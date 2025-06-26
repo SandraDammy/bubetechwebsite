@@ -1,5 +1,5 @@
 import React from 'react'
-import './Home.module.css'
+import styles from './Home.module.css'
 import LandingPage from '../../Section/LandingPage/LandingPage'
 import Rating from '../../Section/Rating/Rating'
 import OurStory from '../../Section/OurStory/OurStory'
@@ -10,7 +10,7 @@ import ContactUs from '../../Section/ContactUs/ContactUs'
 
 const Home = () => {
   return (
-    <div>
+    <div className={styles.container}>
       <LandingPage />
       <Rating/>
       <OurStory />
