@@ -1,4 +1,10 @@
 .btnWhite {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 6.938rem;
+  height: 2.75rem;
   padding: 0.75rem 1.25rem;
   font-family: Poppins;
   font-weight: 500;
@@ -16,6 +22,12 @@
 }
 
 .btnGreen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 13.75rem;
+  height: 4.125rem;
   padding: 0.625rem;
   font-family: Poppins;
   font-size: 1.25rem;
@@ -33,6 +45,12 @@
 }
 
 .btnMsg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 15.438rem;
+  height: 3.875rem;
   padding: 0.75rem;
   font-family: Poppins;
   font-weight: 600;
@@ -50,6 +68,12 @@
 }
 
 .btnGreenOutline {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 10.313rem;
+  height: 3.5rem;
   padding: 0.625rem;
   font-family: Poppins;
   font-size: 1.25rem;
