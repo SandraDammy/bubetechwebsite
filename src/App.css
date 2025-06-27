@@ -22,6 +22,9 @@
     #e5fff0,
     #ffffff
   );
+  --mainCircle: #463E8D1A;
+  --subCircle: #61BF0833;
+  --border: #A4BD174D;
 }
 
 * {

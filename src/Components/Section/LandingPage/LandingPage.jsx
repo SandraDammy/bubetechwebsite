@@ -54,17 +54,17 @@ const LandingPage = () => {
       </div>
 
       <div className={styles.imgContainer}>
-        <div className={styles.circularBorder}>
-          {images.map((img, index) => (
-            <img
-              key={index}
-              src={img}
-              alt={`Farm ${index + 1}`}
-              className={`${styles.image} ${
-                index === currentImage ? styles.active : styles.hidden
-              }`}
-            />
-          ))}
+        <div className={styles.mainBorder}>
+            {images.map((img, index) => (
+              <img
+                key={index}
+                src={img}
+                alt={`Farm ${index + 1}`}
+                className={`${styles.image} ${
+                  index === currentImage ? styles.active : styles.hidden
+                }`}
+              />
+            ))}
         </div>
       </div>
     </div>
