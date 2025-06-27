@@ -1,13 +1,15 @@
 import React from "react";
 import "./App.css";
-import { BrowserRouter } from "react-router-dom";
-import AppRoutes from "./AppRoutes/AppRoutes";
+import WhyChoose from "./Components/Section/WhyChoose/WhyChoose";
+// import { BrowserRouter } from "react-router-dom";
+// import AppRoutes from "./AppRoutes/AppRoutes";
 
 function App() {
   return (
-    <BrowserRouter>
-      <AppRoutes />
-    </BrowserRouter>
+    <WhyChoose />
+    // <BrowserRouter>
+    //   <AppRoutes />
+    // </BrowserRouter>
   );
 }
 
