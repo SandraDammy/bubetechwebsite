@@ -1,3 +1,125 @@
 .landingPage {
-    /* background: var(--gradient); */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4rem 6rem;
+  flex-wrap: wrap;
+}
+
+.textContainer {
+  max-width: 50%;
+}
+
+.subHeading {
+  font-size: 1rem;
+  color: #4CAF50;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  position: relative;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #1E1E1E;
+  margin-bottom: 1rem;
+}
+
+.desc {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+.btnJoin {
+  margin-top: 1rem;
+}
+
+.imgContainer {
+  max-width: 45%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circularBorder {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  padding: 10px;
+  border: 15px solid #CFF0C8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+
+.image {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  object-fit: cover;
+  position: absolute;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.active {
+  opacity: 1;
+  position: relative;
+  z-index: 2;
+}
+
+.hidden {
+  opacity: 0;
+  position: absolute;
+  z-index: 1;
+}
+
+.circularBorder {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  padding: 10px;
+  border: 15px solid #CFF0C8;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .landingPage {
+    flex-direction: column;
+    padding: 2rem;
+    text-align: center;
+  }
+
+  .textContainer,
+  .imgContainer {
+    max-width: 100%;
+  }
+
+  .circularBorder {
+    width: 250px;
+    height: 250px;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
 }
