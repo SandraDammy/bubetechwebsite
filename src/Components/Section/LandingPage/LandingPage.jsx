@@ -27,18 +27,26 @@ const LandingPage = () => {
   return (
     <div className={styles.landingPage}>
       <div className={styles.textContainer}>
-        <p>When Farmers Connect, Communities Prosper</p>
+        <div className={styles.subHeading}>
+          <span className={styles.line}></span>
+          <p>
+            {t("whenFarmersConnect") ||
+              "When Farmers Connect, Communities Prosper"}
+          </p>
+          <span className={styles.line}></span>
+        </div>
         <h1 className={styles.title}>
-          Turning Farm Isolation into Shared Success
+          {t("turningFarmIsolation") || "Turning Farm Isolation"}
+          <br />
+          {t("intoSharedSuccess") || "into Shared Success"}
         </h1>
         <p className={styles.desc}>
-          We connect crop farmers, herders, and fishermen to expert guidance,
-          quality resources, and fair prices in local languages, even without
-          internet.
+          {t("farmDescription") ||
+            "We connect crop farmers, herders, and fishermen to expert guidance, quality resources, and fair prices in local languages, even without internet."}
         </p>
         <div className={styles.btnJoin}>
           <Button
-            title={t("startConnecting")}
+            title={t("startConnecting") || "Start Connecting"}
             btnEventHandler={btnEventHandler}
             className="btnGreen"
           />
@@ -47,7 +55,6 @@ const LandingPage = () => {
 
       <div className={styles.imgContainer}>
         <div className={styles.circularBorder}>
-          {" "}
           {images.map((img, index) => (
             <img
               key={index}
