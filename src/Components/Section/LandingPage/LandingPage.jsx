@@ -6,11 +6,7 @@ const LandingPage = () => {
   return (
     <div className={styles.landingPage}>
       LandingPage
-      <Button
-        title="Start Connecting"
-        className="btnGreen"
-        type="button"
-      />
+
       <Button
         title="Subscribe"
         className="btnWhite"
