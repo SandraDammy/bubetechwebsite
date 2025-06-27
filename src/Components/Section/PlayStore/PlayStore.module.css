@@ -1,3 +1,114 @@
 .playStore {
-    background-color: var(--subGreen);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem 6rem;
+  width: 100%;
+  overflow-x: hidden;
+  gap: 5rem;
+  background-color: var(--subGreen);
+}
+
+.imgContainer {
+  display: flex;
+  /* justify-content: center;
+  align-items: center; */
+}
+
+.imgContainer img {
+  width: 457px;
+  height: 535px;
+}
+
+.mockup {
+  width: 100px;
+  height: auto;
+  object-fit: contain;
+}
+
+.txtContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+.txtContainer h1 {
+  font-family: Poppins;
+  font-weight: 500;
+  font-size: 3.25rem;
+  line-height: 100%;
+  letter-spacing: 0px;
+  color: var(--mainBlack);
+}
+
+.txtContainer p {
+  font-family: Poppins;
+  font-weight: 500;
+  font-size: 1.25rem;
+  line-height: 100%;
+  letter-spacing: 0px;
+  color: var(--subBlack);
+}
+
+.section {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.card {
+  display: flex;
+  flex: row;
+  align-items: center;
+  /* width: 160px; */
+  height: 48px;
+  width: 134px;
+  border-radius: 6px;
+  padding: 0.5rem;
+  background-color: var(--appStore);
+  gap: 0.5rem;
+}
+
+.cardIcon {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 21px;
+  height: 24px;
+}
+
+.iconImage {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+.cardTitle {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 0.3rem;
+}
+
+.txt {
+  color: var(--mainWhite);
+  font-family: Poppins;
+  font-weight: 500;
+  font-size: 9px;
+  line-height: 9px;
+  letter-spacing: 0px;
+  width: 100%;
+}
+
+.text {
+  color: var(--mainWhite);
+  font-family: Poppins;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: -0.47px;
+  width: 100%;
 }
