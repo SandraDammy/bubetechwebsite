@@ -14,7 +14,7 @@
     align-items: center;
     flex-direction: column;
     padding-top: 20px;
-   
+    padding-bottom:50px;
 }
 .title-container{
     display: block;
@@ -37,7 +37,7 @@
     font-weight: 500;
     font-size: 20px;
     font-family:'Poppins';
-    cursor: pointer;
+   
 }
 
 .why-choose-title{
@@ -50,24 +50,32 @@
     margin-top:18px ;
 }
 
-.why-choose-description-container{
+.why-choose-description-container-one{
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: fill(1352px);
+    height:Hug(220px);
    
+}
+.why-choose-description-container-two{
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: fill(1352px);
     height:Hug(220px);
     margin: auto;
-    
 }
+
 .container-one{
    
     border-radius: 20px;
-    width: 664px;
+    width: 590px;
     height: 200px;
     margin:10px;
     gap: 24px;
-    padding: 10px;
+    padding: 27px;
     background-color: #fff;
 }
 .why-choose-container-icon{

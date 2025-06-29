@@ -2,6 +2,12 @@ import React from 'react'
 import styles from './WhyChoose.module.css'
 import Button from "../../Common/Button/Button";
 import {BiLogoInternetExplorer, BiMoney,BiSolidPaint} from 'react-icons/bi';
+import price from '../../../Assets/Img/Prices.svg';
+import language from '../../../Assets/Img/Language.svg';
+import community from '../../../Assets/Img/Community.svg';
+import resources from '../../../Assets/Img/Resources.svg';
+
+
 import './WhyChoose.css'
 
 
@@ -25,10 +31,12 @@ const WhyChoose = () => {
         </h2>
       </div>
         {/* Row One */}
-        <div className="why-choose-description-container"> 
+        <div className="why-choose-description-container-one"> 
           {/* Column One */}
           <div className="container-one">
-            <div className="why-choose-container-icon"><BiMoney /></div>
+            <div className="why-choose-container-icon">
+              <img src={price} alt="price" />
+            </div>
               <p className="why-choose-description-title">
                 Fair Market Prices
               </p>
@@ -38,7 +46,9 @@ const WhyChoose = () => {
           </div>
           {/* Column Two */}
           <div className="container-one">
-            <div className="why-choose-container-icon"><BiLogoInternetExplorer /></div>
+            <div className="why-choose-container-icon">
+            <img src={language} alt="language" />
+              </div>
               <p className="why-choose-description-title">
                 Local Language Support
               </p>
@@ -48,10 +58,12 @@ const WhyChoose = () => {
           </div>
         </div>
         {/* Row Two */}
-        <div className="why-choose-description-container"> 
+        <div className="why-choose-description-container-two"> 
           {/* Column One */}
           <div className="container-one">
-            <div className="why-choose-container-icon"><BsFillPeopleFill /></div>
+            <div className="why-choose-container-icon">
+            <img src={community} alt="community" />
+              </div>
               <p className="why-choose-description-title">
                 Expert Community
               </p>
@@ -61,7 +73,9 @@ const WhyChoose = () => {
           </div>
           {/* Column Two */}
           <div className="container-one">
-            <div className="why-choose-container-icon"><BiSolidPaint /></div>
+            <div className="why-choose-container-icon">
+            <img src={resources} alt="resources" />
+            </div>
               <p className="why-choose-description-title">
                 Quality Resources
               </p>
