@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+.Contact-us-container{
+    display: flex;
+    width: hug(1221.29px);
+    height:hug(744px);
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    font-family: 'Poppins', sans-serif;
+    background: #fff;
+    padding-top: 20px;
+   
+}
+.form-container{
+    
+    width:40%;
+    height:hug(744px);
+    
+   
+}
+.contact-header{
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    width: fill(538px);
+}
+.header-title{
+    height:36px;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 100%;
+    color:#6FA521;
+}
+.header-details{
+    height: 24px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #323232;
+}
+.main-form{
+    margin-top:27px;
+    padding-left: 20px;
+}
+label{
+    font-size: 16px;
+    font-weight: 400;
+    color:#323232;
+    height:24px;
+}
+input[type=text],[type=email]{
+    height: 45px;
+    width: 450px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #B3B4B9 ;
+}
+textarea{
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #B3B4B9 ;
+    width: 450px;
+}
+input[type=submit]{
+    cursor: pointer;
+    padding: 16px;
+    width:247px;
+
+    border-radius: 8px;
+    background-color: #6FA521;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    border: 0px;
+    text-align: center;
+    margin-bottom: 10px;
+
+}
+input[type=submit]:hover{
+    background-color: #507c11;
+}
+.image-container{
+    width: 40%;
+    height:hug(744px);
+    display: flex;
+    justify-content: center;
+    margin-left: 60px;
+    margin-top: 60px;
+}
+.image{
+    width: 392.29px;
+    height: 396.32px;
+   
+
+}
