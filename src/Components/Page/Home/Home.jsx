@@ -16,8 +16,8 @@ const Home = () => {
       <OurStory />
       <WhyChoose />
       <FrequentlyAskedQty />  
-      <PlayStore />
       <ContactUs />
+      <PlayStore />
     </div>
   )
 }

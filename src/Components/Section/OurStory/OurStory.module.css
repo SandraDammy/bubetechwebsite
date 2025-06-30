@@ -1,13 +1,64 @@
-.Intro{
-
+.ourStory {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem 6rem;
+  width: 100%;
+  overflow-x: hidden;
+  gap: 5rem;
+  background-color: var(--body);
 }
-.text{
 
+.imgContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.bottom{
 
+.imgContainer img {
+  width: 386px;
+  height: 245px;
+  border-radius: 1.25rem;
 }
-.body-text{
-    width: 873px;
-    height: 350px;
+
+.frameLogo {
+  width: 100px;
+  height: auto;
+  object-fit: contain;
+}
+
+.txtContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+.txtContainer h1 {
+  font-family: Poppins;
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 26px;
+  letter-spacing: -0.1px;
+  color: var(--mainBlack);
+  gap: 2rem;
+}
+
+.txtContainer p {
+  font-family: Poppins;
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 26px;
+  letter-spacing: -0.1px;
+  color: var(--mainBlack);
+}
+
+.txtContainer span {
+  font-family: Poppins;
+  font-weight: 500;
+  font-size: 1.25rem;
+  line-height: 26px;
+  letter-spacing: -0.1px;
+  color: var(--mainBlack);
 }
