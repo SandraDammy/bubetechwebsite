@@ -1,4 +1,62 @@
-.frequentlyAskedQty{
+.faqContainer{
       background-color: var(--body);
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      gap: 10rem;
+      height: 38rem;
+      margin: auto;
+}
+.faqImage{
+      width: 28rem;
+      height: 27rem;
+      justify-content: center;
+      margin-top: 4rem;
+}
+img{
+     width: 24rem;
+     height: 25rem;
+}
+.faqSection{
+      width: 40%;
+      height: 41rem;
+}
 
+.faqSection h2{
+      padding-bottom: 2.5rem;
+      color: #323232;
+      height: 5rem;
+      font-weight: 800;
+      font-size: 1.6rem;
+      line-height: 120%;
+}
+
+.faqItem{
+      border-bottom: 0.2rem solid #E9E9E9;
+      padding: 1rem 0;
+      cursor: pointer;
+}
+
+.faqItem:last-child{
+      border-bottom: none;
+}
+
+.faqQuestion{
+      font-weight: 600;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #323232;
+      font-size: 0.9rem;
+}
+
+.faqAnswer{
+      margin-top: 0.7rem;
+      color: #323232;
+      font-size: 0.8rem;
+}
+
+.faqIcon{
+      font-weight: bold;
+      font-size: 1.2rem;
 }
