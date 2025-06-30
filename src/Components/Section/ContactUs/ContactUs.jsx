@@ -22,7 +22,6 @@ const ContactUs = () => {
   const btnSubmit = (e) => {
     e.preventDefault();
     console.log("Form Submitted:", formData);
-    // You can add your API call here
   };
 
   return (
