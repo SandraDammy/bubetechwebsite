@@ -1,6 +1,5 @@
 import React from "react";
 import styles from "./ContactUs.module.css";
-import "./Contact.css";
 import image from "../../../Assets/Img/ContactUs.svg";
 
 const ContactUs = () => {
@@ -42,6 +41,7 @@ const ContactUs = () => {
         <img src={image} className="image" alt="contact" />
       </div>
     </div>
+    
   );
 };
 
