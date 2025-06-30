@@ -28,7 +28,7 @@ const PlayStore = () => {
             </div>
             <div className={styles.cardTitle}>
               <h5 className={styles.txt}>GET IT ON</h5>
-              <span className={styles.text}>Google Store</span>
+              <span className={styles.texts}>Google Store</span>
             </div>
           </div>
           <div className={styles.card}>
