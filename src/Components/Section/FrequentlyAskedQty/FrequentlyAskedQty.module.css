@@ -1,62 +1,87 @@
-.faqContainer{
-      background-color: var(--body);
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      gap: 10rem;
-      height: 38rem;
-      margin: auto;
-}
-.faqImage{
-      width: 28rem;
-      height: 27rem;
-      justify-content: center;
-      margin-top: 4rem;
-}
-img{
-     width: 24rem;
-     height: 25rem;
-}
-.faqSection{
-      width: 40%;
-      height: 41rem;
+.faqContainer {
+  background-color: var(--body);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem 6rem;
+  width: 100%;
+  overflow-x: hidden;
+  gap: 2rem;
 }
 
-.faqSection h2{
-      padding-bottom: 2.5rem;
-      color: #323232;
-      height: 5rem;
-      font-weight: 800;
-      font-size: 1.6rem;
-      line-height: 120%;
+.imageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  padding: 0rem 5rem;
 }
 
-.faqItem{
-      border-bottom: 0.2rem solid #E9E9E9;
-      padding: 1rem 0;
-      cursor: pointer;
+.imageContainer img {
+  width: 447.6888122558594px;
+  height: 425.9998474121094px;
 }
 
-.faqItem:last-child{
-      border-bottom: none;
+.faqLogo {
+  width: 100px;
+  height: auto;
+  object-fit: contain;
 }
 
-.faqQuestion{
-      font-weight: 600;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      color: #323232;
-      font-size: 0.9rem;
+.faqSection {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 50%;
+  flex-wrap: wrap;
+  padding: 0rem 5rem;}
+
+.faqSection h2 {
+  color: var(--mainBlack);
+  font-family: Poppins;
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 120%;
+  letter-spacing: 0px;
+  margin-bottom: 2rem;
 }
 
-.faqAnswer{
-      margin-top: 0.7rem;
-      color: #323232;
-      font-size: 0.8rem;
+.faqItem {
+  border-bottom: 1.5px solid var(--faqLine);
+  padding-bottom: 1rem;
+  margin-bottom: 0.75rem;
 }
 
-.faqIcon{
-      font-weight: bold;
-      font-size: 1.2rem;
+.faqQuestion {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  color: var(--mainBlack);
+  font-family: Poppins;
+  font-weight: 600;
+  font-size: 1.125rem;
+  line-height: 120%;
+  letter-spacing: 0px;
+}
+
+.faqAnswer {
+  margin-top: 0.75rem;
+  color: var(--mainBlack);
+  font-weight: 400;
+  font-family: Poppins;
+  font-size: 1rem;
+  line-height: 140%;
+  letter-spacing: 0px;
+}
+
+.faqIcon {
+  display: flex;
+  align-items: center;
+  margin-left: 1rem;
+}
+
+.iconImg {
+  width: 24px;
+  height: 24px;
 }

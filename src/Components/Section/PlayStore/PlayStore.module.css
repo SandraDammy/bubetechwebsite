@@ -11,16 +11,17 @@
 
 .imgContainer {
   display: flex;
-  justify-content: center;
-  align-items: flex-end;
+  justify-content: flex-start; 
+  align-items: flex-end;       
   padding-top: 3rem;
-  background-color: red;
   width: 457px;
+  height: 100%; 
 }
 
 .imgContainer img {
-  width: 457px;
-  height: 535px;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
 }
 
 .mockup {
@@ -28,6 +29,8 @@
   height: auto;
   object-fit: contain;
 }
+
+
 
 .txtContainer {
   display: flex;
