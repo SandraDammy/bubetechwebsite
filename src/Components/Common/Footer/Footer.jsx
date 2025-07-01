@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import styles from "./Footer.module.css";
 import Button from "../Button/Button";
 
-import logo from "../../../Assets/Img/BUBETECH_Logo.svg";
+import logo from "../../../Assets/Img/BUBETECH_Footer_Logo.svg";
 import Facebook from "../../../Assets/Img/facebook.svg";
 import Instagram from "../../../Assets/Img/instagram.svg";
 import Twitter from "../../../Assets/Img/Twitter.svg";
@@ -32,7 +32,7 @@ const Footer = () => {
 
   return (
     <footer className={styles.footer}>
-      <div className={styles.subscribeSection}>
+      <div className={styles.title}>
         <h2>Stay Connected</h2>
         <p>
           Stay connected with farmer success stories, market insights, and
@@ -57,13 +57,15 @@ const Footer = () => {
 
       <hr className={styles.divider} />
 
-      <div className={styles.description}>
+      <div className={styles.title}>
         <h2>BubeTech</h2>
-        <p>
-          Building farmer-to-farmer and farmer-to-expert connections across West
-          Africa. Traditional wisdom meets modern community networks.
-        </p>
-        <p>Turning Farm Isolation into Shared Success</p>
+        <div className={styles.description}>
+          <p>
+            Building farmer-to-farmer and farmer-to-expert connections across
+            West Africa. Traditional wisdom meets modern community networks.
+          </p>
+          <p>Turning Farm Isolation into Shared Success</p>
+        </div>
       </div>
 
       <div className={styles.linksSection}>
@@ -103,65 +105,80 @@ const Footer = () => {
 
         <div className={styles.column}>
           <h6>Get Connected</h6>
-          <Link to="/contact" className={styles.link}>
-            connect@bubetech.africa
-          </Link>
-          <Link to="/support" className={styles.link}>
-            Community Support: +234 803 700 0117
-          </Link>
+          <div className={styles.footerLink}>
+            <Link to="/contact" className={styles.link}>
+              connect@bubetech.africa
+            </Link>
+            <Link to="/support" className={styles.link}>
+              Community Support: +234 803 700 0117
+            </Link>
+          </div>
         </div>
 
         <div className={styles.column}>
           <h6>Learn More</h6>
-          <Link to="/our-story" className={styles.link}>
-            Our Story
-          </Link>
-          <Link to="/associations" className={styles.link}>
-            For Agricultural Associations
-          </Link>
-          <Link to="/careers" className={styles.link}>
-            Careers
-          </Link>
-          <Link to="/contact" className={styles.link}>
-            Contact Us
-          </Link>
+          <div className={styles.footerLink}>
+            <Link to="/our-story" className={styles.link}>
+              Our Story
+            </Link>
+            <Link to="/associations" className={styles.link}>
+              For Agricultural Associations
+            </Link>
+            <Link to="/careers" className={styles.link}>
+              Careers
+            </Link>
+            <Link to="/contact" className={styles.link}>
+              Contact Us
+            </Link>
+          </div>
         </div>
 
         <div className={styles.column}>
           <h6>Support</h6>
-          <Link to="/call-support" className={styles.link}>
-            Call Support
-          </Link>
-          <Link to="/help" className={styles.link}>
-            Get Help
-          </Link>
-          <Link to="/language-support" className={styles.link}>
-            Language Support
-          </Link>
-          <Link to="/community-hubs" className={styles.link}>
-            Community Hubs
-          </Link>
+          <div className={styles.footerLink}>
+            <Link to="/call-support" className={styles.link}>
+              Call Support
+            </Link>
+            <Link to="/help" className={styles.link}>
+              Get Help
+            </Link>
+            <Link to="/language-support" className={styles.link}>
+              Language Support
+            </Link>
+            <Link to="/community-hubs" className={styles.link}>
+              Community Hubs
+            </Link>
+          </div>
         </div>
       </div>
 
-      <div className={styles.bottomBar}>
+      <div className={styles.bottom}>
         <div className={styles.bottomLeft}>
-          <select onChange={handleLanguageChange}>
-            <option value="en">English</option>
-            <option value="yo">Yoruba</option>
-            <option value="ig">Igbo</option>
-          </select>
-          <span>•</span>
-          <Link to="/privacy" className={styles.link}>
-            Privacy
-          </Link>
-          <span>•</span>
-          <Link to="/terms" className={styles.link}>
-            Terms of Service
-          </Link>
+          <div className={styles.section}>
+            <select
+              className={styles.languageSwitcher}
+              onChange={handleLanguageChange}
+            >
+              <option value="en">English</option>
+              <option value="yo">YOR</option>
+              <option value="ig">IGB</option>
+            </select>
+          </div>
+          <div className={styles.section}>
+            <span>•</span>
+            <Link to="/privacy" className={styles.term}>
+              Privacy
+            </Link>
+          </div>
+          <div className={styles.section}>
+            <span>•</span>
+            <Link to="/terms" className={styles.term}>
+              Terms of Service
+            </Link>
+          </div>
         </div>
         <div className={styles.bottomRight}>
-          <p>© 2024 Bubetech. All Rights Reserved.</p>
+          <p className={styles.term}>© 2024 Bubetech. All Rights Reserved.</p>
         </div>
       </div>
     </footer>

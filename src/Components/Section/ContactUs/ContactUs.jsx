@@ -43,6 +43,7 @@ const ContactUs = () => {
               value={formData.name}
               onChange={handleChange}
               required
+              placeholder="Enter your name"
             />
           </div>
           <div className={styles.formGroup}>
@@ -53,6 +54,7 @@ const ContactUs = () => {
               value={formData.email}
               onChange={handleChange}
               required
+              placeholder="Enter your email"
             />
           </div>
           <div className={styles.formGroup}>
@@ -63,6 +65,7 @@ const ContactUs = () => {
               value={formData.subject}
               onChange={handleChange}
               required
+              placeholder="Enter your subject"
             />
           </div>
           <div className={styles.formGroup}>
@@ -73,6 +76,7 @@ const ContactUs = () => {
               value={formData.message}
               onChange={handleChange}
               required
+              placeholder="Enter your message"
             ></textarea>
           </div>
           <div className={styles.submit}>
@@ -85,7 +89,7 @@ const ContactUs = () => {
         </form>
       </div>
       <div className={styles.imageContainer}>
-        <img src={image} alt="contact" className={styles.frameLogo}/>
+        <img src={image} alt="contact" className={styles.frameLogo} />
       </div>
     </div>
   );
