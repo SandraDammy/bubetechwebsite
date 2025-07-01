@@ -34,8 +34,7 @@
   gap: 1rem;
   width: 50%;
   flex-wrap: wrap;
-  padding: 0rem 5rem;
-}
+  padding: 0rem 5rem;}
 
 .faqSection h2 {
   color: var(--mainBlack);
