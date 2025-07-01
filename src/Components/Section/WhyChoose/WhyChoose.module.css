@@ -1,0 +1,93 @@
+.whyChoose {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem 6rem;
+  width: 100%;
+  overflow-x: hidden;
+  gap: 2rem;
+  background-color: var(--body);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem 0;
+}
+
+.titleContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.title {
+  font-family: Poppins;
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: var(--subBlack);
+}
+
+.cardContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1.5rem;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.card {
+  border-radius: 1.25rem;
+  width: 664px;
+  height: 200px;
+  padding: 1.5rem 1rem;
+  background-color: var(--mainWhite);
+}
+
+.cardIcon {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 0.5rem;
+}
+
+.iconImage {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+.cardTitle {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.txt {
+  color: var(--mainBlack);
+  font-family: Poppins;
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 32px;
+  letter-spacing: -0.5px;
+}
+.text {
+  color: var(--mainBlack);
+  font-family: Poppins;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 24px;
+  letter-spacing: -0.1px;
+}
