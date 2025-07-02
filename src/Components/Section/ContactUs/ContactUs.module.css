@@ -160,3 +160,24 @@ textarea {
     width: 240px;
   }
 }
+@media( max-width:768px){
+    .contactUs{
+      display: flex;
+      flex-direction: column-reverse;
+      padding: auto;
+    
+    }
+    .formContainer{
+      width: 100%;
+    }
+    .header{
+      width: 360px;
+      margin: 0 auto;
+      justify-content: center;
+    }
+    input,textarea{
+      width:125%;
+    }
+
+
+}
