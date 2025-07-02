@@ -39,3 +39,15 @@
   line-height: 100%;
   letter-spacing: 0%;
 }
+@media (max-width:768px){
+  .rating{
+    width: 100%;
+    height: fit-content;
+  }
+  .container{
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 3rem;
+  }
+}
