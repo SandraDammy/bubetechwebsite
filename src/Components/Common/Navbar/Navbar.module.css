@@ -36,7 +36,7 @@
   justify-content: space-between;
   align-items: center;
   gap: 5rem;
-    /* background-color: red; */
+  /* background-color: red; */
 }
 
 .navLinks {
@@ -74,7 +74,7 @@
   letter-spacing: 0px;
   cursor: pointer;
   text-decoration: none;
-    text-transform: capitalize;
+  text-transform: capitalize;
 
   transition: color 0.3s ease;
 }
@@ -164,5 +164,7 @@
 
   .ctaSection {
     top: 0.9rem;
+    background-color: var(--green);
+    
   }
 }
