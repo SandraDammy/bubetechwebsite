@@ -19,3 +19,33 @@
   gap: 0.75rem;
   color: var(--mainBlack);
 }
+
+.shortLabel {
+  width: 4.563rem;
+  text-transform: uppercase;
+  border: none;
+}
+
+.fullLabel {
+  width: 4.563rem;
+  font-weight: 400;
+  font-size: 0.75rem;
+  color: var(--mainWhite);
+  text-transform: capitalize;
+  border: none;
+}
+
+.languageSwitcher option {
+  background-color: var(--green);
+  color: var(--mainWhite);
+  border: none;
+}
+
+.languageSwitcher:hover {
+  border: none;
+}
+
+.languageSwitcher option:hover {
+  background-color: var(--mainWhite) !important;
+  color: var(--green) !important;
+}

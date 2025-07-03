@@ -7,11 +7,18 @@ import Ellipse3 from "../../../Assets/Img/Ellipse3.svg";
 import { useTranslation } from "react-i18next";
 
 const LandingPage = () => {
+  const { t, i18n } = useTranslation();
+
   const btnEventHandler = () => {
     window.open("https://bubetech.org", "_blank");
   };
 
-  const { t } = useTranslation();
+  useEffect(() => {
+    const savedLang = localStorage.getItem("appLang");
+    if (savedLang && i18n.language !== savedLang) {
+      i18n.changeLanguage(savedLang);
+    }
+  }, [i18n]);
 
   const images = [Ellipse1, Ellipse2, Ellipse3];
   const [currentImage, setCurrentImage] = useState(0);
@@ -22,31 +29,31 @@ const LandingPage = () => {
     }, 4000);
 
     return () => clearInterval(intervalId);
-  }, []);
+  }, [images.length]);
 
   return (
     <div className={styles.landingPage}>
       <div className={styles.textContainer}>
         <div className={styles.subHeading}>
           <span className={styles.line}></span>
-          <p>
-            {t("whenFarmersConnect") ||
-              "When Farmers Connect, Communities Prosper"}
-          </p>
+          <p>{t("When Farmers Connect, Communities Prosper")}</p>
           <span className={styles.line}></span>
         </div>
+
         <h1 className={styles.title}>
-          {t("turningFarmIsolation") || "Turning Farm Isolation"}
-          <br />
-          {t("intoSharedSuccess") || "into Shared Success"}
+          {t("Turning Farm Isolation")} <br />
+          {t("into Shared Success")}
         </h1>
+
         <p className={styles.desc}>
-          {t("farmDescription") ||
-            "We connect crop farmers, herders, and fishermen to expert guidance, quality resources, and fair prices in local languages, even without internet."}
+          {t(
+            "We connect crop farmers, herders, and fishermen to expert guidance, quality resources, and fair prices in local languages, even without internet."
+          )}
         </p>
+
         <div className={styles.btnJoin}>
           <Button
-            title={t("startConnecting") || "Start Connecting"}
+            title={t("Start Connecting")}
             btnEventHandler={btnEventHandler}
             className="btnGreen"
           />
@@ -55,16 +62,16 @@ const LandingPage = () => {
 
       <div className={styles.imgContainer}>
         <div className={styles.mainBorder}>
-            {images.map((img, index) => (
-              <img
-                key={index}
-                src={img}
-                alt={`Farm ${index + 1}`}
-                className={`${styles.image} ${
-                  index === currentImage ? styles.active : styles.hidden
-                }`}
-              />
-            ))}
+          {images.map((img, index) => (
+            <img
+              key={index}
+              src={img}
+              alt={`Farm ${index + 1}`}
+              className={`${styles.image} ${
+                index === currentImage ? styles.active : styles.hidden
+              }`}
+            />
+          ))}
         </div>
       </div>
     </div>
