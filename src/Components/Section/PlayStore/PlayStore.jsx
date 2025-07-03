@@ -1,10 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "./PlayStore.module.css";
 import Mockup from "../../../Assets/Img/Bubetech_Mockup.svg";
 import GoogleStore from "../../../Assets/Img/Playstore.svg";
 import AppleStore from "../../../Assets/Img/Apple.svg";
+import { useTranslation } from "react-i18next";
 
 const PlayStore = () => {
+    const { t, i18n } = useTranslation();
+  
+    useEffect(() => {
+      const savedLang = localStorage.getItem("appLang");
+      if (savedLang && i18n.language !== savedLang) {
+        i18n.changeLanguage(savedLang);
+      }
+    }, [i18n]);
+
   return (
     <div className={styles.playStore}>
       <div className={styles.imgContainer}>
@@ -12,10 +22,10 @@ const PlayStore = () => {
       </div>
       <div className={styles.txtContainer}>
         <h1>
-          We are bridging the gap <br/>between farmers and  <br/>future of agriculture
+          {t("We are bridging the gap")} <br/>{t("between farmers and")}  <br/>{t("future of agriculture")}
         </h1>
         <p>
-          Helping Farmers Adapt, Grow, and Succeed Through Tailored Solutions.{" "}
+         {t("Helping Farmers Adapt, Grow, and Succeed Through Tailored Solutions.")}
         </p>
         <div className={styles.section}>
           <div className={styles.card}>
@@ -27,8 +37,8 @@ const PlayStore = () => {
               />
             </div>
             <div className={styles.cardTitle}>
-              <h5 className={styles.txt}>GET IT ON</h5>
-              <span className={styles.texts}>Google Store</span>
+              <h5 className={styles.txt}>{t("GET IT ON")}</h5>
+              <span className={styles.texts}>{t("Google Store")}</span>
             </div>
           </div>
           <div className={styles.card}>
@@ -40,8 +50,8 @@ const PlayStore = () => {
               />
             </div>
             <div className={styles.cardTitle}>
-              <h5 className={styles.txt}>Download on the</h5>
-              <span className={styles.text}>App Store </span>
+              <h5 className={styles.txt}>{t("Download on the")}</h5>
+              <span className={styles.text}>{t("App Store")}</span>
             </div>
           </div>
         </div>

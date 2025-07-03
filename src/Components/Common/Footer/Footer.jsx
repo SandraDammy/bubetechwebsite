@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import styles from "./Footer.module.css";
 import Button from "../Button/Button";
@@ -8,8 +8,19 @@ import Facebook from "../../../Assets/Img/facebook.svg";
 import Instagram from "../../../Assets/Img/instagram.svg";
 import Twitter from "../../../Assets/Img/Twitter.svg";
 import Linkedin from "../../../Assets/Img/Linkedin.svg";
+import { useTranslation } from "react-i18next";
+import LangSelector from "../LangSelector/LangSelector";
 
 const Footer = () => {
+    const { t, i18n } = useTranslation();
+  
+    useEffect(() => {
+      const savedLang = localStorage.getItem("appLang");
+      if (savedLang && i18n.language !== savedLang) {
+        i18n.changeLanguage(savedLang);
+      }
+    }, [i18n]);
+
   const [formData, setFormData] = useState({ email: "" });
 
   const handleChange = (e) => {
@@ -26,17 +37,18 @@ const Footer = () => {
     // API call goes here
   };
 
-  const handleLanguageChange = (e) => {
-    console.log("Language selected:", e.target.value);
+ const handleLanguageChange = (e) => {
+    const lang = e.target.value;
+    i18n.changeLanguage(lang);
+    localStorage.setItem("appLang", lang); // Persist selection
   };
 
   return (
     <footer className={styles.footer}>
       <div className={styles.title}>
-        <h2>Stay Connected</h2>
+        <h2>{t("Stay Connected")}</h2>
         <p>
-          Stay connected with farmer success stories, market insights, and
-          community updates.
+          {t("Stay connected with farmer success stories, market insights, and community updates.")}
         </p>
         <form className={styles.subscribeForm} onSubmit={btnSubscribe}>
           <input
@@ -44,12 +56,12 @@ const Footer = () => {
             id="email"
             value={formData.email}
             onChange={handleChange}
-            placeholder="Enter your email"
+            placeholder={t("Enter your email")}
             required
           />
           <Button
             className="btnWhite"
-            title="Subscribe"
+            title={t("Subscribe")}
             btnEventHandler={btnSubscribe}
           />
         </form>
@@ -58,13 +70,12 @@ const Footer = () => {
       <hr className={styles.divider} />
 
       <div className={styles.title}>
-        <h2>BubeTech</h2>
+        <h2>{t("BubeTech")}</h2>
         <div className={styles.description}>
           <p>
-            Building farmer-to-farmer and farmer-to-expert connections across
-            West Africa. Traditional wisdom meets modern community networks.
+            {t("Building farmer-to-farmer and farmer-to-expert connections across West Africa. Traditional wisdom meets modern community networks.")}
           </p>
-          <p>Turning Farm Isolation into Shared Success</p>
+          <p>{t("Turning Farm Isolation into Shared Success")}</p>
         </div>
       </div>
 
@@ -104,13 +115,13 @@ const Footer = () => {
         </div>
 
         <div className={styles.column}>
-          <h6>Get Connected</h6>
+          <h6>{t("Get Connected")}</h6>
           <div className={styles.footerLink}>
             <Link to="/contact" className={styles.link}>
               connect@bubetech.africa
             </Link>
             <Link to="/support" className={styles.link}>
-              Community Support: +234 803 700 0117
+              {t("Community Support")}: +234 803 700 0117
             </Link>
           </div>
         </div>
@@ -119,16 +130,16 @@ const Footer = () => {
           <h6>Learn More</h6>
           <div className={styles.footerLink}>
             <Link to="/our-story" className={styles.link}>
-              Our Story
+              {t("Our Story")}
             </Link>
             <Link to="/associations" className={styles.link}>
-              For Agricultural Associations
+              {t("For Agricultural Associations")}
             </Link>
             <Link to="/careers" className={styles.link}>
-              Careers
+              {t("Careers")}
             </Link>
             <Link to="/contact" className={styles.link}>
-              Contact Us
+              {t("Contact Us")}
             </Link>
           </div>
         </div>
@@ -137,16 +148,16 @@ const Footer = () => {
           <h6>Support</h6>
           <div className={styles.footerLink}>
             <Link to="/call-support" className={styles.link}>
-              Call Support
+              {t("Call Support")}
             </Link>
             <Link to="/help" className={styles.link}>
-              Get Help
+              {t("Get Help")}
             </Link>
             <Link to="/language-support" className={styles.link}>
-              Language Support
+              {t("Language Support")}
             </Link>
             <Link to="/community-hubs" className={styles.link}>
-              Community Hubs
+              {t("Community Hubs")}
             </Link>
           </div>
         </div>
@@ -155,30 +166,34 @@ const Footer = () => {
       <div className={styles.bottom}>
         <div className={styles.bottomLeft}>
           <div className={styles.section}>
-            <select
+            {/* <select
               className={styles.languageSwitcher}
               onChange={handleLanguageChange}
             >
               <option value="en">English</option>
-              <option value="yo">YOR</option>
-              <option value="ig">IGB</option>
-            </select>
+              <option value="yo">Yoruba</option>
+              <option value="ig">Igbo</option>
+              <option value="ha">Hausa</option>
+              <option value="ff">Fulfulde</option>
+            </select> */}
+                    <LangSelector handleLanguageChange={handleLanguageChange} labelType="full"/>
+
           </div>
           <div className={styles.section}>
             <span>•</span>
             <Link to="/privacy" className={styles.term}>
-              Privacy
+              {t("Privacy")}
             </Link>
           </div>
           <div className={styles.section}>
             <span>•</span>
             <Link to="/terms" className={styles.term}>
-              Terms of Service
+              {t("Terms of Service")}
             </Link>
           </div>
         </div>
         <div className={styles.bottomRight}>
-          <p className={styles.term}>© 2024 Bubetech. All Rights Reserved.</p>
+          <p className={styles.term}>© 2024 {t("Bubetech")}. {t("All Rights Reserved")}.</p>
         </div>
       </div>
     </footer>
@@ -186,3 +201,6 @@ const Footer = () => {
 };
 
 export default Footer;
+
+
+

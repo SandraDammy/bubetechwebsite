@@ -14,7 +14,7 @@ const Navbar = () => {
   const handleLanguageChange = (e) => {
     const lang = e.target.value;
     i18n.changeLanguage(lang);
-    localStorage.setItem("appLang", lang);
+    localStorage.setItem("appLang", lang); // Persist selection
   };
 
   useEffect(() => {
@@ -25,41 +25,54 @@ const Navbar = () => {
   return (
     <header className={styles.header}>
       <nav className={styles.navbar}>
-        <div className={styles.logoSection}>
-          <img src={logo} alt="Buben Tech Logo" className={styles.logo} />
-        </div>
+        <div className={styles.navContent}>
+          {/* Logo */}
+          <div className={styles.logoSection}>
+            <img src={logo} alt="Buben Tech Logo" className={styles.logo} />
+          </div>
 
-        <LangSelector handleLanguageChange={handleLanguageChange} />
-
-        <div
-          className={styles.hamburger}
-          onClick={() => setMenuOpen(!menuOpen)}
-        >
-          <img
-            src={menuOpen ? CloseIcon : HamburgerIcon}
-            alt="Menu Toggle"
-            className={styles.menuIcon}
-          />
-        </div>
-
-        <ul className={`${styles.navLinks} ${menuOpen ? styles.open : ""}`}>
-          <li>{t("Home")}</li>
-          <li>{t("About Us")}</li>
-          <li>{t("Our Services")}</li>
-          <li>{t("features")}</li>
-          <li>{t("Contact Us")}</li>
-          <div className={styles.loginSection}>
-            <p className={styles.login}>{t("login")}</p>
-            <Button
-              title={t("startConnecting")}
-              className="btnGreen"
-              type="button"
+          {/* Hamburger icon */}
+          <div
+            className={styles.hamburger}
+            onClick={() => setMenuOpen(!menuOpen)}
+          >
+            <img
+              src={menuOpen ? CloseIcon : HamburgerIcon}
+              alt="Menu Toggle"
+              className={styles.menuIcon}
             />
           </div>
-        </ul>
+
+          <div className={styles.navItems}>
+            {/* Nav Links */}
+            <ul className={`${styles.navLinks} ${menuOpen ? styles.open : ""}`}>
+              <li>{t("ome")}</li>
+              <li>{t("About Us")}</li>
+              <li>{t("Our Services")}</li>
+              <li>{t("features")}</li>
+              <li>{t("Contact Us")}</li>
+            </ul>
+
+            {/* Desktop Login & CTA */}
+            <div className={styles.loginSection}>
+              <p className={styles.login}>{t("login")}</p>
+              <Button
+                title={t("Start Connecting")}
+                className="btnGreen"
+                type="button"
+              />
+            </div>
+          </div>
+        </div>
+
+        {/* Language Selector */}
+        <LangSelector handleLanguageChange={handleLanguageChange} labelType="short"/>
       </nav>
     </header>
   );
 };
 
 export default Navbar;
+
+
+
