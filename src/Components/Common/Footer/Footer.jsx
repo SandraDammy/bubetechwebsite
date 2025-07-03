@@ -127,7 +127,7 @@ const Footer = () => {
         </div>
 
         <div className={styles.column}>
-          <h6>Learn More</h6>
+          <h6>{t("Learn More")}</h6>
           <div className={styles.footerLink}>
             <Link to="/our-story" className={styles.link}>
               {t("Our Story")}
@@ -145,7 +145,7 @@ const Footer = () => {
         </div>
 
         <div className={styles.column}>
-          <h6>Support</h6>
+          <h6>{t("Support")}</h6>
           <div className={styles.footerLink}>
             <Link to="/call-support" className={styles.link}>
               {t("Call Support")}
