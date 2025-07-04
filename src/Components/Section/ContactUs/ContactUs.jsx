@@ -5,14 +5,14 @@ import Button from "../../Common/Button/Button";
 import { useTranslation } from "react-i18next";
 
 const ContactUs = () => {
-    const { t, i18n } = useTranslation();
-  
-    useEffect(() => {
-      const savedLang = localStorage.getItem("appLang");
-      if (savedLang && i18n.language !== savedLang) {
-        i18n.changeLanguage(savedLang);
-      }
-    }, [i18n]);
+  const { t, i18n } = useTranslation();
+
+  useEffect(() => {
+    const savedLang = localStorage.getItem("appLang");
+    if (savedLang && i18n.language !== savedLang) {
+      i18n.changeLanguage(savedLang);
+    }
+  }, [i18n]);
 
   const [formData, setFormData] = useState({
     name: "",
@@ -54,6 +54,7 @@ const ContactUs = () => {
               onChange={handleChange}
               required
               placeholder={t("Enter your name")}
+              className={styles.contactInput}
             />
           </div>
           <div className={styles.formGroup}>
@@ -64,7 +65,7 @@ const ContactUs = () => {
               value={formData.email}
               onChange={handleChange}
               required
-              placeholder="{t(Enter your email)}"
+              placeholder={t("Enter your email")}
             />
           </div>
           <div className={styles.formGroup}>

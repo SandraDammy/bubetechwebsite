@@ -55,7 +55,7 @@ const LandingPage = () => {
           <Button
             title={t("Start Connecting")}
             btnEventHandler={btnEventHandler}
-            className="btnGreen"
+            className="btnGreenBig"
           />
         </div>
       </div>

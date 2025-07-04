@@ -25,7 +25,7 @@
 .subHeading p {
   white-space: nowrap;
   font-family: Poppins;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 1.25rem;
   line-height: 100%;
   letter-spacing: 0%;
@@ -54,7 +54,7 @@
   font-size: 1.25rem;
   line-height: 100%;
   letter-spacing: 0%;
-}
+  color: var(--subBlack);}
 
 .btnJoin {
   margin-top: 1rem;
@@ -72,10 +72,12 @@
   height: 30rem;
   border-radius: 50%;
   border: 1.5rem solid var(--mainCircle);
+  /* Green - 61BF08 - opacity 20 */
   display: flex;
   justify-content: center;
   align-items: center;
   background: var(--subCircle);
+  /* background-color: #463E8D ; 463E8D - opacity 10% */
   position: relative;
   overflow: hidden;
 }

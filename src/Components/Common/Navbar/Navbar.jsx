@@ -20,7 +20,7 @@ const Navbar = () => {
   useEffect(() => {
     const savedLang = localStorage.getItem("appLang");
     if (savedLang) i18n.changeLanguage(savedLang);
-  }, []);
+  }, [i18n]);
 
   return (
     <header className={styles.header}>
@@ -46,10 +46,10 @@ const Navbar = () => {
           <div className={styles.navItems}>
             {/* Nav Links */}
             <ul className={`${styles.navLinks} ${menuOpen ? styles.open : ""}`}>
-              <li>{t("ome")}</li>
+              <li>{t("Home")}</li>
               <li>{t("About Us")}</li>
-              <li>{t("Our Services")}</li>
               <li>{t("features")}</li>
+              <li>{t("FAQs")}</li>
               <li>{t("Contact Us")}</li>
             </ul>
 

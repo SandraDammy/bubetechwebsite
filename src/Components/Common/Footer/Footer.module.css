@@ -1,5 +1,5 @@
 .footer {
-  background-color: var(--green);
+  background-color: var(--footerGreen);
   color: var(--mainWhite);
   padding: 3rem 6rem;
   display: flex;
@@ -53,9 +53,14 @@
   width: 20rem;
   height: 2.75rem;
   border: 1px solid var(--inputOutline);
-  color: var(--mainBlack);
+  color: var(--text);
   outline: none;
   gap: 1rem;
+}
+
+.emailInput::placeholder {
+  color: var(--mainWhite);
+  opacity: 1;
 }
 
 .divider {

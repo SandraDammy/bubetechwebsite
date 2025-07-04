@@ -74,13 +74,18 @@ input {
   line-height: 100%;
   letter-spacing: 0%;
   padding: 0.75rem;
-  height: 2.5rem;
+  height: 3.5rem;
   width: 100%;
   border-radius: 0.313rem;
   border: 1px solid var(--inputOutline);
   outline: none;
   background-color: transparent;
   color: var(--mainBlack);
+}
+
+.contactInput::placeholder {
+  color: var(--text);
+  opacity: 1;
 }
 
 textarea {

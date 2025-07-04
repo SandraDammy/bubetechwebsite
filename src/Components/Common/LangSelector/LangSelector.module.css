@@ -36,8 +36,8 @@
 }
 
 .languageSwitcher option {
-  background-color: var(--green);
-  color: var(--mainWhite);
+  background-color: var(--mainWhite);
+  color: var(--mainBlack);
   border: none;
 }
 
@@ -46,6 +46,6 @@
 }
 
 .languageSwitcher option:hover {
-  background-color: var(--mainWhite) !important;
-  color: var(--green) !important;
+  background-color: var(--dropdown)!important;
+  color: var(--mainBlack) !important;
 }
