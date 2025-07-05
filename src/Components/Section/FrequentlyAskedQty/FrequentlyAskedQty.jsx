@@ -3,21 +3,18 @@ import styles from "./FrequentlyAskedQty.module.css";
 import Faq from "../../../Assets/Img/FAQ.svg";
 import PlusIcon from "../../../Assets/Img/PlusIcon.svg";
 import CloseIcon from "../../../Assets/Img/CloseIcon.svg";
-import {faqData} from "../../../Assets/Data/faqData"; 
+import { faqData } from "../../../Assets/Data/faqData";
 import { useTranslation } from "react-i18next";
 
-
-
 const FrequentlyAskedQty = () => {
+  const { t, i18n } = useTranslation();
 
-    const { t, i18n } = useTranslation();
-  
-    useEffect(() => {
-      const savedLang = localStorage.getItem("appLang");
-      if (savedLang && i18n.language !== savedLang) {
-        i18n.changeLanguage(savedLang);
-      }
-    }, [i18n]);
+  useEffect(() => {
+    const savedLang = localStorage.getItem("appLang");
+    if (savedLang && i18n.language !== savedLang) {
+      i18n.changeLanguage(savedLang);
+    }
+  }, [i18n]);
 
   const [activeIndex, setActiveIndex] = useState(null);
 
@@ -39,7 +36,7 @@ const FrequentlyAskedQty = () => {
               className={styles.faqQuestion}
               onClick={() => toggleAnswer(index)}
             >
-              {item.question}
+              {t(item.question)}
               <span className={styles.faqIcon}>
                 <img
                   src={activeIndex === index ? CloseIcon : PlusIcon}
@@ -50,7 +47,7 @@ const FrequentlyAskedQty = () => {
             </div>
             {activeIndex === index && (
               <div className={styles.faqAnswer}>
-                <span>{item.answer}</span>
+                <span>{t(item.answer)}</span>
               </div>
             )}
           </div>

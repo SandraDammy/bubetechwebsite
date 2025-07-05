@@ -1,32 +1,33 @@
 export const faqData = [
   {
-    question: "Where can I watch?",
+    question: "How much does BubeTech cost?",
     answer:
-      "Nibh quisque suscipit fermentum netus nulla cras porttitor euismod nulla. Orci, dictumst nec aliquet id ullamcorper venenatis.",
+      "Contact us for current pricing. The more farmers in your community who join, the better the rates for everyone.",
+  },
+
+  {
+    question: "Do I need a smartphone to use BubeTech?",
+    answer:
+      "No! BubeTech works on any phone - basic phones, smartphones, or feature phones. Youth ambassadors handle registration using our mobile app.",
   },
   {
-    question: "Mauris id nibh eu fermentum mattis purus?",
+    question: "How do I register for BubeTech?",
     answer:
-      "Nibh quisque suscipit fermentum netus nulla cras porttitor euismod nulla. Orci, dictumst nec aliquet id ullamcorper venenatis.",
+      "Wait for youth ambassadors from your association to visit your area. They'll register you using our mobile app and help you get your digital ID card.",
   },
   {
-    question: "Eros imperdiet rhoncus?",
+    question: "What languages do you support?",
     answer:
-      "Nibh quisque suscipit fermentum netus nulla cras porttitor euismod nulla. Orci, dictumst nec aliquet id ullamcorper venenatis.",
+      "We speak Fulfulde, Hausa, Yoruba, Igbo, English, French, Portuguese, and many other West African languages.",
   },
   {
-    question: "Fames imperdiet quam fermentum?",
+    question: "Why does BubeTech start with pastoralists?",
     answer:
-      "Nibh quisque suscipit fermentum netus nulla cras porttitor euismod nulla. Orci, dictumst nec aliquet id ullamcorper venenatis.",
+      "Pastoralists face the most challenging isolation and have strong organizational structures that enable effective implementation. Success here creates the foundation for serving all agricultural communities.",
   },
   {
-    question: "Varius vitae, convallis amet lacus sit aliquet nibh?",
+    question: "Why work through associations instead of directly with farmers?",
     answer:
-      "Nibh quisque suscipit fermentum netus nulla cras porttitor euismod nulla. Orci, dictumst nec aliquet id ullamcorper venenatis.",
-  },
-  {
-    question: "Tortor nisl pellentesque sit quis orci dolor?",
-    answer:
-      "Nibh quisque suscipit fermentum netus nulla cras porttitor euismod nulla. Orci, dictumst nec aliquet id ullamcorper venenatis.",
+      "Associations have established trust and know their members best. We strengthen associations so they can provide real value to farmers while respecting traditional community structures.",
   },
 ];

@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 3rem 6rem;
+  padding: 5rem 6rem 3rem 6rem;
   width: 100%;
   overflow-x: hidden;
   gap: 5rem;
@@ -62,46 +62,57 @@
   letter-spacing: -0.1px;
   color: var(--mainBlack);
 }
-@media(max-width :768px){
-    .ourStory{
-      display: flex;
-      padding: 2rem;
-      text-align: center;
-      flex-direction: column-reverse;
-
-    }
-    .imgContainer {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-
-    }
-  
-    .imgContainer img {
-        width: 100%;
-        height: auto;
-        border-radius: 1.25rem;
-        object-fit: cover;
-    }
-
-    .frameLogo {
-        width: 80px;
-        height: auto;
-        object-fit: contain;
-    }
-    .txtContainer{
-      align-items: left;
-      text-align: left;
-    }
-    .txtContainer h1{
-      font-size:20px;
-    }
-    .txtContainer p{
-      font-size:18px;
-    }
-    span{
-      font-size:20px;
-    }
+@media (max-width: 480px) {
+  .ourStory {
+    display: flex;
+    padding: 5rem 2rem 2rem 2rem;
+    text-align: center;
+    flex-direction: column-reverse;
+    gap: 2rem;
   }
-  
+  .imgContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .imgContainer img {
+    width: 100%;
+    height: auto;
+    border-radius: 1.25rem;
+    object-fit: cover;
+  }
+
+  .frameLogo {
+    width: 80px;
+    height: auto;
+    object-fit: contain;
+  }
+  .txtContainer {
+    align-items: left;
+    text-align: left;
+  }
+  .txtContainer h1 {
+    font-family: Poppins;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 100%;
+    letter-spacing: 0%;
+  }
+  .txtContainer p {
+    font-family: Poppins;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: -0.1px;
+    font-size: 0.75rem;
+  }
+  .txtContainer span {
+    font-size: 0.75rem;
+    font-family: Poppins;
+    font-weight: 500;
+    font-style: Medium;
+    line-height: 16px;
+    letter-spacing: -0.1px;
+  }
+}

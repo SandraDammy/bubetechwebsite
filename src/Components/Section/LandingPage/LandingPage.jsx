@@ -39,23 +39,28 @@ const LandingPage = () => {
           <p>{t("When Farmers Connect, Communities Prosper")}</p>
           <span className={styles.line}></span>
         </div>
+        <div className={styles.heading}>
+          <h1 className={styles.title}>{t("Turning Farm Isolation")}</h1>
+          <h1 className={styles.title}>{t("into Shared Success")}</h1>
+        </div>
 
-        <h1 className={styles.title}>
-          {t("Turning Farm Isolation")} <br />
-          {t("into Shared Success")}
-        </h1>
-
-        <p className={styles.desc}>
-          {t(
-            "We connect crop farmers, herders, and fishermen to expert guidance, quality resources, and fair prices in local languages, even without internet."
-          )}
-        </p>
+        <div className={styles.headingDesc}>
+          <p className={styles.desc}>
+            {t("We connect crop farmers, herders, and fishermen to expert ")}
+          </p>
+          <p className={styles.desc}>
+            {t("guidance, quality resources, and fair prices in ")}
+          </p>
+          <p className={styles.desc}>
+            {t("local languages, even without internet.")}
+          </p>
+        </div>
 
         <div className={styles.btnJoin}>
           <Button
             title={t("Start Connecting")}
             btnEventHandler={btnEventHandler}
-            className="btnGreen"
+            className="btnGreenBig"
           />
         </div>
       </div>

@@ -12,14 +12,14 @@ import { useTranslation } from "react-i18next";
 import LangSelector from "../LangSelector/LangSelector";
 
 const Footer = () => {
-    const { t, i18n } = useTranslation();
-  
-    useEffect(() => {
-      const savedLang = localStorage.getItem("appLang");
-      if (savedLang && i18n.language !== savedLang) {
-        i18n.changeLanguage(savedLang);
-      }
-    }, [i18n]);
+  const { t, i18n } = useTranslation();
+
+  useEffect(() => {
+    const savedLang = localStorage.getItem("appLang");
+    if (savedLang && i18n.language !== savedLang) {
+      i18n.changeLanguage(savedLang);
+    }
+  }, [i18n]);
 
   const [formData, setFormData] = useState({ email: "" });
 
@@ -37,7 +37,7 @@ const Footer = () => {
     // API call goes here
   };
 
- const handleLanguageChange = (e) => {
+  const handleLanguageChange = (e) => {
     const lang = e.target.value;
     i18n.changeLanguage(lang);
     localStorage.setItem("appLang", lang); // Persist selection
@@ -48,7 +48,9 @@ const Footer = () => {
       <div className={styles.title}>
         <h2>{t("Stay Connected")}</h2>
         <p>
-          {t("Stay connected with farmer success stories, market insights, and community updates.")}
+          {t(
+            "Stay connected with farmer success stories, market insights, and community updates."
+          )}
         </p>
         <form className={styles.subscribeForm} onSubmit={btnSubscribe}>
           <input
@@ -58,6 +60,7 @@ const Footer = () => {
             onChange={handleChange}
             placeholder={t("Enter your email")}
             required
+            className={styles.emailInput}
           />
           <Button
             className="btnWhite"
@@ -73,7 +76,9 @@ const Footer = () => {
         <h2>{t("BubeTech")}</h2>
         <div className={styles.description}>
           <p>
-            {t("Building farmer-to-farmer and farmer-to-expert connections across West Africa. Traditional wisdom meets modern community networks.")}
+            {t(
+              "Building farmer-to-farmer and farmer-to-expert connections across West Africa. Traditional wisdom meets modern community networks."
+            )}
           </p>
           <p>{t("Turning Farm Isolation into Shared Success")}</p>
         </div>
@@ -166,18 +171,10 @@ const Footer = () => {
       <div className={styles.bottom}>
         <div className={styles.bottomLeft}>
           <div className={styles.section}>
-            {/* <select
-              className={styles.languageSwitcher}
-              onChange={handleLanguageChange}
-            >
-              <option value="en">English</option>
-              <option value="yo">Yoruba</option>
-              <option value="ig">Igbo</option>
-              <option value="ha">Hausa</option>
-              <option value="ff">Fulfulde</option>
-            </select> */}
-                    <LangSelector handleLanguageChange={handleLanguageChange} labelType="full"/>
-
+            <LangSelector
+              handleLanguageChange={handleLanguageChange}
+              labelType="full"
+            />
           </div>
           <div className={styles.section}>
             <span>•</span>
@@ -193,7 +190,9 @@ const Footer = () => {
           </div>
         </div>
         <div className={styles.bottomRight}>
-          <p className={styles.term}>© 2024 {t("Bubetech")}. {t("All Rights Reserved")}.</p>
+          <p className={styles.term}>
+            © 2024 {t("Bubetech")}. {t("All Rights Reserved")}.
+          </p>
         </div>
       </div>
     </footer>
@@ -201,6 +200,3 @@ const Footer = () => {
 };
 
 export default Footer;
-
-
-
