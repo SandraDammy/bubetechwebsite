@@ -28,7 +28,9 @@ const Navbar = () => {
       <nav className={styles.navbar}>
         {/* Logo */}
         <div className={styles.logoSection}>
-          <img src={logo} alt="Buben Tech Logo" className={styles.logo} />
+          <Link to="/" >
+            <img src={logo} alt="Buben Tech Logo" className={styles.logo} />
+          </Link>
         </div>
 
         <div className={menuOpen ? styles.navMenuActive : styles.navMenu}>

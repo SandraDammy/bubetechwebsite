@@ -6,9 +6,7 @@ import OurStory from "../Components/Section/OurStory/OurStory";
 import WhyChoose from "../Components/Section/WhyChoose/WhyChoose";
 import FrequentlyAskedQty from "../Components/Section/FrequentlyAskedQty/FrequentlyAskedQty";
 import ContactUs from "../Components/Section/ContactUs/ContactUs";
-// import About from "./pages/About";
-// import Contact from "./pages/Contact";
-// import NotFound from "./pages/NotFound";
+import NotFound from "../Components/Page/NotFound/NotFound";
 
 const AppRoutes = () => {
   const routes = useRoutes([
@@ -23,6 +21,8 @@ const AppRoutes = () => {
         { path: "/contact", element: <ContactUs /> },
       ],
     },
+        { path: "*", element: <NotFound /> }, 
+
   ]);
 
   return routes;
