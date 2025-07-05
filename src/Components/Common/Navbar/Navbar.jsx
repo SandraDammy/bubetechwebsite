@@ -6,6 +6,7 @@ import { useTranslation } from "react-i18next";
 import LangSelector from "../LangSelector/LangSelector";
 import HamburgerIcon from "../../../Assets/Img/Hamburger.svg";
 import CloseIcon from "../../../Assets/Img/CloseIcon.svg";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const { t, i18n } = useTranslation();
@@ -14,7 +15,7 @@ const Navbar = () => {
   const handleLanguageChange = (e) => {
     const lang = e.target.value;
     i18n.changeLanguage(lang);
-    localStorage.setItem("appLang", lang); // Persist selection
+    localStorage.setItem("appLang", lang);
   };
 
   useEffect(() => {
@@ -25,54 +26,73 @@ const Navbar = () => {
   return (
     <header className={styles.header}>
       <nav className={styles.navbar}>
-        <div className={styles.navContent}>
-          {/* Logo */}
-          <div className={styles.logoSection}>
-            <img src={logo} alt="Buben Tech Logo" className={styles.logo} />
-          </div>
+        {/* Logo */}
+        <div className={styles.logoSection}>
+          <img src={logo} alt="Buben Tech Logo" className={styles.logo} />
+        </div>
 
-          {/* Hamburger icon */}
-          <div
-            className={styles.hamburger}
-            onClick={() => setMenuOpen(!menuOpen)}
-          >
-            <img
-              src={menuOpen ? CloseIcon : HamburgerIcon}
-              alt="Menu Toggle"
-              className={styles.menuIcon}
+        <div className={menuOpen ? styles.navMenuActive : styles.navMenu}>
+          <ul className={styles.navList}>
+            <li className={styles.navItem}>
+              <Link to="/" className={styles.navLink}>
+                {t("Home")}
+              </Link>
+            </li>
+            <li className={styles.navItem}>
+              <Link to="/about" className={styles.navLink}>
+                {t("About Us")}
+              </Link>
+            </li>
+            <li className={styles.navItem}>
+              <Link to="/feature" className={styles.navLink}>
+                {t("features")}
+              </Link>
+            </li>
+            <li className={styles.navItem}>
+              <Link to="/faqs" className={styles.navLink}>
+                {t("FAQs")}
+              </Link>
+            </li>
+            <li className={styles.navItem}>
+              <Link to="/contact" className={styles.navLink}>
+                {t("Contact Us")}
+              </Link>
+            </li>
+          </ul>
+
+          <div className={styles.navLogin}>
+            <p className={styles.login}>
+              <Link to="/login" className={styles.navLink}>
+                {t("login")}
+              </Link>
+            </p>
+            <Button
+              title={t("Start Connecting")}
+              className="btnGreen"
+              type="button"
             />
-          </div>
-
-          <div className={styles.navItems}>
-            {/* Nav Links */}
-            <ul className={`${styles.navLinks} ${menuOpen ? styles.open : ""}`}>
-              <li>{t("Home")}</li>
-              <li>{t("About Us")}</li>
-              <li>{t("features")}</li>
-              <li>{t("FAQs")}</li>
-              <li>{t("Contact Us")}</li>
-            </ul>
-
-            {/* Desktop Login & CTA */}
-            <div className={styles.loginSection}>
-              <p className={styles.login}>{t("login")}</p>
-              <Button
-                title={t("Start Connecting")}
-                className="btnGreen"
-                type="button"
-              />
-            </div>
           </div>
         </div>
 
-        {/* Language Selector */}
-        <LangSelector handleLanguageChange={handleLanguageChange} labelType="short"/>
+        <LangSelector
+          handleLanguageChange={handleLanguageChange}
+          labelType="short"
+        />
+
+        {/* Hamburger icon */}
+        <div
+          className={styles.hamburger}
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          <img
+            src={menuOpen ? CloseIcon : HamburgerIcon}
+            alt="Menu Toggle"
+            className={styles.menuIcon}
+          />
+        </div>
       </nav>
     </header>
   );
 };
 
 export default Navbar;
-
-
-

@@ -6,14 +6,14 @@ import AppleStore from "../../../Assets/Img/Apple.svg";
 import { useTranslation } from "react-i18next";
 
 const PlayStore = () => {
-    const { t, i18n } = useTranslation();
-  
-    useEffect(() => {
-      const savedLang = localStorage.getItem("appLang");
-      if (savedLang && i18n.language !== savedLang) {
-        i18n.changeLanguage(savedLang);
-      }
-    }, [i18n]);
+  const { t, i18n } = useTranslation();
+
+  useEffect(() => {
+    const savedLang = localStorage.getItem("appLang");
+    if (savedLang && i18n.language !== savedLang) {
+      i18n.changeLanguage(savedLang);
+    }
+  }, [i18n]);
 
   return (
     <div className={styles.playStore}>
@@ -21,11 +21,13 @@ const PlayStore = () => {
         <img src={Mockup} alt="Play Store" className={styles.mockup} />
       </div>
       <div className={styles.txtContainer}>
-        <h1>
-          {t("We are bridging the gap")} <br/>{t("between farmers and")}  <br/>{t("future of agriculture")}
-        </h1>
+        <h1>{t("We are bridging the gap")}</h1>
+        <h1>{t("between farmers and")}</h1>
+        <h1>{t("future of agriculture")}</h1>
         <p>
-         {t("Helping Farmers Adapt, Grow, and Succeed Through Tailored Solutions.")}
+          {t(
+            "Helping Farmers Adapt, Grow, and Succeed Through Tailored Solutions."
+          )}
         </p>
         <div className={styles.section}>
           <div className={styles.card}>
