@@ -54,7 +54,6 @@ const ContactUs = () => {
               onChange={handleChange}
               required
               placeholder={t("Enter your name")}
-              className={styles.contactInput}
             />
           </div>
           <div className={styles.formGroup}>

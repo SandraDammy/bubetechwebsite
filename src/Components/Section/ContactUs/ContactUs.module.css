@@ -132,57 +132,20 @@ textarea {
 
 @media (max-width: 480px) {
   .contactUs {
-    padding: 1.5rem 1rem;
+    display: flex;
+    flex-direction: column-reverse;
+      padding: 2rem;
   }
-
   .formContainer {
-    gap: 2rem;
+    width: 100%;
+    margin-top: 3rem;
   }
-
   .header {
-    gap: 0.5rem;
-  }
-
-  .title {
-    font-size: 1.125rem;
-  }
-
-  .details {
-    font-size: 0.9rem;
-  }
-
-  .formGroup label,
-  input,
-  textarea {
-    font-size: 0.9rem;
-  }
-
-  .submit {
+    width: 100%;
     justify-content: center;
   }
-
-  .image {
-    width: 240px;
+  
+  form {
+    width: 100%;
   }
-}
-@media( max-width:768px){
-    .contactUs{
-      display: flex;
-      flex-direction: column-reverse;
-      padding: auto;
-    
-    }
-    .formContainer{
-      width: 100%;
-    }
-    .header{
-      width: 360px;
-      margin: 0 auto;
-      justify-content: center;
-    }
-    input,textarea{
-      width:125%;
-    }
-
-
 }

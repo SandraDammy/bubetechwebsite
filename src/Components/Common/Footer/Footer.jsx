@@ -171,16 +171,6 @@ const Footer = () => {
       <div className={styles.bottom}>
         <div className={styles.bottomLeft}>
           <div className={styles.section}>
-            {/* <select
-              className={styles.languageSwitcher}
-              onChange={handleLanguageChange}
-            >
-              <option value="en">English</option>
-              <option value="yo">Yoruba</option>
-              <option value="ig">Igbo</option>
-              <option value="ha">Hausa</option>
-              <option value="ff">Fulfulde</option>
-            </select> */}
             <LangSelector
               handleLanguageChange={handleLanguageChange}
               labelType="full"
