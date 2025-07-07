@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 4rem 0rem 4rem 6rem;
+  padding: 2rem 0rem 4rem 6rem;
   width: 100%;
   overflow-x: hidden;
   gap: 2rem;
@@ -50,7 +50,7 @@
   color: var(--mainBlack);
   font-family: Poppins;
   font-weight: 500;
-  font-size: 3.25rem;
+  font-size: 3.1rem;
   line-height: 100%;
   letter-spacing: 0%;
 }
@@ -58,14 +58,14 @@
 .headingDesc {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.75rem;
   flex-wrap: wrap;
 }
 
 .desc {
   font-family: Poppins;
   font-weight: 500;
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   line-height: 100%;
   letter-spacing: 0%;
   color: var(--subBlack);
