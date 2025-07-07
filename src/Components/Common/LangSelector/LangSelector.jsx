@@ -22,20 +22,21 @@ const LangSelector = ({ handleLanguageChange, labelType = "short" }) => {
       border: "none",
       boxShadow: "none",
       cursor: "pointer",
-      width: labelType === "short" ? "90px" : "150px",
+      width: labelType === "short" ? "5.563rem" : "7.5rem",
     }),
     menu: (base) => ({
       ...base,
       backgroundColor: "var(--mainWhite);",
       borderRadius: "0.5rem",
-      marginTop: "0.25rem",
+      marginTop: "0rem",
       zIndex: 9999,
     }),
     option: (base, { isFocused, isSelected }) => ({
       ...base,
-      backgroundColor: isFocused ? "var(--dropdown);" : "var(--mainBlack)",
-      color: isFocused ? "var(--mainBlack)" : "var(--mainWhite);",
+      backgroundColor: isFocused ? "var(--dropdown);" : "var(--mainWhite)",
+      color: isFocused ? "var(--mainBlack)" :  "var(--mainBlack);",
       cursor: "pointer",
+      
     }),
     singleValue: (base) => ({
       ...base,
