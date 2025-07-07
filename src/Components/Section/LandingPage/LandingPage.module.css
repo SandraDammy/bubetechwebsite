@@ -76,47 +76,68 @@
 }
 
 .imgContainer {
-  width: 50%;
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-}
-
-.mainBorder {
-  width: 30rem;
-  height: 30rem;
-  border-radius: 50%;
-  border: 1.5rem solid var(--mainCircle);
-  /* Green - 61BF08 - opacity 20 */
   display: flex;
   justify-content: center;
   align-items: center;
-  background: var(--subCircle);
-  /* background-color: #463E8D ; 463E8D - opacity 10% */
+  flex: 1;
+  margin-left: 15rem;
+}
+
+.mainBorder {
   position: relative;
+  width: 650px;
+  height: 650px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-color: rgba(70, 62, 141, 0.1);
+}
+
+.smallCircle {
+  position: absolute;
+  width: 580px;
+  height: 580px;
+  background-color: rgba(97, 191, 8, 0.2);
+
+  border-radius: 50%;
+  top: 45px;
+  left: 71%;
+  transform: translateX(-75%);
+}
+
+.imgCircle {
+  position: relative;
+  width: 510px;
+  height: 510px;
+  border: 0;
+  border-radius: 50%;
+  top: 45px;
+  left: 70%;
+  transform: translateX(-75%);
   overflow: hidden;
 }
 
 .image {
-  width: 100%;
-  height: auto;
-  border-radius: 50%;
-  border: 1.5rem solid var(--border);
-  object-fit: cover;
   position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
   opacity: 0;
-  transition: opacity 1s ease-in-out;
+  transition: opacity 0.8s ease-in-out;
 }
 
 .active {
   opacity: 1;
-  position: relative;
   z-index: 2;
 }
 
 .hidden {
   opacity: 0;
-  z-index: 1;
 }
 
 /* Responsive Design */
@@ -124,7 +145,7 @@
   .landingPage {
     display: flex;
     flex-direction: column;
-    padding: 2rem;
+    padding: 2rem 0rem;
     text-align: center;
   }
 
@@ -133,6 +154,7 @@
     align-items: center;
     justify-content: center;
     width: 100%;
+    padding: 0rem 2rem;
   }
 
   .subHeading {
@@ -156,11 +178,28 @@
 
   .imgContainer {
     width: 100%;
+    margin: 0;
   }
 
-  /* .circularBorder {
-    width: 250px;
-    height: 250px;
-    margin-top: 2rem;
-  } */
+  .mainBorder {
+    width: 450px;
+    height: 450px;
+    background-color: rgba(70, 62, 141, 0.1);
+  }
+
+  .smallCircle {
+    width: 400px;
+    height: 400px;
+    top: 35px;
+    left: 71%;
+    transform: translateX(-75%);
+  }
+
+  .imgCircle {
+    width: 350px;
+    height: 350px;
+    top: 35px;
+    left: 70%;
+    transform: translateX(-75%);
+  }
 }
