@@ -92,15 +92,14 @@
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  background-color: rgba(70, 62, 141, 0.1);
+  background-color: var(--mainCircle);
 }
 
 .smallCircle {
   position: absolute;
   width: 580px;
   height: 580px;
-  background-color: rgba(97, 191, 8, 0.2);
-
+  background-color: var(--subCircle);
   border-radius: 50%;
   top: 45px;
   left: 71%;

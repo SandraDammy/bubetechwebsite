@@ -13,9 +13,8 @@
   --subBlack: #565656;
   --inputOutline: #b3b4b9;
   --appStore: #171717;
-  --mainCircle: #463E8D1A;
-  --subCircle: #61BF0833;
-  --border: #A4BD174D;
+  --mainCircle: rgba(70, 62, 141, 0.1);
+  --subCircle: rgba(97, 191, 8, 0.2);
   --faqLine: #E9E9E9;
   --dropdown: #EDFFDE;
   --z-fixed: 100;
