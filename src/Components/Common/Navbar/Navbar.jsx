@@ -28,58 +28,60 @@ const Navbar = () => {
       <nav className={styles.navbar}>
         {/* Logo */}
         <div className={styles.logoSection}>
-          <Link to="/" >
+          <Link to="/">
             <img src={logo} alt="Buben Tech Logo" className={styles.logo} />
           </Link>
         </div>
 
-        <div className={menuOpen ? styles.navMenuActive : styles.navMenu}>
-          <ul className={styles.navList}>
-            <li className={styles.navItem}>
-              <Link to="/" className={styles.navLink}>
-                {t("Home")}
-              </Link>
-            </li>
-            <li className={styles.navItem}>
-              <Link to="/about" className={styles.navLink}>
-                {t("About Us")}
-              </Link>
-            </li>
-            <li className={styles.navItem}>
-              <Link to="/feature" className={styles.navLink}>
-                {t("features")}
-              </Link>
-            </li>
-            <li className={styles.navItem}>
-              <Link to="/faqs" className={styles.navLink}>
-                {t("FAQs")}
-              </Link>
-            </li>
-            <li className={styles.navItem}>
-              <Link to="/contact" className={styles.navLink}>
-                {t("Contact Us")}
-              </Link>
-            </li>
-          </ul>
+        <div className={styles.navItemLng}>
+          <div className={menuOpen ? styles.navMenuActive : styles.navMenu}>
+            <ul className={styles.navList}>
+              <li className={styles.navItem}>
+                <Link to="/" className={styles.navLink}>
+                  {t("Home")}
+                </Link>
+              </li>
+              <li className={styles.navItem}>
+                <Link to="/about" className={styles.navLink}>
+                  {t("About Us")}
+                </Link>
+              </li>
+              <li className={styles.navItem}>
+                <Link to="/feature" className={styles.navLink}>
+                  {t("features")}
+                </Link>
+              </li>
+              <li className={styles.navItem}>
+                <Link to="/faqs" className={styles.navLink}>
+                  {t("FAQs")}
+                </Link>
+              </li>
+              <li className={styles.navItem}>
+                <Link to="/contact" className={styles.navLink}>
+                  {t("Contact Us")}
+                </Link>
+              </li>
+            </ul>
 
-          <div className={styles.navLogin}>
-            <p className={styles.login}>
-              <Link to="/login" className={styles.navLink}>
-                {t("login")}
-              </Link>
-            </p>
-            <Button
-              title={t("Start Connecting")}
-              className="btnGreen"
-              type="button"
-            />
+            <div className={styles.navLogin}>
+              <p className={styles.login}>
+                <Link to="/login" className={styles.navLink}>
+                  {t("login")}
+                </Link>
+              </p>
+              <Button
+                title={t("Start Connecting")}
+                className="btnGreen"
+                type="button"
+              />
+            </div>
           </div>
-        </div>
 
-        <LangSelector
-          handleLanguageChange={handleLanguageChange}
-          labelType="short"
-        />
+          <LangSelector
+            handleLanguageChange={handleLanguageChange}
+            labelType="short"
+          />
+        </div>
 
         {/* Hamburger icon */}
         <div
