@@ -5,7 +5,7 @@ import Footer from "../Common/Footer/Footer";
 
 const ProjectLayout = () => {
   return (
-    <div className="landingPage">
+    <div className="layoutPage">
       <header className="header">
         <Navbar />
       </header>

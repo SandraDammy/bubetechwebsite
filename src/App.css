@@ -18,6 +18,14 @@
   --faqLine: #E9E9E9;
   --dropdown: #EDFFDE;
   --z-fixed: 100;
+    --gradient: linear-gradient(
+    to right,
+    #e4ffb3,
+    #edffde,
+    #f9ffd8,
+    #e5fff0,
+    #ffffff
+  );
 }
 
 * {
@@ -29,9 +37,19 @@
 body {
   margin: 0;
   font-family: "Poppins", sans-serif;
-  /* background-color: var(--body); */
   background: var(--gradient);
   height: 100%;
   width: 100%;
   color: var(--mainBlack);
+  overflow-x: hidden
+}
+
+.layoutPage {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.header {
+  width: 100%;
 }

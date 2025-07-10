@@ -1,7 +1,7 @@
 .whyChoose {
-  display: flex;
+  /* display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: center; */
   padding: 3rem 6rem;
   width: 100%;
   overflow-x: hidden;
@@ -12,16 +12,16 @@
 .container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
   gap: 2rem;
-  padding: 2rem 0;
+  /* padding: 2rem 0; */
 }
 
 .titleContainer {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
   gap: 2rem;
 }
@@ -37,25 +37,32 @@
 
 .cardContainer {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  /* grid-template-columns: repeat(3, 1fr); */
+  grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
   grid-gap: 1.5rem;
   width: 100%;
   margin-top: 2rem;
 }
 
 .section {
-  display: flex;
+  /* display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  width: 100%;
+  width: 100%; */
+  display: contents;
 }
 
 .card {
-  border-radius: 1.25rem;
+  /* border-radius: 1.25rem;
   width: 664px;
   height: 200px;
   padding: 1.5rem 1rem;
+  background-color: var(--mainWhite); */
+    border-radius: 1.25rem;
+  width: 100%;
+  padding: 1.5rem;
   background-color: var(--mainWhite);
+  box-sizing: border-box;
 }
 
 .cardIcon {
