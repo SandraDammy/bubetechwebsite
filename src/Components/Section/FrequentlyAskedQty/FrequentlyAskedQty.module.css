@@ -95,13 +95,13 @@
     align-items: center;
     width: 100%;
     gap: 2rem;
-    padding: 5rem 2rem;
+    padding: 3rem 2rem;
   }
   .imageContainer {
     width: 100%;
   }
   .imageContainer img {
-    width: 120%;
+    width: 160%;
     height: auto;
   }
   .faqLogo {
@@ -114,10 +114,10 @@
     width: 100%;
     padding: 0;
     align-self: flex-start;
-    margin: 5rem 0rem;
+    margin: 3rem 0rem;
   }
   .faqSection h2 {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
   }
 
   .faqItem {

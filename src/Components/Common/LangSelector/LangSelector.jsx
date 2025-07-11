@@ -40,14 +40,12 @@ const LangSelector = ({ handleLanguageChange, labelType = "short" }) => {
     }),
     singleValue: (base) => ({
       ...base,
-      // color: "var(--mainBlack)",
       
     color: labelType === "full" ? "var(--mainWhite)" : "var(--mainBlack)",
       textTransform: labelType === "short" ? "uppercase" : "capitalize",
     }),
     dropdownIndicator: (base) => ({
       ...base,
-      // color: "var(--mainBlack)",
           color: labelType === "full" ? "var(--mainWhite)" : "var(--mainBlack)",
 
     }),

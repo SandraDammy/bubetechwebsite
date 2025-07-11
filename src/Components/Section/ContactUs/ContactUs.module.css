@@ -134,7 +134,7 @@ textarea {
   .contactUs {
     display: flex;
     flex-direction: column-reverse;
-      padding: 2rem;
+      padding: 2rem ;
   }
   .formContainer {
     width: 100%;
@@ -148,4 +148,10 @@ textarea {
   form {
     width: 100%;
   }
+
+  .imageContainer{
+    width: 200px;
+    height: 350px;
+  }
+
 }
