@@ -144,7 +144,7 @@
   .landingPage {
     display: flex;
     flex-direction: column;
-    padding: 2rem 0rem;
+    padding: 0.5rem 0rem;
     text-align: center;
   }
 
@@ -158,47 +158,58 @@
 
   .subHeading {
     width: 100%;
+    gap: 0.3rem;
   }
   .subHeading p {
-    font-size: 0.9rem;
+    font-size: 0.75rem;
+    width: 100%;
+    letter-spacing: 0rem;
   }
 
   .line {
-    width: 2rem;
+    /* width: 2rem; */
+    width: 50%;
   }
 
+  .heading{
+    gap: 0.5rem;
+  }
   .title {
-    font-size: 2rem;
+    font-size: 1.7rem;
   }
-
+.headingDesc {
+  gap: 0.5rem;
+}
   .desc {
-    font-size: 0.75rem;
+    font-size: 0.65rem;
   }
 
   .imgContainer {
     width: 100%;
     margin: 0;
+    margin-bottom: 2rem;
   }
 
   .mainBorder {
-    width: 450px;
-    height: 450px;
+    width:395px;
+    height: 375px;
     background-color: rgba(70, 62, 141, 0.1);
   }
 
   .smallCircle {
-    width: 400px;
-    height: 400px;
+    width: 335px;
+    height: 325px;
     top: 35px;
     left: 71%;
     transform: translateX(-75%);
   }
 
   .imgCircle {
-    width: 350px;
-    height: 350px;
+    width: 277px;
+    height: 277px;
     top: 35px;
-    left: 70%;
+    left: 68.5%;
     transform: translateX(-75%);
   }
 }
+
