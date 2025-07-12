@@ -80,6 +80,7 @@ const Navbar = () => {
           <LangSelector
             handleLanguageChange={handleLanguageChange}
             labelType="short"
+            placement="top"
           />
         </div>
 
