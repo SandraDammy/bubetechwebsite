@@ -122,3 +122,18 @@
   color: var(--green);
   border: 1px solid var(--green);
 }
+
+@media (max-width: 480px) {
+
+  .btnGreenBig {
+      width:10.313rem;
+  height: 3rem;
+  font-size: 1rem;
+}
+
+.btnMsg {
+  width: 7.25rem;
+  height: 2.5rem;
+  font-size: 0.75rem;
+  }
+}
