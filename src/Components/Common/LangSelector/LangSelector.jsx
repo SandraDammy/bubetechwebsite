@@ -62,6 +62,7 @@ const LangSelector = ({ handleLanguageChange, labelType = "short" }) => {
       options={options}
       styles={customStyles}
       isSearchable={false}
+      menuPlacement={labelType === "full" ? "top" : "bottom"} 
     />
   );
 };

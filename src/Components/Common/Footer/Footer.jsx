@@ -174,6 +174,7 @@ const Footer = () => {
             <LangSelector
               handleLanguageChange={handleLanguageChange}
               labelType="full"
+              placement = "bottom"
             />
           </div>
           <div className={styles.section}>
