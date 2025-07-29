@@ -88,5 +88,12 @@
   "Wait for youth ambassadors from your association to visit your area. They'll register you using our mobile app and help you get your digital ID card.": "Duro fun awọn ikọwe ọdọ lati ẹgbẹ yin ki wọn wa si agbegbe yin. Wọn yoo forukọ yin silẹ pẹlu ohun elo wa ati ran yin lọwọ lati gba kaadi idanimọ dijitali yin.",
   "We speak Fulfulde, Hausa, Yoruba, Igbo, English, French, Portuguese, and many other West African languages.": "A n sọ Fulfulde, Hausa, Yoruba, Igbo, Gẹẹsi, Faranse, Pọtugi, ati ọpọlọpọ awọn ede Afirika Iwọ-Oorun miiran.",
   "Pastoralists face the most challenging isolation and have strong organizational structures that enable effective implementation. Success here creates the foundation for serving all agricultural communities.": "Awọn darandaran n koju iṣoro isọtọ ti o lagbara julọ ati pe wọn ni eto ilana ẹgbẹ ti o lagbara ti o mu iṣẹ ṣiṣe daradara ṣeeṣe. Aṣeyọri nibi yii n ṣe ipilẹ fun ṣiṣe iranṣẹ fun gbogbo awọn agbegbe ogbin.",
-  "Associations have established trust and know their members best. We strengthen associations so they can provide real value to farmers while respecting traditional community structures.": "Awọn ẹgbẹ ti fi idi igbẹkẹle mulẹ ati pe wọn mọ awọn ọmọ ẹgbẹ wọn daradara julọ. A n mu awọn ẹgbẹ lagbara ki wọn le pese iye pataki fun awọn agbe lakoko bọwọ fun awọn eto agbegbe ibile."
+  "Associations have established trust and know their members best. We strengthen associations so they can provide real value to farmers while respecting traditional community structures.": "Awọn ẹgbẹ ti fi idi igbẹkẹle mulẹ ati pe wọn mọ awọn ọmọ ẹgbẹ wọn daradara julọ. A n mu awọn ẹgbẹ lagbara ki wọn le pese iye pataki fun awọn agbe lakoko bọwọ fun awọn eto agbegbe ibile.",
+
+   "step": {
+    "personalInfo": "Alaye ti ara ẹni",
+    "identification": "Idanimọ ati Eranko",
+    "challenges": "Awọn italaya ati Awọn iṣẹ",
+    "education": "Ẹkọ ati Iṣẹ miiran"
+  }
 }

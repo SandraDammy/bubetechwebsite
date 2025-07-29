@@ -89,5 +89,12 @@
   "Wait for youth ambassadors from your association to visit your area. They'll register you using our mobile app and help you get your digital ID card.": "Masɗo ceeɓɓe ɓiɗɗo ummoraade e jekketeeji maa ɓe njahata leyɗeele maa. Ɓe maa nayloto ɗaa huutoraade jaaɓnirɗe amen tee wallit-maa heɓde karte tokkannde dijital.",
   "We speak Fulfulde, Hausa, Yoruba, Igbo, English, French, Portuguese, and many other West African languages.": "Min haalata Fulfulde, Hausa, Yoruba, Igbo, Engeleere, Farayseere, Purtugeeje, e ɗemɗe Aafirik Hirnaange goɗɗe.",
   "Pastoralists face the most challenging isolation and have strong organizational structures that enable effective implementation. Success here creates the foundation for serving all agricultural communities.": "Mbororo'en ina anndaa faɗɗa gonɗingol ina mari e nyaamo e njuɓɓudi golle ɗuuɗɓe ngonɗi waɗaaki gollaade no haani. Moƴƴugo ɗoo ina mahaaki dundaaku ngam wallude poti leñol-laamu gollaaɗo.",
-  "Associations have established trust and know their members best. We strengthen associations so they can provide real value to farmers while respecting traditional community structures.": "Jekketeeji njuurtii jamiinu tee ɓe jeyi sanne memɓe maɓɓe. Min njaafoɗoo jekketeeji ngam ɓe waɗde moƴƴugol ngam gollɓe tee eeltinoo miijo leñol-laamu gooɗɗo."
+  "Associations have established trust and know their members best. We strengthen associations so they can provide real value to farmers while respecting traditional community structures.": "Jekketeeji njuurtii jamiinu tee ɓe jeyi sanne memɓe maɓɓe. Min njaafoɗoo jekketeeji ngam ɓe waɗde moƴƴugol ngam gollɓe tee eeltinoo miijo leñol-laamu gooɗɗo.",
+
+    "step": {
+    "personalInfo": "Bayaan Fayi",
+    "identification": "Ngusum e Jeyaan Na’i",
+    "challenges": "Cakkaaji e Ndoggol Jeyaaɗe",
+    "education": "Jangirde e Hooreyanke"
+  }
 }

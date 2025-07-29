@@ -91,6 +91,13 @@
   "Wait for youth ambassadors from your association to visit your area. They'll register you using our mobile app and help you get your digital ID card.":"Chere ndị ntorobịa ndị nnọchite anya si n'òtù gị ka ha bịa n'ógbè gị. Ha ga-edebanye aha gị site na ngwa anyị ma nyere gị aka inweta kaadị njirimara dijitalụ gị.",
   "We speak Fulfulde, Hausa, Yoruba, Igbo, English, French, Portuguese, and many other West African languages.":"Anyị na-asụ Fulfulde, Hausa, Yoruba, Igbo, Bekee, French, Portuguese, na ọtụtụ asụsụ ndị West Africa ọzọ.",
   "Pastoralists face the most challenging isolation and have strong organizational structures that enable effective implementation. Success here creates the foundation for serving all agricultural communities.":"Ndị na-azụ anụ na-eche ihe ike nkewapụ kacha sie ike ma nwee usoro nhazi ọha mmadụ siri ike nke na-eme ka mmejuputa iwu dị mma. Ihe ịga nke ọma ebe a na-ewulite ntọala maka ije ozi obodo niile na-arụ ọrụ ugbo.",
-   "Associations have established trust and know their members best. We strengthen associations so they can provide real value to farmers while respecting traditional community structures.":"Òtù ndị ahụ eguzobela ntụkwasị obi ma marakwa ndị so na ha nke ọma. Anyị na-eme ka òtù ndị ahụ sie ike ka ha nwee ike inye ndị ọrụ ugbo uru dị mkpa ebe ha na-asọpụrụ usoro obodo omenala."
+   "Associations have established trust and know their members best. We strengthen associations so they can provide real value to farmers while respecting traditional community structures.":"Òtù ndị ahụ eguzobela ntụkwasị obi ma marakwa ndị so na ha nke ọma. Anyị na-eme ka òtù ndị ahụ sie ike ka ha nwee ike inye ndị ọrụ ugbo uru dị mkpa ebe ha na-asọpụrụ usoro obodo omenala.",
+
+     "step": {
+    "personalInfo": "Ozi Onwe Onye",
+    "identification": "Nchọpụta & Inwe Ụmụ anụmanụ",
+    "challenges": "Ihe isi ike & Ịnweta Ọrụ",
+    "education": "Ụmụakwụkwọ & Ọrụ"
+  }
 
 }

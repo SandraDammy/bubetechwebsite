@@ -68,8 +68,6 @@
   "App Store": "App Store",
 
   "Frequently Asked Questions": "Frequently Asked Questions",
-  "": "",
-  "": "",
 
   "Why Choose Bubetech": "Why Choose Bubetech",
   "Fair Market Prices": "Fair Market Prices",
@@ -93,6 +91,13 @@
   "Wait for youth ambassadors from your association to visit your area. They'll register you using our mobile app and help you get your digital ID card.": "Wait for youth ambassadors from your association to visit your area. They'll register you using our mobile app and help you get your digital ID card.",
   "We speak Fulfulde, Hausa, Yoruba, Igbo, English, French, Portuguese, and many other West African languages.": "We speak Fulfulde, Hausa, Yoruba, Igbo, English, French, Portuguese, and many other West African languages.",
   "Pastoralists face the most challenging isolation and have strong organizational structures that enable effective implementation. Success here creates the foundation for serving all agricultural communities.": "Pastoralists face the most challenging isolation and have strong organizational structures that enable effective implementation. Success here creates the foundation for serving all agricultural communities.",
-  "Associations have established trust and know their members best. We strengthen associations so they can provide real value to farmers while respecting traditional community structures.": "Associations have established trust and know their members best. We strengthen associations so they can provide real value to farmers while respecting traditional community structures."
+  "Associations have established trust and know their members best. We strengthen associations so they can provide real value to farmers while respecting traditional community structures.": "Associations have established trust and know their members best. We strengthen associations so they can provide real value to farmers while respecting traditional community structures.",
 
+
+    "step": {
+    "personalInfo": "Personal Information",
+    "identification": "Identification & Livestock",
+    "challenges": "Challenges & Services",
+    "education": "Education & Other Occupation"
+  }
 }
