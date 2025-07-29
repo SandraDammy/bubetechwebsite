@@ -4,54 +4,72 @@ import IdentificationLivestock from "../../Section/Form/IdentificationLivestock"
 import ChallengesServices from "../../Section/Form/ChallengesServices";
 import EducationOccupation from "../../Section/Form/EducationOccupation";
 import PersonalInfo from "../../Section/Form/PersonalInfo";
+import { useTranslation } from "react-i18next";
 
 const StartConnecting = () => {
   const [step, setStep] = useState(1);
   const [formValues, setFormValues] = useState({});
+  const { t } = useTranslation();
 
   const subtitleMap = {
-    1: "Personal Information",
-    2: "Identification & Livestock",
-    3: "Challenges & Services",
-    4: "Education & Other Occupation",
+    1: t("step.personalInfo"),
+    2: t("step.identification"),
+    3: t("step.challenges"),
+    4: t("step.education"),
   };
 
-  const handleEventNext = (data = {}) => {
-    setFormValues((prevValues) => ({
-      ...prevValues,
+  const handleNext = (data = {}) => {
+    setFormValues((prev) => ({
+      ...prev,
       ...data,
     }));
-    const nextStep = step + 1;
-    setStep(nextStep);
+    setStep((prev) => Math.min(prev + 1, 4));
   };
 
-  const handleEventPrevious = () => {
-    const prevStep = step - 1;
-    if (prevStep >= 1) setStep(prevStep);
+  const handlePrevious = () => {
+    setStep((prev) => Math.max(prev - 1, 1));
+  };
+
+  const handleSubmit = (data = {}) => {
+    const finalData = {
+      ...formValues,
+      ...data,
+    };
+    console.log("Submitting form with values:", finalData);
+    // Submit logic here (e.g., API call)
   };
 
   const renderStep = () => {
     switch (step) {
       case 1:
         return (
-          <PersonalInfo onNext={handleEventNext} onPrev={handleEventPrevious} />
+          <PersonalInfo
+            onNext={handleNext}
+            onPrev={() => window.location.href = "/startconnect"} // or any route you want
+          />
         );
       case 2:
         return (
           <IdentificationLivestock
-            onNext={handleEventNext}
-            onPrev={handleEventPrevious}
+            onNext={handleNext}
+            onPrev={handlePrevious}
           />
         );
       case 3:
         return (
           <ChallengesServices
-            onNext={handleEventNext}
-            onPrev={handleEventPrevious}
+            onNext={handleNext}
+            onPrev={handlePrevious}
           />
         );
       case 4:
-        return <EducationOccupation formValues={formValues} />;
+        return (
+          <EducationOccupation
+            formValues={formValues}
+            onSubmit={handleSubmit}
+            onPrev={handlePrevious}
+          />
+        );
       default:
         return null;
     }
@@ -70,20 +88,12 @@ const StartConnecting = () => {
               <div key={stepNumber} className={styles.stepItem}>
                 <div
                   className={`${styles.stepCircle} ${
-                    isActive
-                      ? styles.active
-                      : isCompleted
-                      ? styles.completed
-                      : ""
+                    isActive ? styles.active : isCompleted ? styles.completed : ""
                   }`}
                 >
                   <div
                     className={`${styles.innerDot} ${
-                      isActive
-                        ? styles.active
-                        : isCompleted
-                        ? styles.completed
-                        : ""
+                      isActive ? styles.active : isCompleted ? styles.completed : ""
                     }`}
                   ></div>
                 </div>

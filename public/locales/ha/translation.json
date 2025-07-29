@@ -89,6 +89,13 @@
   "Wait for youth ambassadors from your association to visit your area. They'll register you using our mobile app and help you get your digital ID card.":"Jira matasan jakadu daga ƙungiyarku su ziyarci yankinku. Za su yi muku rajista ta amfani da manhajjar mu kuma su taimake ku samun katin shedar dijital.",
   "We speak Fulfulde, Hausa, Yoruba, Igbo, English, French, Portuguese, and many other West African languages.":"Muna magana da Fulfulde, Hausa, Yoruba, Igbo, Ingilishi, Faransanci, Fotugal, da sauran harsunan Afirka ta Yamma da yawa.",
   "Pastoralists face the most challenging isolation and have strong organizational structures that enable effective implementation. Success here creates the foundation for serving all agricultural communities.":"Makiyaya suna fuskantar wahalar keɓewa sosai kuma suna da tsarin ƙungiya mai ƙarfi da ke ba da damar aiwatarwa mai inganci. Nasara a nan tana gina tushe don hidimar dukkan al'ummomin noma.",
-   "Associations have established trust and know their members best. We strengthen associations so they can provide real value to farmers while respecting traditional community structures.":"Ƙungiyoyi sun kafa amana kuma sun fi sanin membobinsu. Muna ƙarfafa ƙungiyoyi domin su ba da amfani ga manoma tare da mutunta tsarin al'umma na gargajiya."
+   "Associations have established trust and know their members best. We strengthen associations so they can provide real value to farmers while respecting traditional community structures.":"Ƙungiyoyi sun kafa amana kuma sun fi sanin membobinsu. Muna ƙarfafa ƙungiyoyi domin su ba da amfani ga manoma tare da mutunta tsarin al'umma na gargajiya.",
+
+     "step": {
+    "personalInfo": "Bayanan Kai",
+    "identification": "Shaidar Kai da Mallakar Dabbobi",
+    "challenges": "Kalubale da Samun Ayyuka",
+    "education": "Ilimi da Sana'a"
+  }
 
 }

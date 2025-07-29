@@ -21,7 +21,7 @@ const Language = () => {
   const handleLanguageChange = (e) => {
     const lang = e.target.value;
     setSelectedLanguage(lang);
-    i18n.changeLanguage(lang); // <-- change language on selection
+    i18n.changeLanguage(lang); 
   };
 
   const handleSubmit = () => {

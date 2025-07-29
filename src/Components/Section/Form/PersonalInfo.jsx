@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./Form.module.css";
 import Button from "../../Common/Button/Button";
+import { useTranslation } from "react-i18next";
 
 const PersonalInfo = ({ onNext, onPrevious }) => {
   const [fullName, setFullName] = useState("");
@@ -13,6 +14,13 @@ const PersonalInfo = ({ onNext, onPrevious }) => {
   const [origin, setOrigin] = useState("");
   const [base, setBase] = useState("");
   const [position, setPosition] = useState("");
+
+  const { t, i18n } = useTranslation();
+
+  useEffect(() => {
+    const savedLang = localStorage.getItem("appLang");
+    if (savedLang) i18n.changeLanguage(savedLang);
+  }, [i18n]);
 
   const handleNext = () => {
     if (
@@ -30,6 +38,7 @@ const PersonalInfo = ({ onNext, onPrevious }) => {
       alert("Please fill all fields");
       return;
     }
+
     onNext({
       fullName,
       sex,
