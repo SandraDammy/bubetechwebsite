@@ -7,6 +7,9 @@ import WhyChoose from "../Components/Section/WhyChoose/WhyChoose";
 import FrequentlyAskedQty from "../Components/Section/FrequentlyAskedQty/FrequentlyAskedQty";
 import ContactUs from "../Components/Section/ContactUs/ContactUs";
 import NotFound from "../Components/Page/NotFound/NotFound";
+import StartConnecting from "../Components/Page/StartConnecting/StartConnecting";
+import ConnectLayout from "../Components/Layout/ConnectLayout";
+import Language from "../Components/Page/StartConnecting/Language";
 
 const AppRoutes = () => {
   const routes = useRoutes([
@@ -21,8 +24,16 @@ const AppRoutes = () => {
         { path: "/contact", element: <ContactUs /> },
       ],
     },
-        { path: "*", element: <NotFound /> }, 
 
+    {path: "/startConnecting", element: <Language />},
+    {
+      path: "/form",
+      element: <ConnectLayout />,
+      children: [{ path: "", element: <StartConnecting /> }],
+    },
+    
+    {path: "/not-found", element: <NotFound />},
+    { path: "*", element: <NotFound /> },
   ]);
 
   return routes;

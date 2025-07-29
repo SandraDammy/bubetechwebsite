@@ -1,0 +1,94 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+}
+
+.body {
+  display: flex;
+  background-color: var(--mainWhite);
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+  border-radius: 0.75rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.bodyRow {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem;
+  width: 100%;
+}
+
+.formGroup {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  text-justify: auto;
+  width: 100%;
+  gap: 0.5rem;
+}
+
+.rowLabel {
+  font-family: Poppins;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: var(--mainBlack);
+  width: 100%;
+}
+
+.readOnlyInput {
+  width: 100%;
+  font-family: Poppins;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: var(--mainBlack);
+  padding: 0.75rem;
+  font-size: 16px;
+  border: 1px solid var(--subWhite);
+  border-radius: 6px;
+  background-color: var(--form);
+  height: 3.75rem;
+}
+.gridInput {
+  width: 100%;
+  font-family: Poppins;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: var(--mainBlack);
+  padding: 0.75rem;
+  font-size: 16px;
+  border: 0.5px solid var(--formLine);
+  border-radius: 6px;
+  background-color: transparent;
+  height: 3.75rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-gap: 1rem;
+  width: 100%;
+  gap: 2rem;
+}
+
+.buttonRow {
+    display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10rem;
+  gap: 2rem;
+}
+
+

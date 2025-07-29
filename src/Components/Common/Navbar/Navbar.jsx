@@ -73,6 +73,9 @@ const Navbar = () => {
                 title={t("Start Connecting")}
                 className="btnGreen"
                 type="button"
+                onClick={() => {
+                  window.location.href = "/startConnecting";
+                }}
               />
             </div>
           </div>
