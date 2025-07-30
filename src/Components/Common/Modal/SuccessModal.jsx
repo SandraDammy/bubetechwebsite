@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./modal.module.css";
 import Success from "../../../Assets/Img/Success.svg";
+import Button from "../Button/Button";
 
 const SuccessModal = ({ title, subtitle, btnTitle, btnOnclick }) => {
   return (
@@ -12,9 +13,7 @@ const SuccessModal = ({ title, subtitle, btnTitle, btnOnclick }) => {
           <p>{subtitle}</p>
         </div>
         <div className={styles.modalBtn}>
-          <button onClick={btnOnclick} className={styles.btnSuccess}>
-            {btnTitle}
-          </button>
+          <Button title={btnTitle} className="btnNext" onClick={btnOnclick} />
         </div>
       </div>
     </div>

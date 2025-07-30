@@ -18,12 +18,12 @@
   flex-direction: column;
   justify-items: center;
   align-items: center;
-  width: 25rem;
-  height: 25rem;
-  background: var(--color-Surface-light);
+  width: 30rem;
+  height: 27rem;
+  background: var(--mainWhite);
   border-radius: 1.5rem;
   padding: 2rem;
-  gap: 2rem;
+  gap: 1rem;
 }
 .modalIcon {
   display: flex;
@@ -41,17 +41,26 @@
   align-items: center;
   text-align: center;
   width: 100%;
-  gap: 2rem;
+  gap: 1rem;
 }
 
+.bodyModel h1 {
+  font-family: Poppins;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: var(--successTxt);
+  width: 100%;
+}
 .bodyModel p {
-  color: var(--neutral-Gray-800);
-  font-family: Poppins, sans-serif;
-  font-size: 1.5rem;
-  font-style: normal;
+  color: var(--successText);
+  font-family: Poppins;
   font-weight: 400;
-  line-height: normal;
-  letter-spacing: -0.045rem;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
   width: 100%;
 }
 
@@ -59,27 +68,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.btnSuccess {
-  display: flex;
-  width: 15.625rem;
-  height: 3.5rem;
-  padding: 0.75rem 1.5rem;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
-  flex-shrink: 0;
-  border: 0;
-  border-radius: 0.5rem;
-  background-color: var(--color-primary-MP50);
-  color: var(--color-Grey-G0);
-  box-shadow: 0px -1px 0px 0px rgba(255, 255, 255, 0.05) inset;
-  font-size: 1.25rem;
-  font-family: Poppins, sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  letter-spacing: -0.0375rem;
-  cursor: pointer;
+  width: 100%;
+  margin-top: 2rem;
 }

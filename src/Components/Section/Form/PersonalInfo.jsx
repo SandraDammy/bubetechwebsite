@@ -58,7 +58,7 @@ const PersonalInfo = ({ onNext, onPrevious }) => {
       <div className={styles.body}>
         <div className={styles.bodyRow}>
           <div className={styles.formGroup}>
-            <label className={styles.rowLabel}>Form ID</label>
+            <label className={styles.rowLabel}>{t("formId")}</label>
             <input
               type="text"
               value="291FY123"
@@ -67,7 +67,7 @@ const PersonalInfo = ({ onNext, onPrevious }) => {
             />
           </div>
           <div className={styles.formGroup}>
-            <label className={styles.rowLabel}>Date</label>
+            <label className={styles.rowLabel}>{t("date")}</label>
             <input
               type="text"
               value="01-July-2025"
@@ -81,116 +81,120 @@ const PersonalInfo = ({ onNext, onPrevious }) => {
       <div className={styles.body}>
         <div className={styles.grid}>
           <div className={styles.formGroup}>
-            <label className={styles.rowLabel}>Full Name</label>
+            <label className={styles.rowLabel}>{t("fullName")}</label>
             <input
-              placeholder="Enter your full name"
+              placeholder={t("enterFullName")}
               value={fullName}
               onChange={(e) => setFullName(e.target.value)}
               className={styles.gridInput}
             />
           </div>
           <div className={styles.formGroup}>
-            <label className={styles.rowLabel}>Sex</label>
+            <label className={styles.rowLabel}>{t("sex")}</label>
             <select
               value={sex}
               onChange={(e) => setSex(e.target.value)}
               className={styles.gridInput}
             >
-              <option value="">Select</option>
-              <option value="Male">Male</option>
-              <option value="Female">Female</option>
+              <option value="">{t("select")}</option>
+              <option value="Male">{t("male")}</option>
+              <option value="Female">{t("female")}</option>
             </select>
           </div>
           <div className={styles.formGroup}>
-            <label className={styles.rowLabel}>Age</label>
+            <label className={styles.rowLabel}>{t("age")}</label>
             <input
               type="number"
-              placeholder="Enter your age"
+              placeholder={t("enterAge")}
               value={age}
               onChange={(e) => setAge(e.target.value)}
               className={styles.gridInput}
             />
           </div>
           <div className={styles.formGroup}>
-            <label className={styles.rowLabel}>Phone Number (Optional)</label>
+            <label className={styles.rowLabel}>
+              {t("phoneNumber(optional)")}
+            </label>
             <input
-              placeholder="Enter your phone number"
+              placeholder={t("enterPhoneNumber")}
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
               className={styles.gridInput}
             />
           </div>
           <div className={styles.formGroup}>
-            <label className={styles.rowLabel}>State</label>
+            <label className={styles.rowLabel}>{t("state")}</label>
             <select
               value={state}
               onChange={(e) => setState(e.target.value)}
               className={styles.gridInput}
             >
-              <option value="">Select</option>
+              <option value="">{t("selectState")}</option>
               <option value="State A">State A</option>
               <option value="State B">State B</option>
             </select>
           </div>
           <div className={styles.formGroup}>
-            <label className={styles.rowLabel}>LGA</label>
+            <label className={styles.rowLabel}>{t("lga")}</label>
             <select
               value={lga}
               onChange={(e) => setLga(e.target.value)}
               className={styles.gridInput}
             >
-              <option value="">Select</option>
-              <option value="LGA A">LGA A</option>
-              <option value="LGA B">LGA B</option>
+              <option value="">{t("selectLGA")}</option>
+              <option value="LGA A">{t("lgaA")}</option>
+              <option value="LGA B">{t("lgaB")}</option>
             </select>
           </div>
           <div className={styles.formGroup}>
-            <label className={styles.rowLabel}>Ward</label>
+            <label className={styles.rowLabel}>{t("ward")}</label>
             <input
-              placeholder="Enter your ward"
+              placeholder={t("enterWard")}
               value={ward}
               onChange={(e) => setWard(e.target.value)}
               className={styles.gridInput}
             />
           </div>
           <div className={styles.formGroup}>
-            <label className={styles.rowLabel}>
-              Village/Community of Origin
-            </label>
+            <label className={styles.rowLabel}>{t("villageOrigin")}</label>
             <input
-              placeholder="Enter your community of origin"
+              placeholder={t("enterVillage")}
               value={origin}
               onChange={(e) => setOrigin(e.target.value)}
               className={styles.gridInput}
             />
           </div>
           <div className={styles.formGroup}>
-            <label className={styles.rowLabel}>Current Settlement Base</label>
+            <label className={styles.rowLabel}>{t("currentBase")}</label>
             <input
-              placeholder="Enter your current base"
+              placeholder={t("enterCurrentBase")}
               value={base}
               onChange={(e) => setBase(e.target.value)}
               className={styles.gridInput}
             />
           </div>
           <div className={styles.formGroup}>
-            <label className={styles.rowLabel}>Position in MACBAN</label>
+            <label className={styles.rowLabel}>{t("positionMacban")}</label>
             <select
               value={position}
               onChange={(e) => setPosition(e.target.value)}
               className={styles.gridInput}
             >
-              <option value="">Select</option>
-              <option value="Leader">Leader</option>
-              <option value="Member">Member</option>
+              <option value="">{t("select")}</option>
+              <option value="Leader">{t("Leader")}</option>
+              <option value="Member">{t("Member")}</option>
             </select>
           </div>
         </div>
       </div>
 
       <div className={styles.buttonRow}>
-        <Button title="Previous" className="btnPrev" onClick={onPrevious} />
-        <Button title="Next" className="btnNext" onClick={handleNext} />
+        <Button
+          title={t("previous")}
+          className="btnPrev"
+          onClick={onPrevious}
+        />
+        <Button title={t("next")} className="btnNext" onClick={handleNext} />
       </div>
     </div>
   );
