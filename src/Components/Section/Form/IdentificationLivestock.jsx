@@ -1,14 +1,22 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./Form.module.css";
 import Button from "../../Common/Button/Button";
+import { useTranslation } from "react-i18next";
 
 const IdentificationLivestock = ({ onNext, onPrevious }) => {
-  const [mainBreed, setMainBreed] = useState("");
+  const [mainBreed, setMainBread] = useState("");
   const [approximate, setApproximate] = useState("");
   const [migration, setMigration] = useState("");
   const [primaryRoute, setPrimaryRoute] = useState("");
   const [primaryCattle, setPrimaryCattle] = useState("");
   const [otherLivestocks, setOtherLivestocks] = useState("");
+
+  const { t, i18n } = useTranslation();
+
+  useEffect(() => {
+    const savedLang = localStorage.getItem("appLang");
+    if (savedLang) i18n.changeLanguage(savedLang);
+  }, [i18n]);
 
   const handleNext = () => {
     if (
@@ -37,25 +45,24 @@ const IdentificationLivestock = ({ onNext, onPrevious }) => {
       <div className={styles.body}>
         <div className={styles.grid}>
           <div className={styles.formGroup}>
-            <label className={styles.rowLabel} htmlFor="mainBreed">
-              Main Cattle Breed
+            <label className={styles.rowLabel} htmlFor="sex">
+              {t("mainBreed")}
             </label>
             <select
               id="mainBreed"
               value={mainBreed}
-              onChange={(e) => setMainBreed(e.target.value)}
+              onChange={(e) => setMainBread(e.target.value)}
               className={styles.gridInput}
             >
-              <option value="">Select an option</option>
-              <option value="White Fulani">White Fulani</option>
-              <option value="Red Bororo">Red Bororo</option>
-              <option value="Muturu">Muturu</option>
+              <option value="">{t("selectOption")}</option>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
             </select>
           </div>
 
           <div className={styles.formGroup}>
-            <label className={styles.rowLabel} htmlFor="approximate">
-              Approximate Herd Size
+            <label className={styles.rowLabel} htmlFor="state">
+              {t("approximateHerdSize")}
             </label>
             <select
               id="approximate"
@@ -63,16 +70,14 @@ const IdentificationLivestock = ({ onNext, onPrevious }) => {
               onChange={(e) => setApproximate(e.target.value)}
               className={styles.gridInput}
             >
-              <option value="">Select an option</option>
-              <option value="1-50">1-50</option>
-              <option value="51-100">51-100</option>
-              <option value="100+">100+</option>
+              <option value="">{t("selectOption")}</option>
+              <option value="State A">State A</option>
+              <option value="State B">State B</option>
             </select>
           </div>
-
           <div className={styles.formGroup}>
-            <label className={styles.rowLabel} htmlFor="migration">
-              Migration Pattern
+            <label className={styles.rowLabel} htmlFor="lga">
+            {t("migrationPattern")}
             </label>
             <select
               id="migration"
@@ -80,29 +85,30 @@ const IdentificationLivestock = ({ onNext, onPrevious }) => {
               onChange={(e) => setMigration(e.target.value)}
               className={styles.gridInput}
             >
-              <option value="">Select an option</option>
-              <option value="Seasonal">Seasonal</option>
-              <option value="Nomadic">Nomadic</option>
-              <option value="Settled">Settled</option>
+              <option value="">{t("selectOption")}</option>
+              <option value="LGA A">LGA A</option>
+              <option value="LGA B">LGA B</option>
             </select>
           </div>
 
           <div className={styles.formGroup}>
-            <label className={styles.rowLabel} htmlFor="primaryRoute">
-              Primary Migration Route
+            <label className={styles.rowLabel} htmlFor="position">
+              {t("primaryMigrationRoute")}
             </label>
-            <input
+            <select
               id="primaryRoute"
-              placeholder="Enter migration route"
               value={primaryRoute}
               onChange={(e) => setPrimaryRoute(e.target.value)}
               className={styles.gridInput}
-            />
+            >
+              <option value="">{t("selectOption")}</option>
+              <option value="Leader">Leader</option>
+              <option value="Member">Member</option>
+            </select>
           </div>
-
           <div className={styles.formGroup}>
-            <label className={styles.rowLabel} htmlFor="primaryCattle">
-              Primary Purpose of Cattle
+            <label className={styles.rowLabel} htmlFor="position">
+              {t("primaryPurposeCattle")}
             </label>
             <select
               id="primaryCattle"
@@ -110,16 +116,14 @@ const IdentificationLivestock = ({ onNext, onPrevious }) => {
               onChange={(e) => setPrimaryCattle(e.target.value)}
               className={styles.gridInput}
             >
-              <option value="">Select an option</option>
-              <option value="Milk">Milk</option>
-              <option value="Meat">Meat</option>
-              <option value="Breeding">Breeding</option>
+              <option value="">{t("selectOption")}</option>
+              <option value="Leader">Leader</option>
+              <option value="Member">Member</option>
             </select>
           </div>
-
           <div className={styles.formGroup}>
-            <label className={styles.rowLabel} htmlFor="otherLivestocks">
-              Other Livestocks
+            <label className={styles.rowLabel} htmlFor="position">
+              {t("otherLivestocks")}
             </label>
             <select
               id="otherLivestocks"
@@ -127,19 +131,16 @@ const IdentificationLivestock = ({ onNext, onPrevious }) => {
               onChange={(e) => setOtherLivestocks(e.target.value)}
               className={styles.gridInput}
             >
-              <option value="">Select an option</option>
-              <option value="Goats">Goats</option>
-              <option value="Sheep">Sheep</option>
-              <option value="Poultry">Poultry</option>
-              <option value="None">None</option>
+              <option value="">{t("selectOption")}</option>
+              <option value="Leader">Leader</option>
+              <option value="Member">Member</option>
             </select>
           </div>
         </div>
       </div>
-
       <div className={styles.buttonRow}>
-        <Button title="Previous" className="btnPrev" onClick={onPrevious} />
-        <Button title="Next" className="btnNext" onClick={handleNext} />
+        <Button title={t("previous")} className="btnPrev" onClick={onPrevious} />
+        <Button title={t("next")} className="btnNext" onClick={handleNext} />
       </div>
     </div>
   );

@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./Form.module.css";
 import Button from "../../Common/Button/Button";
+import { useTranslation } from "react-i18next";
 
 const ChallengesServices = ({ onNext, onPrevious }) => {
   const [accessServices, setAccessServices] = useState("");
@@ -8,6 +9,13 @@ const ChallengesServices = ({ onNext, onPrevious }) => {
   const [financialServices, setFinancialServices] = useState("");
   const [bankAccount, setBankAccount] = useState("");
   const [votersCard, setVotersCard] = useState("");
+
+    const { t, i18n } = useTranslation();
+  
+    useEffect(() => {
+      const savedLang = localStorage.getItem("appLang");
+      if (savedLang) i18n.changeLanguage(savedLang);
+    }, [i18n]);
 
   const handleNext = () => {
     if (
@@ -35,7 +43,7 @@ const ChallengesServices = ({ onNext, onPrevious }) => {
         <div className={styles.grid}>
           <div className={styles.formGroup}>
             <label className={styles.rowLabel} htmlFor="accessServices">
-              Access to Veterinary Services
+              {t("accessVeterinaryServices")}
             </label>
             <select
               id="accessServices"
@@ -43,7 +51,7 @@ const ChallengesServices = ({ onNext, onPrevious }) => {
               onChange={(e) => setAccessServices(e.target.value)}
               className={styles.gridInput}
             >
-              <option value="">Select an option</option>
+              <option value="">{t("selectOption")}</option>
               <option value="Accessible">Accessible</option>
               <option value="Not Accessible">Not Accessible</option>
             </select>
@@ -51,7 +59,7 @@ const ChallengesServices = ({ onNext, onPrevious }) => {
 
           <div className={styles.formGroup}>
             <label className={styles.rowLabel} htmlFor="challenge">
-              Biggest Challenge
+              {t("biggestChallenge")}
             </label>
             <select
               id="challenge"
@@ -59,7 +67,7 @@ const ChallengesServices = ({ onNext, onPrevious }) => {
               onChange={(e) => setChallenge(e.target.value)}
               className={styles.gridInput}
             >
-              <option value="">Select an option</option>
+              <option value="">{t("selectOption")}</option>
               <option value="Lack of market access">Lack of market access</option>
               <option value="High feed cost">High feed cost</option>
               <option value="Poor veterinary services">Poor veterinary services</option>
@@ -68,7 +76,7 @@ const ChallengesServices = ({ onNext, onPrevious }) => {
 
           <div className={styles.formGroup}>
             <label className={styles.rowLabel} htmlFor="financialServices">
-              Potential Financial Services
+              {t("financialServices")}
             </label>
             <select
               id="financialServices"
@@ -76,7 +84,7 @@ const ChallengesServices = ({ onNext, onPrevious }) => {
               onChange={(e) => setFinancialServices(e.target.value)}
               className={styles.gridInput}
             >
-              <option value="">Select an option</option>
+              <option value="">{t("selectOption")}</option>
               <option value="Microloans">Microloans</option>
               <option value="Savings groups">Savings groups</option>
               <option value="Cooperative funding">Cooperative funding</option>
@@ -89,7 +97,7 @@ const ChallengesServices = ({ onNext, onPrevious }) => {
         <div className={styles.grid}>
           <div className={styles.formGroup}>
             <label className={styles.rowLabel} htmlFor="bankAccount">
-              Do You Have a Bank Account?
+              {t("bankAccount")}
             </label>
             <select
               id="bankAccount"
@@ -97,7 +105,7 @@ const ChallengesServices = ({ onNext, onPrevious }) => {
               onChange={(e) => setBankAccount(e.target.value)}
               className={styles.gridInput}
             >
-              <option value="">Select an option</option>
+              <option value="">{t("selectOption")}</option>
               <option value="Yes">Yes</option>
               <option value="No">No</option>
             </select>
@@ -105,7 +113,7 @@ const ChallengesServices = ({ onNext, onPrevious }) => {
 
           <div className={styles.formGroup}>
             <label className={styles.rowLabel} htmlFor="votersCard">
-              Do You Have a Voter’s Card?
+              {t("votersCard")}
             </label>
             <select
               id="votersCard"
@@ -113,7 +121,7 @@ const ChallengesServices = ({ onNext, onPrevious }) => {
               onChange={(e) => setVotersCard(e.target.value)}
               className={styles.gridInput}
             >
-              <option value="">Select an option</option>
+              <option value="">{t("selectOption")}</option>
               <option value="Yes">Yes</option>
               <option value="No">No</option>
             </select>
@@ -122,8 +130,8 @@ const ChallengesServices = ({ onNext, onPrevious }) => {
       </div>
 
       <div className={styles.buttonRow}>
-        <Button title="Previous" className="btnPrev" onClick={onPrevious} />
-        <Button title="Next" className="btnNext" onClick={handleNext} />
+        <Button title={t("previous")} className="btnPrev" onClick={onPrevious} />
+        <Button title={t("next")}  className="btnNext" onClick={handleNext} />
       </div>
     </div>
   );

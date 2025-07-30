@@ -5,10 +5,12 @@ import ChallengesServices from "../../Section/Form/ChallengesServices";
 import EducationOccupation from "../../Section/Form/EducationOccupation";
 import PersonalInfo from "../../Section/Form/PersonalInfo";
 import { useTranslation } from "react-i18next";
+import SuccessModal from "../../Common/Modal/SuccessModal";
 
 const StartConnecting = () => {
   const [step, setStep] = useState(1);
   const [formValues, setFormValues] = useState({});
+  const [showSuccessModal, setShowSuccessModal] = useState(false); // ✅ Modal state
   const { t } = useTranslation();
 
   const subtitleMap = {
@@ -36,7 +38,11 @@ const StartConnecting = () => {
       ...data,
     };
     console.log("Submitting form with values:", finalData);
-    // Submit logic here (e.g., API call)
+
+    // Simulate successful submission
+    setTimeout(() => {
+      setShowSuccessModal(true); // ✅ Show modal on success
+    }, 1000);
   };
 
   const renderStep = () => {
@@ -45,22 +51,16 @@ const StartConnecting = () => {
         return (
           <PersonalInfo
             onNext={handleNext}
-            onPrev={() => window.location.href = "/startconnect"} // or any route you want
+            onPrev={() => (window.location.href = "/startConnecting")}
           />
         );
       case 2:
         return (
-          <IdentificationLivestock
-            onNext={handleNext}
-            onPrev={handlePrevious}
-          />
+          <IdentificationLivestock onNext={handleNext} onPrev={handlePrevious} />
         );
       case 3:
         return (
-          <ChallengesServices
-            onNext={handleNext}
-            onPrev={handlePrevious}
-          />
+          <ChallengesServices onNext={handleNext} onPrev={handlePrevious} />
         );
       case 4:
         return (
@@ -114,6 +114,18 @@ const StartConnecting = () => {
 
         <div className={styles.formInput}>{renderStep()}</div>
       </div>
+
+      {showSuccessModal && (
+        <SuccessModal
+          title={t("title")}
+          subtitle={t("subtitle")}
+          btnTitle={t("btnBack")}
+          btnOnclick={() => {
+            setShowSuccessModal(false);
+            window.location.href = "/";
+          }}
+        />
+      )}
     </div>
   );
 };

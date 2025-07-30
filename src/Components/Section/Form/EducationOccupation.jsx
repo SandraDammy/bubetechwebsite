@@ -1,22 +1,21 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./Form.module.css";
 import Button from "../../Common/Button/Button";
-import SuccessModal from "../../Common/Modal/SuccessModal";
+import { useTranslation } from "react-i18next";
 
-const EducationOccupation = ({ onPrevious }) => {
+const EducationOccupation = ({ onSubmit, onPrevious }) => {
   const [education, setEducation] = useState("");
   const [occupation, setOccupation] = useState("");
   const [photo, setPhoto] = useState(null);
-  const [showSuccessModal, setShowSuccessModal] = useState(false); // ✅ fixed
 
-  const handleSubmit = () => {
-    if (!education || !occupation || !photo) {
-      alert("Please fill all fields and upload a photo.");
-      return;
+  const { t, i18n } = useTranslation();
+
+  useEffect(() => {
+    const savedLang = localStorage.getItem("appLang");
+    if (savedLang) {
+      i18n.changeLanguage(savedLang);
     }
-
-    setShowSuccessModal(true); // ✅ trigger modal on submit
-  };
+  }, [i18n]);
 
   const handleFileChange = (e) => {
     setPhoto(e.target.files[0]);
@@ -28,7 +27,7 @@ const EducationOccupation = ({ onPrevious }) => {
         <div className={styles.grid}>
           <div className={styles.formGroup}>
             <label className={styles.rowLabel} htmlFor="education">
-              Highest Level of Education
+              {t("highestLevelEducation")}
             </label>
             <select
               id="education"
@@ -36,7 +35,7 @@ const EducationOccupation = ({ onPrevious }) => {
               onChange={(e) => setEducation(e.target.value)}
               className={styles.gridInput}
             >
-              <option value="">Select an option</option>
+              <option value="">{t("selectOption")}</option>
               <option value="Primary">Primary</option>
               <option value="Secondary">Secondary</option>
               <option value="Tertiary">Tertiary</option>
@@ -46,7 +45,7 @@ const EducationOccupation = ({ onPrevious }) => {
 
           <div className={styles.formGroup}>
             <label className={styles.rowLabel} htmlFor="occupation">
-              Other Occupation
+              {t("otherOccupation")}
             </label>
             <select
               id="occupation"
@@ -54,7 +53,7 @@ const EducationOccupation = ({ onPrevious }) => {
               onChange={(e) => setOccupation(e.target.value)}
               className={styles.gridInput}
             >
-              <option value="">Select an option</option>
+              <option value="">{t("selectOption")}</option>
               <option value="None">None</option>
               <option value="Trader">Trader</option>
               <option value="Artisan">Artisan</option>
@@ -69,7 +68,7 @@ const EducationOccupation = ({ onPrevious }) => {
         <div className={styles.grid}>
           <div className={styles.formGroup}>
             <label className={styles.rowLabel} htmlFor="photo">
-              Upload Photo *
+              {t("uploadPhoto")} *
             </label>
             <input
               type="file"
@@ -83,20 +82,13 @@ const EducationOccupation = ({ onPrevious }) => {
       </div>
 
       <div className={styles.buttonRow}>
-        <Button title="Previous" className="btnPrev" onClick={onPrevious} />
-        <Button title="Submit" className="btnNext" onClick={handleSubmit} />
-      </div>
-
-      {/* Success Modal */}
-      {showSuccessModal && (
-        <SuccessModal
-          title="Submitted Successfully!."
-          subtitle="Your details have been submitted successfully.
-Thank you for filling the form."
-          btnTitle="Back to Home"
-          btnOnclick={() => setShowSuccessModal(false)}
+        <Button
+          title={t("previous")}
+          className="btnPrev"
+          onClick={onPrevious}
         />
-      )}
+        <Button title={t("submit")} className="btnNext" onClick={onSubmit} />
+      </div>
     </div>
   );
 };
