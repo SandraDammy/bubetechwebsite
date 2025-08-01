@@ -84,11 +84,88 @@
 }
 
 .buttonRow {
-    display: flex;
+  display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 10rem;
+  margin-top: 8rem;
+  margin-bottom: 2rem;
   gap: 2rem;
+  width: 100%;
+  background-color: yellow;
 }
 
+.gridInputTxt {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fff;
+  color: #333;
+  outline: none;
+  resize: vertical;
+  min-height: 120px; /* good for multiple selections */
+  font-family: "Poppins", sans-serif;
+}
 
+.gridInputTxt:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+@media (max-width: 480px) {
+  .form {
+    gap: 1rem;
+    padding: 0rem;
+    width: 100%;
+  }
+
+  .body {
+    padding: 1rem;
+    gap: 1.5rem;
+    width: 100%;
+  }
+
+  .bodyRow {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .formGroup {
+    width: 100%;
+    gap: 0.25rem;
+  }
+
+  .rowLabel {
+    font-size: 16px;
+    line-height: 1.2;
+  }
+
+  .readOnlyInput,
+  .gridInput,
+  .gridInputTxt {
+    font-size: 14px;
+    padding: 0.5rem;
+    height: 3rem;
+  }
+
+  .gridInputTxt {
+    min-height: 100px;
+    font-size: 14px;
+  }
+
+  .buttonRow {
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 3rem;
+    width: 100%;
+    background-color: red;
+  }
+}
