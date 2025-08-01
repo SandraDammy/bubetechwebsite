@@ -209,3 +209,26 @@
   background: var(--green);
   border-radius: 50%;
 }
+
+
+@media (max-width: 480px) {
+
+  .formInput {
+    margin: 0;
+  }
+
+  .titleInput {
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 90%;
+  }
+
+  .body {
+    width: 90%;
+    padding: 2rem;
+  }
+
+  .submitButton {
+    width: 100%;
+  }
+}

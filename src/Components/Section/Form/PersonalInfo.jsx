@@ -183,6 +183,8 @@ const PersonalInfo = ({ onNext, onPrevious }) => {
               <option value="">{t("select")}</option>
               <option value="Leader">{t("Leader")}</option>
               <option value="Member">{t("Member")}</option>
+              <option value="Leader">{t("Leader")}</option>
+              <option value="Member">{t("Member")}</option>
             </select>
           </div>
         </div>

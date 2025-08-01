@@ -10,12 +10,12 @@ const ChallengesServices = ({ onNext, onPrevious }) => {
   const [bankAccount, setBankAccount] = useState("");
   const [votersCard, setVotersCard] = useState("");
 
-    const { t, i18n } = useTranslation();
-  
-    useEffect(() => {
-      const savedLang = localStorage.getItem("appLang");
-      if (savedLang) i18n.changeLanguage(savedLang);
-    }, [i18n]);
+  const { t, i18n } = useTranslation();
+
+  useEffect(() => {
+    const savedLang = localStorage.getItem("appLang");
+    if (savedLang) i18n.changeLanguage(savedLang);
+  }, [i18n]);
 
   const handleNext = () => {
     if (
@@ -52,8 +52,39 @@ const ChallengesServices = ({ onNext, onPrevious }) => {
               className={styles.gridInput}
             >
               <option value="">{t("selectOption")}</option>
-              <option value="Accessible">Accessible</option>
-              <option value="Not Accessible">Not Accessible</option>
+              <option value="inadequateInfrastructure">
+                {t("Inadequate Veterinary Infrastructure")}
+              </option>
+              <option value="shortagePersonnel">
+                {t("Shortage of Trained Veterinary Personnel")}
+              </option>
+              <option value="highCost">
+                {t("High Cost of Veterinary Services & Medicines")}
+              </option>
+              <option value="poorColdChain">
+                {t("Lack of or Poor Cold Chain and Drug Storage")}
+              </option>
+              <option value="limitedKnowledge">
+                {t("Limited Knowledge of Disease Prevention")}
+              </option>
+              <option value="poorSurveillance">
+                {t("Poor Disease Surveillance and Reporting")}
+              </option>
+              <option value="seasonalMigration">
+                {t("Mobility of the Fulani (Seasonal Migration)")}
+              </option>
+              <option value="languageBarriers">
+                {t("Language and Cultural Barriers")}
+              </option>
+              <option value="insecurityConflict">
+                {t("Insecurity and Conflict")}
+              </option>
+              <option value="distrustGov">
+                {t("Distrust of Government Services")}
+              </option>
+              <option value="inconsistentPolicy">
+                {t("Inconsistent Government Support and Policies")}
+              </option>
             </select>
           </div>
 
@@ -68,9 +99,18 @@ const ChallengesServices = ({ onNext, onPrevious }) => {
               className={styles.gridInput}
             >
               <option value="">{t("selectOption")}</option>
-              <option value="Lack of market access">Lack of market access</option>
-              <option value="High feed cost">High feed cost</option>
-              <option value="Poor veterinary services">Poor veterinary services</option>
+              <option value="veterinaryDrugs">
+                {t("Veterinary Drugs & Services")}
+              </option>
+              <option value="grazingWater">{t("Grazing Land & Water")}</option>
+              <option value="cattleRustling">{t("Cattle Rustling")}</option>
+              <option value="banditry">{t("Banditry")}</option>
+              <option value="farmerHerderConflict">
+                {t("Farmer/Herder Conflict")}
+              </option>
+              <option value="interTribalConflict">
+                {t("Inter-Tribal Conflict")}
+              </option>
             </select>
           </div>
 
@@ -85,9 +125,23 @@ const ChallengesServices = ({ onNext, onPrevious }) => {
               className={styles.gridInput}
             >
               <option value="">{t("selectOption")}</option>
-              <option value="Microloans">Microloans</option>
-              <option value="Savings groups">Savings groups</option>
-              <option value="Cooperative funding">Cooperative funding</option>
+              <option value="fullBanking">{t("Full Banking Services")}</option>
+              <option value="mobileBanking">{t("Mobile Banking")}</option>
+              <option value="livestockInsurance">
+                {t("Livestock Insurance")}
+              </option>
+              <option value="microcreditsLoans">
+                {t("Microcredits & Livestock Loans")}
+              </option>
+              <option value="remittancePayment">
+                {t("Remittance & Payment Services")}
+              </option>
+              <option value="valueChain">{t("Value Chain Financing")}</option>
+              <option value="thriftCoop">
+                {t("Thrift & Cooperative Finance")}
+              </option>
+              <option value="other">{t("Other")}</option>
+              <option value="notInterested">{t("Not Interested")}</option>
             </select>
           </div>
         </div>
@@ -130,8 +184,12 @@ const ChallengesServices = ({ onNext, onPrevious }) => {
       </div>
 
       <div className={styles.buttonRow}>
-        <Button title={t("previous")} className="btnPrev" onClick={onPrevious} />
-        <Button title={t("next")}  className="btnNext" onClick={handleNext} />
+        <Button
+          title={t("previous")}
+          className="btnPrev"
+          onClick={onPrevious}
+        />
+        <Button title={t("next")} className="btnNext" onClick={handleNext} />
       </div>
     </div>
   );

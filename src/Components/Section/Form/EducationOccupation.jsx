@@ -36,10 +36,11 @@ const EducationOccupation = ({ onSubmit, onPrevious }) => {
               className={styles.gridInput}
             >
               <option value="">{t("selectOption")}</option>
-              <option value="Primary">Primary</option>
-              <option value="Secondary">Secondary</option>
-              <option value="Tertiary">Tertiary</option>
-              <option value="Other">Other</option>
+              <option value="primary">{t("Primary")}</option>
+              <option value="secondary">{t("Secondary")}</option>
+              <option value="tertiary">{t("Tertiary")}</option>
+              <option value="quranic">{t("Qur'anic")}</option>
+              <option value="none">{t("None")}</option>
             </select>
           </div>
 
@@ -54,11 +55,11 @@ const EducationOccupation = ({ onSubmit, onPrevious }) => {
               className={styles.gridInput}
             >
               <option value="">{t("selectOption")}</option>
-              <option value="None">None</option>
-              <option value="Trader">Trader</option>
-              <option value="Artisan">Artisan</option>
-              <option value="Farmer">Farmer</option>
-              <option value="Other">Other</option>
+              <option value="farming">{t("Farming")}</option>
+              <option value="trading">{t("Trading")}</option>
+              <option value="laboring">{t("Laboring")}</option>
+              <option value="handcrafts">{t("Handcrafts")}</option>
+              <option value="other">{t("Other")}</option>
             </select>
           </div>
         </div>
