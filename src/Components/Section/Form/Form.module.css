@@ -111,6 +111,58 @@
 }
 
 @media (max-width: 480px) {
+  .form {
+    gap: 1rem;
+    padding: 0rem;
+    width: 100%;
+  }
 
+  .body {
+    padding: 1rem;
+    gap: 1.5rem;
+    width: 100%;
+  }
 
+  .bodyRow {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .formGroup {
+    width: 100%;
+    gap: 0.25rem;
+  }
+
+  .rowLabel {
+    font-size: 16px;
+    line-height: 1.2;
+  }
+
+  .readOnlyInput,
+  .gridInput,
+  .gridInputTxt {
+    font-size: 14px;
+    padding: 0.5rem;
+    height: 3rem;
+  }
+
+  .gridInputTxt {
+    min-height: 100px;
+    font-size: 14px;
+  }
+
+  .buttonRow {
+    flex-direction: column;
+    gap: 1rem;
+    /* margin-top: 3rem; */
+    margin: 3rem 5rem;
+    /* width: 100%; */
+  }
 }
