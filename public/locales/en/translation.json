@@ -236,5 +236,18 @@
   "Secondary": "Secondary",
   "Tertiary": "Tertiary",
   "Qur'anic": "Qur'anic",
-  "None": "None"
+  "None": "None",
+
+  "Grand Patron": "Grand Patron",
+  "Patron": "Patron",
+  "Ward": "Ward",
+  "National President": "National President",
+  "National Secretary": "National Secretary",
+  "State Chairman": "State Chairman",
+  "State Secretary": "State Secretary",
+  "LGA Chairman": "LGA Chairman",
+  "LGA Secretary": "LGA Secretary",
+  "Ward Chairman": "Ward Chairman",
+  "Ward Secretary": "Ward Secretary",
+  "Member": "Member"
 }

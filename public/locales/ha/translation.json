@@ -232,5 +232,18 @@
   "Secondary": "Sakandare",
   "Tertiary": "Jami'a",
   "Qur'anic": "Karatun Al-Qur'ani",
-  "None": "Babu"
+  "None": "Babu",
+
+  "Grand Patron": "Babban Jagora",
+  "Patron": "Jagora",
+  "Ward": "Gunduma",
+  "National President": "Shugaban Ƙasa",
+  "National Secretary": "Sakataren Ƙasa",
+  "State Chairman": "Shugaban Jiha",
+  "State Secretary": "Sakataren Jiha",
+  "LGA Chairman": "Shugaban Karamar Hukuma",
+  "LGA Secretary": "Sakataren Karamar Hukuma",
+  "Ward Chairman": "Shugaban Gunduma",
+  "Ward Secretary": "Sakataren Gunduma",
+  "Member": "Mamba"
 }

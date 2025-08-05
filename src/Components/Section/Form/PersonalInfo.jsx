@@ -181,10 +181,18 @@ const PersonalInfo = ({ onNext, onPrevious }) => {
               className={styles.gridInput}
             >
               <option value="">{t("select")}</option>
-              <option value="Leader">{t("Leader")}</option>
-              <option value="Member">{t("Member")}</option>
-              <option value="Leader">{t("Leader")}</option>
-              <option value="Member">{t("Member")}</option>
+              <option value="Leader">{t("Grand Patron")}</option>
+              <option value="Member">{t("Patron")}</option>
+              <option value="Leader">{t("Word") }</option>
+              <option value="Member">{t("National President")}</option>
+              <option value="Member">{t("National Secretary")}</option>
+              <option value="Leader">{t("State Chairman")}</option>
+              <option value="Member">{t("State Secretary")}</option>
+              <option value="Member">{t("LGA Chairman")}</option>
+              <option value="Leader">{t("LGA Secretary")}</option>
+              <option value="Member">{t("Ward Chairman")}</option>
+              <option value="Member">{t("Ward Secretary")}</option>
+              <option value="Leader">{t("Member")}</option>
             </select>
           </div>
         </div>

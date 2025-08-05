@@ -231,5 +231,18 @@
   "Secondary": "Ụlọ akwụkwọ sekọndrị",
   "Tertiary": "Mahadum",
   "Qur'anic": "Akwụkwọ Qur'anic",
-  "None": "Ọ dịghị"
+  "None": "Ọ dịghị",
+
+  "Grand Patron": "Onye Nlekọta Ukwu",
+  "Patron": "Onye Nlekọta",
+  "Ward": "Mpịakọta",
+  "National President": "Onye isi ala",
+  "National Secretary": "Odeakwụkwọ ala",
+  "State Chairman": "Onye isi steeti",
+  "State Secretary": "Odeakwụkwọ steeti",
+  "LGA Chairman": "Onye isi LGA",
+  "LGA Secretary": "Odeakwụkwọ LGA",
+  "Ward Chairman": "Onye isi Mpịakọta",
+  "Ward Secretary": "Odeakwụkwọ Mpịakọta",
+  "Member": "Onye òtù"
 }
