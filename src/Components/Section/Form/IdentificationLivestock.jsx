@@ -194,6 +194,24 @@ const IdentificationLivestock = ({ onNext, onPrevious }) => {
             </label>
             <select
               id="otherLivestocks"
+              value={otherLivestocks}
+              onChange={(e) => setOtherLivestocks(e.target.selectedOptions)}
+              className={styles.gridInput}
+            >
+              <option value="">{t("selectOption")}</option>
+              <option value="sheep">{t("Sheep")}</option>
+              <option value="goats">{t("Goats")}</option>
+              <option value="camel">{t("Camel")}</option>
+              <option value="poultry">{t("Poultry")}</option>
+              <option value="others">{t("Others")}</option>
+            </select>
+          </div>
+          {/* <div className={styles.formGroup}>
+            <label className={styles.rowLabel} htmlFor="otherLivestocks">
+              {t("otherLivestocks")}
+            </label>
+            <select
+              id="otherLivestocks"
               multiple
               value={otherLivestocks}
               onChange={(e) =>
@@ -210,7 +228,9 @@ const IdentificationLivestock = ({ onNext, onPrevious }) => {
               <option value="poultry">{t("Poultry")}</option>
               <option value="others">{t("Others")}</option>
             </select>
-          </div>
+          </div> */}
+
+       
         </div>
       </div>
       <div className={styles.buttonRow}>

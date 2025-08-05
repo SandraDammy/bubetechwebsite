@@ -23,6 +23,14 @@
   width: 100%;
 }
 
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-gap: 1rem;
+  width: 100%;
+  gap: 2rem;
+}
+
 .formGroup {
   flex: 1;
   display: flex;
@@ -59,6 +67,7 @@
   background-color: var(--form);
   height: 3.75rem;
 }
+
 .gridInput {
   width: 100%;
   font-family: Poppins;
@@ -73,15 +82,30 @@
   border-radius: 6px;
   background-color: transparent;
   height: 3.75rem;
+
+  &:open {
+  background-color: transparent;
+  }
+
+  option {
+  background-color: transparent;
+  color: var(--mainBlack);
+  }
+
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  grid-gap: 1rem;
-  width: 100%;
-  gap: 2rem;
+.gridInput:focus {
+    border: 0.5px solid var(--formLine);
+      background-color: transparent;
+
 }
+
+
+
+/* .gridInput {
+  background-color: rgb(34, 162, 94);
+} */
+
 
 .buttonRow {
   display: flex;
@@ -91,10 +115,9 @@
   margin-bottom: 2rem;
   gap: 2rem;
   width: 100%;
-  background-color: yellow;
 }
 
-.gridInputTxt {
+/* .gridInputTxt {
   width: 100%;
   padding: 10px;
   font-size: 1rem;
@@ -104,14 +127,14 @@
   color: #333;
   outline: none;
   resize: vertical;
-  min-height: 120px; /* good for multiple selections */
+  min-height: 120px; 
   font-family: "Poppins", sans-serif;
 }
 
 .gridInputTxt:focus {
   border-color: #007bff;
   box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
-}
+} */
 
 @media (max-width: 480px) {
   .form {
@@ -166,6 +189,5 @@
     gap: 1rem;
     margin-top: 3rem;
     width: 100%;
-    background-color: red;
   }
 }

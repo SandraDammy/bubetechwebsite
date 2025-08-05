@@ -232,5 +232,18 @@
   "Secondary": "Lékol jowirde",
   "Tertiary": "Université",
   "Qur'anic": "Janngirde Al-Qur'ani",
-  "None": "Alaa"
+  "None": "Alaa",
+
+  "Grand Patron": "Laamdo Ndagi",
+  "Patron": "Laamdo",
+  "Ward": "Dukki",
+  "National President": "Laamdo Leñol",
+  "National Secretary": "Katib Leñol",
+  "State Chairman": "Laamdo Leydi",
+  "State Secretary": "Katib Leydi",
+  "LGA Chairman": "Laamdo Kommbi",
+  "LGA Secretary": "Katib Kommbi",
+  "Ward Chairman": "Laamdo Dukki",
+  "Ward Secretary": "Katib Dukki",
+  "Member": "Mamba"
 }
