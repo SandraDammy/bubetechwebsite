@@ -1,70 +1,98 @@
-# Getting Started with Create React App
+# BUBETECH - Farm Smarter, Live Better (Frontend)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**BUBETECH** is the **frontend** of a web-based platform that empowers farmers with the tools, knowledge, and fair pricing they need to succeed. Built with React, this frontend connects to a backend API to handle data and user interactions.  
 
-## Available Scripts
+> Farm smarter, live better.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## Table of Contents
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- [About the Project](#about-the-project)  
+- [Features](#features)  
+- [Technologies Used](#technologies-used)  
+- [Installation](#installation)  
+- [Available Scripts](#available-scripts)  
+- [Live Demo](#live-demo)  
+- [Figma Design](#figma-design)  
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## About the Project
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Farming is hard work. Many farmers face challenges like middlemen taking profits, language barriers, and limited access to resources or information. **BUBETECH** addresses these issues by providing:  
 
-### `npm run build`
+- Access to reliable farming resources  
+- Connections to other farmers and communities  
+- Fair pricing and marketplace information  
+- Tools to track crops, livestock, or fish production  
+- Notifications and guidance from the backend  
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+**Note:** This is the **frontend only**. Full functionality requires a backend API.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Features
 
-### `npm run eject`
+- User registration and authentication (frontend forms)  
+- Interfaces for managing crops, livestock, and fish  
+- Marketplace views for trading and pricing  
+- Community and knowledge-sharing pages  
+- Multi-language support  
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Technologies Used
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- React  
+- React Router  
+- CSS / Tailwind CSS for styling  
+- Additional packages:  
+  - `xlsx`  
+  - `react-i18next`  
+  - `react-select`  
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+*(A backend API and database are required for full functionality.)*
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Live Demo
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Check out the hosted frontend here:
+[link](https://bubetechwebsite.vercel.app/)
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Figma Design
 
-### Analyzing the Bundle Size
+View the project designs and prototypes here:
+[link](https://www.figma.com/proto/CyBYu18B2W3q2aKXZaGARz/Bube-Tech?node-id=2719-3752&t=Sc0qo425W6c7eFcw-9&scaling=scale-down&content-scaling=fixed&page-id=2719%3A3715&starting-point-node-id=2719%3A3752&show-proto-sidebar=1)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+## Installation
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Prerequisites
 
-### Advanced Configuration
+- Node.js (v14 or above)  
+- npm or yarn  
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Steps
 
-### Deployment
+1. Clone the repository:  
+   ```bash
+   
+   git clone https://github.com/SandraDammy/bubetechwebsite.git
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+2. Navigate to the project directory: 
+   cd BUBETECHWEBSITE
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+3. Install dependencies:  
+  npm install
+
+  OR
+
+  yarn install
+
+
