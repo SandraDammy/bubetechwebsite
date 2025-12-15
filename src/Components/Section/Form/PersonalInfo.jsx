@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import styles from "./Form.module.css";
 import Button from "../../Common/Button/Button";
 import { useTranslation } from "react-i18next";
+import * as XLSX from "xlsx";
 
 const PersonalInfo = ({ onNext, onPrevious }) => {
   const [fullName, setFullName] = useState("");
@@ -21,6 +22,78 @@ const PersonalInfo = ({ onNext, onPrevious }) => {
     const savedLang = localStorage.getItem("appLang");
     if (savedLang) i18n.changeLanguage(savedLang);
   }, [i18n]);
+
+  const [allData, setAllData] = useState([]);
+  const [states, setStates] = useState([]);
+  const [lgas, setLgas] = useState([]);
+  const [wards, setWards] = useState([]);
+
+  // ✅ Load wards automatically from Excel
+
+  useEffect(() => {
+    fetch("/ward.xlsx")
+      .then((res) => res.arrayBuffer())
+      .then((data) => {
+        const workbook = XLSX.read(data, { type: "array" });
+        const sheet = workbook.Sheets[workbook.SheetNames[0]];
+        const jsonData = XLSX.utils.sheet_to_json(sheet);
+
+        setAllData(jsonData);
+
+        // ✅ Extract unique States
+        const uniqueStates = [
+          ...new Set(jsonData.map((row) => row.State).filter(Boolean)),
+        ];
+        setStates(uniqueStates);
+      })
+      .catch((err) => console.error("Excel load error:", err));
+  }, []);
+
+  // ✅ Load State automatically from Excel
+
+  useEffect(() => {
+    if (!state) {
+      setLgas([]);
+      setLga("");
+      setWards([]);
+      setWard("");
+      return;
+    }
+
+    const filteredLgas = [
+      ...new Set(
+        allData.filter((row) => row.State === state).map((row) => row.LGA)
+      ),
+    ];
+
+    setLgas(filteredLgas);
+    setLga("");
+    setWards([]);
+    setWard("");
+  }, [state, allData]);
+
+  // ✅ Load LGA automatically from Excel
+
+  useEffect(() => {
+    if (!lga) {
+      setWards([]);
+      setWard("");
+      return;
+    }
+
+    const filteredWards = [
+      ...new Set(
+        allData
+          .filter((row) => row.State === state && row.LGA === lga)
+          .map((row) => row.Ward)
+      ),
+    ];
+
+    setWards(filteredWards);
+    setWard("");
+  }, [lga, state, allData]);
+
+  // ✅ Load wards automatically from Excel
 
   const handleNext = () => {
     if (
@@ -124,37 +197,55 @@ const PersonalInfo = ({ onNext, onPrevious }) => {
           </div>
           <div className={styles.formGroup}>
             <label className={styles.rowLabel}>{t("state")}</label>
+
             <select
               value={state}
               onChange={(e) => setState(e.target.value)}
               className={styles.gridInput}
             >
               <option value="">{t("selectState")}</option>
-              <option value="State A">State A</option>
-              <option value="State B">State B</option>
+              {states.map((s, index) => (
+                <option key={index} value={s}>
+                  {s}
+                </option>
+              ))}
             </select>
           </div>
           <div className={styles.formGroup}>
             <label className={styles.rowLabel}>{t("lga")}</label>
+
             <select
               value={lga}
               onChange={(e) => setLga(e.target.value)}
               className={styles.gridInput}
+              disabled={!state}
             >
               <option value="">{t("selectLGA")}</option>
-              <option value="LGA A">{t("lgaA")}</option>
-              <option value="LGA B">{t("lgaB")}</option>
+              {lgas.map((l, index) => (
+                <option key={index} value={l}>
+                  {l}
+                </option>
+              ))}
             </select>
           </div>
           <div className={styles.formGroup}>
             <label className={styles.rowLabel}>{t("ward")}</label>
-            <input
-              placeholder={t("enterWard")}
+
+            <select
               value={ward}
               onChange={(e) => setWard(e.target.value)}
               className={styles.gridInput}
-            />
+              disabled={!lga}
+            >
+              <option value="">{t("selectWard")}</option>
+              {wards.map((w, index) => (
+                <option key={index} value={w}>
+                  {w}
+                </option>
+              ))}
+            </select>
           </div>
+
           <div className={styles.formGroup}>
             <label className={styles.rowLabel}>{t("villageOrigin")}</label>
             <input
