@@ -173,7 +173,7 @@ const PersonalInfo = ({ onNext, onPrevious }) => {
               className={styles.gridInput}
             />
           </div>
-          <div className={styles.formGroup}>
+          {/* <div className={styles.formGroup}>
             <label className={styles.rowLabel}>{t("positionMacban")}</label>
             <select
               value={position}
@@ -194,7 +194,7 @@ const PersonalInfo = ({ onNext, onPrevious }) => {
               <option value="Member">{t("Ward Secretary")}</option>
               <option value="Leader">{t("Member")}</option>
             </select>
-          </div>
+          </div> */}
         </div>
       </div>
 

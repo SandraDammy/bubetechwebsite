@@ -1,7 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
 import styles from "./Navbar.module.css";
-import HamburgerIcon from "../../../Assets/Img/Hamburger.svg";
-import CloseIcon from "../../../Assets/Img/CloseIcon.svg";
 import { Link } from "react-router-dom";
 import logo from "../../../Assets/Img/BUBETECH_Logo.svg";
 import ArrowBack from "../../../Assets/Img/ArrowBack.svg";
@@ -24,7 +22,8 @@ const Connectbar = () => {
         </div>
 
         <div className={styles.logoNav}>
-          <h1 className={styles.title}>MACBAN PASTORALIST REGISTRATION FORM</h1>
+          <h1 className={styles.title}>PASTORALIST REGISTRATION FORM</h1>
+          {/* <h1 className={styles.title}>MACBAN PASTORALIST REGISTRATION FORM</h1> */}
         </div>
 
       </nav>
