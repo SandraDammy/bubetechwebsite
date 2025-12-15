@@ -14,7 +14,7 @@ const PersonalInfo = ({ onNext, onPrevious }) => {
   const [ward, setWard] = useState("");
   const [origin, setOrigin] = useState("");
   const [base, setBase] = useState("");
-  const [position, setPosition] = useState("");
+  // const [position, setPosition] = useState("");
 
   const { t, i18n } = useTranslation();
 
@@ -23,13 +23,34 @@ const PersonalInfo = ({ onNext, onPrevious }) => {
     if (savedLang) i18n.changeLanguage(savedLang);
   }, [i18n]);
 
+
+  const formatDate = () => {
+    const today = new Date();
+
+    const day = String(today.getDate()).padStart(2, "0");
+    const month = today.toLocaleString("en-US", { month: "long" });
+    const year = today.getFullYear();
+
+    return `${day}-${month}-${year}`;
+  };
+
+  // Generate Form ID like: MAC-20250701-482
+  const generateFormId = () => {
+    const date = new Date();
+    const ymd = date.toISOString().slice(0, 10).replace(/-/g, "");
+    const random = Math.floor(100 + Math.random() * 900);
+    return `${ymd}-${random}`;
+  };
+
+  const [formId] = useState(generateFormId());
+  const [formDate] = useState(formatDate());
+
   const [allData, setAllData] = useState([]);
   const [states, setStates] = useState([]);
   const [lgas, setLgas] = useState([]);
   const [wards, setWards] = useState([]);
 
   // ✅ Load wards automatically from Excel
-
   useEffect(() => {
     fetch("/ward.xlsx")
       .then((res) => res.arrayBuffer())
@@ -100,13 +121,11 @@ const PersonalInfo = ({ onNext, onPrevious }) => {
       !fullName ||
       !sex ||
       !age ||
-      !phone ||
       !state ||
       !lga ||
       !ward ||
       !origin ||
-      !base ||
-      !position
+      !base 
     ) {
       alert("Please fill all fields");
       return;
@@ -122,7 +141,6 @@ const PersonalInfo = ({ onNext, onPrevious }) => {
       ward,
       origin,
       base,
-      position,
     });
   };
 
@@ -132,9 +150,10 @@ const PersonalInfo = ({ onNext, onPrevious }) => {
         <div className={styles.bodyRow}>
           <div className={styles.formGroup}>
             <label className={styles.rowLabel}>{t("formId")}</label>
+           
             <input
               type="text"
-              value="291FY123"
+              value={formId}
               readOnly
               className={styles.readOnlyInput}
             />
@@ -143,7 +162,7 @@ const PersonalInfo = ({ onNext, onPrevious }) => {
             <label className={styles.rowLabel}>{t("date")}</label>
             <input
               type="text"
-              value="01-July-2025"
+              value={formDate}
               readOnly
               className={styles.readOnlyInput}
             />
@@ -264,28 +283,7 @@ const PersonalInfo = ({ onNext, onPrevious }) => {
               className={styles.gridInput}
             />
           </div>
-          {/* <div className={styles.formGroup}>
-            <label className={styles.rowLabel}>{t("positionMacban")}</label>
-            <select
-              value={position}
-              onChange={(e) => setPosition(e.target.value)}
-              className={styles.gridInput}
-            >
-              <option value="">{t("select")}</option>
-              <option value="Leader">{t("Grand Patron")}</option>
-              <option value="Member">{t("Patron")}</option>
-              <option value="Leader">{t("Word") }</option>
-              <option value="Member">{t("National President")}</option>
-              <option value="Member">{t("National Secretary")}</option>
-              <option value="Leader">{t("State Chairman")}</option>
-              <option value="Member">{t("State Secretary")}</option>
-              <option value="Member">{t("LGA Chairman")}</option>
-              <option value="Leader">{t("LGA Secretary")}</option>
-              <option value="Member">{t("Ward Chairman")}</option>
-              <option value="Member">{t("Ward Secretary")}</option>
-              <option value="Leader">{t("Member")}</option>
-            </select>
-          </div> */}
+        
         </div>
       </div>
 
