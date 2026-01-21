@@ -210,6 +210,58 @@
   border-radius: 50%;
 }
 
+.formGroup {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  text-justify: auto;
+  width: 100%;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.rowLabel {
+  font-family: Poppins;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: var(--mainBlack);
+  width: 100%;
+}
+
+.gridInput {
+  width: 100%;
+  font-family: Poppins;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: var(--mainBlack);
+  padding: 0.75rem;
+  font-size: 16px;
+  border: 0.5px solid var(--formLine);
+  border-radius: 6px;
+  background-color: transparent;
+  height: 3.75rem;
+
+  &:open {
+    background-color: transparent;
+  }
+
+  option {
+    background-color: transparent;
+    color: var(--mainBlack);
+  }
+}
+
+.gridInput:focus {
+  border: 0.5px solid var(--formLine);
+  background-color: transparent;
+}
+
 @media (max-width: 480px) {
   /* .header {
     margin-bottom: 0.5rem;

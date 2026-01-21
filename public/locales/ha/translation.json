@@ -245,5 +245,20 @@
   "LGA Secretary": "Sakataren Karamar Hukuma",
   "Ward Chairman": "Shugaban Gunduma",
   "Ward Secretary": "Sakataren Gunduma",
-  "Member": "Mamba"
+  "Member": "Mamba",
+
+"pleaseSelectYourMinistry": "Don Allah zaɓi ma’aikatarka",
+"ministry": "Ma’aikata",
+"selectTheMinistryYouBelongTo": "Zaɓi ma’aikatar da kake ciki",
+"selectYourOrganisation": "Zaɓi ƙungiyarka",
+"association": "Ƙungiya",
+ "ministryOfAgricultureAndLivestock": "Ma’aikatar Noma da Kiwon Dabbobi",
+  "ministryOfLivestock": "Ma’aikatar Kiwon Dabbobi",
+  "ministryOfWaterResources": "Ma’aikatar Albarkatun Ruwa",
+  "allFarmersAssociationOfNigeria": "Kungiyar Duk Manoma Na Najeriya (AFAN)",
+  "amanaFarmersAndGrainsSuppliersAssociationOfNigeria": "Kungiyar Manoma Amana da Masu Samar da Hatsi Na Najeriya (AFGSAN)",
+  "associationOfCommercialFarmersAndAgroAlliedProducersOfNigeria": "Kungiyar Manoma Masu Kasuwanci da Masu Samar da Kayayyakin Noma Na Najeriya (ACFAAPON)",
+  "nigeriaFarmersAlliance": "Hadin Kan Manoma Na Najeriya (NFA)",
+  "nigerianWomenInAgriculturalBusinessCooperativeSocietyLtd": "Kungiyar Mata Masu Sana’ar Noma Na Najeriya (NIWAB)"
+
 }

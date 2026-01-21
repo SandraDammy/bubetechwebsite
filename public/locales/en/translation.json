@@ -121,7 +121,7 @@
   "lgaA": "LGA A",
   "lgaB": "LGA B",
   "ward": "Ward",
-   "selectWard": "Select Ward",
+  "selectWard": "Select Ward",
   "enterWard": "Enter your ward",
   "villageOrigin": "Village/Community of Origin",
   "enterVillage": "Enter your village",
@@ -249,7 +249,18 @@
   "LGA Secretary": "LGA Secretary",
   "Ward Chairman": "Ward Chairman",
   "Ward Secretary": "Ward Secretary",
-  "Member": "Member"
-
-  
+  "Member": "Member",
+  "pleaseSelectYourMinistry": "Please select your ministry",
+  "ministry": "Ministry",
+  "selectTheMinistryYouBelongTo": "Select the ministry you belong to",
+  "selectYourOrganisation": "Select your organisation",
+  "association": "Association",
+  "ministryOfAgricultureAndLivestock": "Ministry of Agriculture and Livestock",
+  "ministryOfLivestock": "Ministry of Livestock",
+  "ministryOfWaterResources": "Ministry of Water Resources",
+  "allFarmersAssociationOfNigeria": "All Farmers Association of Nigeria (AFAN)",
+  "amanaFarmersAndGrainsSuppliersAssociationOfNigeria": "Amana Farmers and Grains Suppliers Association of Nigeria (AFGSAN)",
+  "associationOfCommercialFarmersAndAgroAlliedProducersOfNigeria": "Association of Commercial Farmers and Agro-Allied Producers of Nigeria (ACFAAPON)",
+  "nigeriaFarmersAlliance": "Nigeria Farmers Alliance (NFA)",
+  "nigerianWomenInAgriculturalBusinessCooperativeSocietyLtd": "Nigerian Women in Agricultural Business Cooperative Society Ltd (NIWAB)"
 }
