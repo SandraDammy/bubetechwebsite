@@ -23,7 +23,6 @@ const PersonalInfo = ({ onNext, onPrevious }) => {
     if (savedLang) i18n.changeLanguage(savedLang);
   }, [i18n]);
 
-
   const formatDate = () => {
     const today = new Date();
 
@@ -83,7 +82,7 @@ const PersonalInfo = ({ onNext, onPrevious }) => {
 
     const filteredLgas = [
       ...new Set(
-        allData.filter((row) => row.State === state).map((row) => row.LGA)
+        allData.filter((row) => row.State === state).map((row) => row.LGA),
       ),
     ];
 
@@ -106,7 +105,7 @@ const PersonalInfo = ({ onNext, onPrevious }) => {
       ...new Set(
         allData
           .filter((row) => row.State === state && row.LGA === lga)
-          .map((row) => row.Ward)
+          .map((row) => row.Ward),
       ),
     ];
 
@@ -125,7 +124,7 @@ const PersonalInfo = ({ onNext, onPrevious }) => {
       !lga ||
       !ward ||
       !origin ||
-      !base 
+      !base
     ) {
       alert("Please fill all fields");
       return;
@@ -150,7 +149,7 @@ const PersonalInfo = ({ onNext, onPrevious }) => {
         <div className={styles.bodyRow}>
           <div className={styles.formGroup}>
             <label className={styles.rowLabel}>{t("formId")}</label>
-           
+
             <input
               type="text"
               value={formId}
@@ -283,7 +282,6 @@ const PersonalInfo = ({ onNext, onPrevious }) => {
               className={styles.gridInput}
             />
           </div>
-        
         </div>
       </div>
 

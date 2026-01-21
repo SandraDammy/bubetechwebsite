@@ -10,6 +10,7 @@ import NotFound from "../Components/Page/NotFound/NotFound";
 import StartConnecting from "../Components/Page/StartConnecting/StartConnecting";
 import ConnectLayout from "../Components/Layout/ConnectLayout";
 import Language from "../Components/Page/StartConnecting/Language";
+import Ministry from "../Components/Page/StartConnecting/Ministry";
 
 const AppRoutes = () => {
   const routes = useRoutes([
@@ -26,6 +27,7 @@ const AppRoutes = () => {
     },
 
     {path: "/startConnecting", element: <Language />},
+    {path: "/ministry", element: <Ministry/>},
     {
       path: "/form",
       element: <ConnectLayout />,
