@@ -2,11 +2,17 @@ import React, { useEffect, useState } from "react";
 import styles from "./Form.module.css";
 import Button from "../../Common/Button/Button";
 import { useTranslation } from "react-i18next";
+import Select from "react-select";
+import CheckboxOption from "../../Common/CheckboxOption/CheckboxOption";
+
+import rateVeterinary from "../../../Assets/Options/rateVeterinary";
+import financialServicesOptions from "../../../Assets/Options/financialServices";
+import challengeOptions from "../../../Assets/Options/challengeOptions";
 
 const ChallengesServices = ({ onNext, onPrevious }) => {
-  const [accessServices, setAccessServices] = useState("");
+  const [rateVeterinaryServices, setRateVeterinaryServices] = useState(null);
   const [challenge, setChallenge] = useState("");
-  const [financialServices, setFinancialServices] = useState("");
+  const [financialServices, setFinancialServices] = useState([]);
   const [bankAccount, setBankAccount] = useState("");
   const [votersCard, setVotersCard] = useState("");
 
@@ -19,130 +25,89 @@ const ChallengesServices = ({ onNext, onPrevious }) => {
 
   const handleNext = () => {
     if (
-      !accessServices ||
+      !rateVeterinaryServices ||
       !challenge ||
-      !financialServices ||
+      financialServices.length === 0 ||
       !bankAccount ||
       !votersCard
     ) {
       alert("Please fill all fields");
       return;
     }
+
     onNext({
-      accessServices,
+      rateVeterinaryServices: rateVeterinaryServices.value,
       challenge,
-      financialServices,
+      financialServices: financialServices.map((item) => item.value),
       bankAccount,
       votersCard,
     });
   };
+
+  const optionsRateVeterinary = rateVeterinary.map((item) => ({
+    value: item.value,
+    label: t(item.labelKey),
+  }));
+
+  const optionsFinancialServices = financialServicesOptions.map((item) => ({
+    value: item.value,
+    label: t(item.labelKey),
+  }));
+
+  const optionsChallenge = challengeOptions.map((item) => ({
+    value: item.value,
+    label: t(item.labelKey),
+  }));
+
+  const yesNoOptions = [
+    { value: "Yes", label: t("Yes") },
+    { value: "No", label: t("No") },
+  ];
 
   return (
     <div className={styles.form}>
       <div className={styles.body}>
         <div className={styles.grid}>
           <div className={styles.formGroup}>
-            <label className={styles.rowLabel} htmlFor="accessServices">
-              {t("accessVeterinaryServices")}
+            <label className={styles.rowLabel}>
+              {t("rateVeterinaryServices")}
             </label>
-            <select
-              id="accessServices"
-              value={accessServices}
-              onChange={(e) => setAccessServices(e.target.value)}
-              className={styles.gridInput}
-            >
-              <option value="">{t("selectOption")}</option>
-              <option value="inadequateInfrastructure">
-                {t("Inadequate Veterinary Infrastructure")}
-              </option>
-              <option value="shortagePersonnel">
-                {t("Shortage of Trained Veterinary Personnel")}
-              </option>
-              <option value="highCost">
-                {t("High Cost of Veterinary Services & Medicines")}
-              </option>
-              <option value="poorColdChain">
-                {t("Lack of or Poor Cold Chain and Drug Storage")}
-              </option>
-              <option value="limitedKnowledge">
-                {t("Limited Knowledge of Disease Prevention")}
-              </option>
-              <option value="poorSurveillance">
-                {t("Poor Disease Surveillance and Reporting")}
-              </option>
-              <option value="seasonalMigration">
-                {t("Mobility of the Fulani (Seasonal Migration)")}
-              </option>
-              <option value="languageBarriers">
-                {t("Language and Cultural Barriers")}
-              </option>
-              <option value="insecurityConflict">
-                {t("Insecurity and Conflict")}
-              </option>
-              <option value="distrustGov">
-                {t("Distrust of Government Services")}
-              </option>
-              <option value="inconsistentPolicy">
-                {t("Inconsistent Government Support and Policies")}
-              </option>
-            </select>
+            <Select
+              options={optionsRateVeterinary}
+              value={rateVeterinaryServices}
+              onChange={setRateVeterinaryServices}
+              placeholder={t("selectOption")}
+              className={styles.gridInputs}
+              classNamePrefix="react-select"
+            />
           </div>
 
           <div className={styles.formGroup}>
-            <label className={styles.rowLabel} htmlFor="challenge">
-              {t("biggestChallenge")}
-            </label>
-            <select
-              id="challenge"
+            <label className={styles.rowLabel}>{t("biggestChallenge")}</label>
+            <Select
+              options={optionsChallenge}
               value={challenge}
-              onChange={(e) => setChallenge(e.target.value)}
-              className={styles.gridInput}
-            >
-              <option value="">{t("selectOption")}</option>
-              <option value="veterinaryDrugs">
-                {t("Veterinary Drugs & Services")}
-              </option>
-              <option value="grazingWater">{t("Grazing Land & Water")}</option>
-              <option value="cattleRustling">{t("Cattle Rustling")}</option>
-              <option value="banditry">{t("Banditry")}</option>
-              <option value="farmerHerderConflict">
-                {t("Farmer/Herder Conflict")}
-              </option>
-              <option value="interTribalConflict">
-                {t("Inter-Tribal Conflict")}
-              </option>
-            </select>
+              onChange={setChallenge}
+              placeholder={t("selectOption")}
+              className={styles.gridInputs}
+              classNamePrefix="react-select"
+            />
           </div>
 
           <div className={styles.formGroup}>
-            <label className={styles.rowLabel} htmlFor="financialServices">
-              {t("financialServices")}
-            </label>
-            <select
-              id="financialServices"
+            <label className={styles.rowLabel}>{t("financialServices")}</label>
+            <Select
+              isMulti
+              closeMenuOnSelect={false}
+              hideSelectedOptions={false}
+              options={optionsFinancialServices}
               value={financialServices}
-              onChange={(e) => setFinancialServices(e.target.value)}
-              className={styles.gridInput}
-            >
-              <option value="">{t("selectOption")}</option>
-              <option value="fullBanking">{t("Full Banking Services")}</option>
-              <option value="mobileBanking">{t("Mobile Banking")}</option>
-              <option value="livestockInsurance">
-                {t("Livestock Insurance")}
-              </option>
-              <option value="microcreditsLoans">
-                {t("Microcredits & Livestock Loans")}
-              </option>
-              <option value="remittancePayment">
-                {t("Remittance & Payment Services")}
-              </option>
-              <option value="valueChain">{t("Value Chain Financing")}</option>
-              <option value="thriftCoop">
-                {t("Thrift & Cooperative Finance")}
-              </option>
-              <option value="other">{t("Other")}</option>
-              <option value="notInterested">{t("Not Interested")}</option>
-            </select>
+              onChange={setFinancialServices}
+              placeholder={t("selectMultipleOption")}
+              components={{ Option: CheckboxOption }}
+              className={styles.gridInputs}
+              classNamePrefix="react-select"
+            />
           </div>
         </div>
       </div>
@@ -150,35 +115,27 @@ const ChallengesServices = ({ onNext, onPrevious }) => {
       <div className={styles.body}>
         <div className={styles.grid}>
           <div className={styles.formGroup}>
-            <label className={styles.rowLabel} htmlFor="bankAccount">
-              {t("bankAccount")}
-            </label>
-            <select
-              id="bankAccount"
+            <label className={styles.rowLabel}>{t("bankAccount")}</label>
+            <Select
+              options={yesNoOptions}
               value={bankAccount}
-              onChange={(e) => setBankAccount(e.target.value)}
-              className={styles.gridInput}
-            >
-              <option value="">{t("selectOption")}</option>
-              <option value="Yes">Yes</option>
-              <option value="No">No</option>
-            </select>
+              onChange={setBankAccount}
+              placeholder={t("selectOption")}
+              className={styles.gridInputs}
+              classNamePrefix="react-select"
+            />
           </div>
 
           <div className={styles.formGroup}>
-            <label className={styles.rowLabel} htmlFor="votersCard">
-              {t("votersCard")}
-            </label>
-            <select
-              id="votersCard"
+            <label className={styles.rowLabel}>{t("votersCard")}</label>
+            <Select
+              options={yesNoOptions}
               value={votersCard}
-              onChange={(e) => setVotersCard(e.target.value)}
-              className={styles.gridInput}
-            >
-              <option value="">{t("selectOption")}</option>
-              <option value="Yes">Yes</option>
-              <option value="No">No</option>
-            </select>
+              onChange={setVotersCard}
+              placeholder={t("selectOption")}
+              className={styles.gridInputs}
+              classNamePrefix="react-select"
+            />
           </div>
         </div>
       </div>

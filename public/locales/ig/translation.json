@@ -130,7 +130,7 @@
   "mainBreed": "Ụdị Ehi Kasị Elu",
   "approximateHerdSize": "Nọmba ehi dị ka e kwesịrị",
   "migrationPattern": "Ụzọ njem ehi",
-  "primaryMigrationRoute": "Ụzọ njem isi",
+  "migrationRouteType": "Ụzọ njem isi",
   "primaryPurposeCattle": "Ebumnuche Isi Maka Ehi",
   "otherLivestocks": "Ụzọ ehi ndị ọzọ",
   "accessVeterinaryServices": "Nweta Ọrụ Dọkịta Anụmanụ",
@@ -259,5 +259,27 @@
   "associationOfCommercialFarmersAndAgroAlliedProducersOfNigeria": "Ụdị Ọrụ Ndị Ọgụgụ Ahịa na Ndị Mmepụta Ngwa Ahịa Na Naịjirịa (ACFAAPON)",
   "nigeriaFarmersAlliance": "Njikọta Ndị Ọgụgụ Ugbo Naịjirịa (NFA)",
   "nigerianWomenInAgriculturalBusinessCooperativeSocietyLtd": "Njikọ Ndị Nwunye Na-eme Ahịa Ugbo Naịjirịa (NIWAB)",
-  "otherSpecify": "Ọzọ (Kọwaa)"
+  "otherSpecify": "Ọzọ (Kọwaa)",
+
+  "vetAccess": {
+    "excellent": "Dị mma nke ukwuu (Na-adị mgbe niile mgbe achọrọ ya, ọnụ ahịa ya adịghị elu)",
+    "good": "Dị mma (Na-adịkarị, ọnụ ahịa ya na-adị mfe)",
+    "fair": "Nkezi (Na-adị oge ụfọdụ, ọnụ ahịa ya dị ntakịrị elu)",
+    "poor": "Adịghị mma (Na-esiri ike inweta, ọnụ ahịa ya dị oke elu)",
+    "veryPoor": "Adịghị mma nke ukwuu (Fọrọ nke nta ka ọ ghara ịdị)",
+    "noAccess": "Enweghị ohere ịnweta ọrụ dọkịta anụmanụ",
+    "dontKnow": "Amaghị m"
+  },
+
+  "financialService": {
+    "bankAccount": "Akaụntụ ụlọ akụ",
+    "mobileMoney": "Ego ekwentị (Mobile Money)",
+    "livestockInsurance": "Nchekwa mkpuchi anụmanụ",
+    "loansToBuyLivestock": "Mgbazinye ego iji zụta anụmanụ",
+    "emergencyLoans": "Mgbazinye ego mberede",
+    "groupSavings": "Nchekwa ego otu",
+    "allWouldHelp": "Ha niile ga-enyere m aka",
+    "notInterested": "Enweghị m mmasị na ọrụ ego",
+    "needToLearnMore": "Achọrọ m ịmụtakwu tupu m kpebie"
+  }
 }

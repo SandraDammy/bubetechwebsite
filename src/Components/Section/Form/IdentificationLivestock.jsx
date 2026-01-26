@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import styles from "./Form.module.css";
 import Button from "../../Common/Button/Button";
 import { useTranslation } from "react-i18next";
+import Select from "react-select";
+import CheckboxOption from "../../Common/CheckboxOption/CheckboxOption";
 
 const IdentificationLivestock = ({ onNext, onPrevious }) => {
   const [mainBreed, setMainBread] = useState("");
@@ -25,7 +27,7 @@ const IdentificationLivestock = ({ onNext, onPrevious }) => {
       !migration ||
       !primaryRoute ||
       !primaryCattle ||
-      !otherLivestocks
+       otherLivestocks.length === 0
     ) {
       alert("Please fill all fields");
       return;
@@ -39,6 +41,14 @@ const IdentificationLivestock = ({ onNext, onPrevious }) => {
       otherLivestocks,
     });
   };
+
+  const options = [
+    { value: "sheep", label: t("sheep") },
+    { value: "goats", label: t("goats") },
+    { value: "camel", label: t("camel") },
+    { value: "poultry", label: t("poultry") },
+    { value: "others", label: t("others") },
+  ];
 
   return (
     <div className={styles.form}>
@@ -123,7 +133,7 @@ const IdentificationLivestock = ({ onNext, onPrevious }) => {
 
           <div className={styles.formGroup}>
             <label className={styles.rowLabel} htmlFor="primaryRoute">
-              {t("primaryMigrationRoute")}
+              {t("migrationRouteType")}
             </label>
             <select
               id="primaryRoute"
@@ -192,45 +202,19 @@ const IdentificationLivestock = ({ onNext, onPrevious }) => {
             <label className={styles.rowLabel} htmlFor="otherLivestocks">
               {t("otherLivestocks")}
             </label>
-            <select
-              id="otherLivestocks"
+            <Select
+              isMulti
+              closeMenuOnSelect={false}
+              hideSelectedOptions={false}
+              options={options}
               value={otherLivestocks}
-              onChange={(e) => setOtherLivestocks(e.target.selectedOptions)}
-              className={styles.gridInput}
-            >
-              <option value="">{t("selectOption")}</option>
-              <option value="sheep">{t("Sheep")}</option>
-              <option value="goats">{t("Goats")}</option>
-              <option value="camel">{t("Camel")}</option>
-              <option value="poultry">{t("Poultry")}</option>
-              <option value="others">{t("Others")}</option>
-            </select>
+              onChange={setOtherLivestocks}
+              placeholder={t("selectMultipleOption")}
+              components={{ Option: CheckboxOption }}
+              className={styles.gridInputs}
+              classNamePrefix="react-select"
+            />
           </div>
-          {/* <div className={styles.formGroup}>
-            <label className={styles.rowLabel} htmlFor="otherLivestocks">
-              {t("otherLivestocks")}
-            </label>
-            <select
-              id="otherLivestocks"
-              multiple
-              value={otherLivestocks}
-              onChange={(e) =>
-                setOtherLivestocks(
-                  Array.from(e.target.selectedOptions, (option) => option.value)
-                )
-              }
-              className={styles.gridInputTxt}
-            >
-              <option value="">{t("selectOption")}</option>
-              <option value="sheep">{t("Sheep")}</option>
-              <option value="goats">{t("Goats")}</option>
-              <option value="camel">{t("Camel")}</option>
-              <option value="poultry">{t("Poultry")}</option>
-              <option value="others">{t("Others")}</option>
-            </select>
-          </div> */}
-
-       
         </div>
       </div>
       <div className={styles.buttonRow}>

@@ -4,6 +4,9 @@ import Button from "../../Common/Button/Button";
 import styles from "./StartConnecting.module.css";
 import logo from "../../../Assets/Img/BUBETECH_Logo.svg";
 import { useTranslation } from "react-i18next";
+import ministryOptions from "../../../Assets/Options/ministryOptions";
+import associationOptions from "../../../Assets/Options/associationOptions";
+import Select from "react-select";
 
 const Ministry = () => {
   const { t, i18n } = useTranslation();
@@ -27,6 +30,15 @@ const Ministry = () => {
     });
   };
 
+  const optionsMinistry = ministryOptions.map((opt) => ({
+    value: opt.value,
+    label: t(opt.labelKey),
+  }));
+
+  const optionsAssociation = associationOptions.map((opt) => ({
+    value: opt.value,
+    label: t(opt.labelKey),
+  }));
   return (
     <div className="layoutCont">
       <header className="header">
@@ -47,50 +59,28 @@ const Ministry = () => {
             <label htmlFor="ministry" className={styles.rowLabel}>
               {t("ministry")}
             </label>
-            <select
-              id="ministry"
+            <Select
+              options={optionsMinistry}
               value={ministry}
-              onChange={(e) => setMinistry(e.target.value)}
-              className={styles.gridInput}
-            >
-              <option value="">{t("selectTheMinistryYouBelongTo")}</option>
-              <option value="agriculture_livestock">
-                {t("ministryOfAgricultureAndLivestock")}
-              </option>
-              <option value="livestock">{t("ministryOfLivestock")}</option>
-              <option value="water_resources">
-                {t("ministryOfWaterResources")}
-              </option>
-            </select>
+              onChange={setMinistry}
+              placeholder={t("selectTheMinistryYouBelongTo")}
+              className={styles.gridInputs}
+              classNamePrefix="react-select"
+            />
           </div>
 
           <div className={styles.formGroup}>
             <label htmlFor="association" className={styles.rowLabel}>
               {t("association")}
             </label>
-            <select
-              id="association"
+            <Select
+              options={optionsAssociation}
               value={association}
-              onChange={(e) => setAssociation(e.target.value)}
-              className={styles.gridInput}
-            >
-              <option value="">{t("selectYourOrganisation")}</option>
-              <option value="afan">
-                {t("allFarmersAssociationOfNigeria")}
-              </option>
-              <option value="afgsan">
-                {t("amanaFarmersAndGrainsSuppliersAssociationOfNigeria")}
-              </option>
-              <option value="acfaapon">
-                {t(
-                  "associationOfCommercialFarmersAndAgroAlliedProducersOfNigeria",
-                )}
-              </option>
-              <option value="nfa">{t("nigeriaFarmersAlliance")}</option>
-              <option value="niwab">
-                {t("nigerianWomenInAgriculturalBusinessCooperativeSocietyLtd")}
-              </option>
-            </select>
+              onChange={setAssociation}
+              placeholder={t("selectYourOrganisation")}
+              className={styles.gridInputs}
+              classNamePrefix="react-select"
+            />
           </div>
 
           <div className={styles.submitButton}>

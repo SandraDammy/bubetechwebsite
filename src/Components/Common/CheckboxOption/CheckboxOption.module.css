@@ -1,0 +1,17 @@
+.option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.checkbox {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.label {
+  font-size: 15px;
+  color: var(--mainBlack);
+  cursor: pointer;
+}

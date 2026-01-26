@@ -72,40 +72,35 @@
   width: 100%;
   font-family: Poppins;
   font-weight: 400;
-  font-size: 20px;
+  /* font-size: 20px; */
   line-height: 100%;
   letter-spacing: 0%;
   color: var(--mainBlack);
   padding: 0.75rem;
-  font-size: 16px;
+  font-size: 15px;
   border: 0.5px solid var(--formLine);
   border-radius: 6px;
   background-color: transparent;
   height: 3.75rem;
 
   &:open {
-  background-color: transparent;
+    background-color: transparent;
   }
 
   option {
-  background-color: transparent;
-  color: var(--mainBlack);
+    background-color: transparent;
+    color: var(--mainBlack);
   }
-
 }
 
 .gridInput:focus {
-    border: 0.5px solid var(--formLine);
-      background-color: transparent;
-
+  border: 0.5px solid var(--formLine);
+  background-color: transparent;
 }
-
-
 
 /* .gridInput {
   background-color: rgb(34, 162, 94);
 } */
-
 
 .buttonRow {
   display: flex;
@@ -190,4 +185,96 @@
     margin-top: 3rem;
     width: 100%;
   }
+}
+
+.gridInputs {
+  width: 100%;
+  height: 3.75rem;
+  font-family: Poppins;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: var(--mainBlack);
+
+}
+/*   
+"migrationRouteType": "Migration Route Type",
+  "bankAccount": "Do You Currently Have a Bank Account?",
+  "votersCard": "Do You Have a Permanent Voter’s Card?",
+
+"rateVeterinaryServices": "Rate Your Veterinary Services",
+*/
+/* Main input */
+.gridInputs :global(.react-select__control) {
+  min-height: unset;
+  border: 0.5px solid var(--formLine);
+  border-radius: 6px;
+  background-color: transparent;
+  box-shadow: none;
+  width: 100%;
+  height: 3.75rem;
+  /* background-color: red; */
+  align-items: center;
+  justify-self: start;
+}
+
+.gridInputs :global(.react-select__control--is-focused) {
+  border: 0.5px solid var(--formLine);
+  /* box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.15); */
+}
+
+/* Dropdown menu */
+/* .gridInputs :global(.react-select__menu) {
+  border-radius: 6px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+} */
+
+/* Option row */
+.gridInputs :global(.react-select__option) {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  padding: 0.5rem 0.75rem;
+  cursor: pointer;
+}
+
+.gridInputs :global(.react-select__option--is-focused) {
+  background-color: var(--green);
+    color: var(--mainWhite);
+
+}
+
+.gridInputs :global(.react-select__option--is-selected) {
+  background-color: var(--mainWhite);
+  color: var(--green);
+}
+
+/* Selected chips */
+.gridInputs :global(.react-select__multi-value) {
+  background-color: var(--form);
+  border-radius: 6px;
+}
+
+.gridInput :global(.react-select__multi-value) {
+  margin: 2px 4px 2px 0;
+}
+
+.gridInputs :global(.react-select__multi-value__label) {
+  color: var(--mainBlack);
+  font-size: 16px;
+  padding: 2px 6px;
+}
+
+.gridInputs :global(.react-select__indicator-separator) {
+  display: none;
+}
+
+.gridInput :global(.react-select__value-container) {
+  padding: 2px 0px;
+}
+
+.gridInput :global(.react-select__input-container) {
+  margin: 0;
+  padding: 0;
 }

@@ -130,7 +130,7 @@
   "mainBreed": "Ìran Màlúù Tó Poju",
   "approximateHerdSize": "Ìdánilójú Iye Màlúù",
   "migrationPattern": "Ìtẹ̀síwájú Iṣípadà",
-  "primaryMigrationRoute": "Ọna Ìṣípadà Pataki",
+  "migrationRouteType": "Ọna Ìṣípadà Pataki",
   "primaryPurposeCattle": "Ìdí Tó Poju Fún Màlúù",
   "otherLivestocks": "Àwọn Ẹran Míì",
   "accessVeterinaryServices": "Ìrìpọ̀ Sẹ́yìn sí Ìtọ́jú Ẹranko",
@@ -260,5 +260,27 @@
   "associationOfCommercialFarmersAndAgroAlliedProducersOfNigeria": "Ẹgbẹ́ Àwọn Agbẹ̀ Ọjà àti Àwọn Olùṣelọpọ Ohun Ọgbìn Ní Nàìjíríà (ACFAAPON)",
   "nigeriaFarmersAlliance": "Àjọṣepọ̀ Àwọn Agbẹ̀ Ní Nàìjíríà (NFA)",
   "nigerianWomenInAgriculturalBusinessCooperativeSocietyLtd": "Ẹgbẹ́ Àwọn Obìnrin Ní Ìṣòwò Ọgbìn Ní Nàìjíríà (NIWAB)",
-  "otherSpecify": "Miíràn (Ṣàlàyé)"
+  "otherSpecify": "Miíràn (Ṣàlàyé)",
+
+    "vetAccess": {
+    "excellent": "Dára gan-an (Máa ń wà nígbà gbogbo tí a bá nílò, owó rẹ̀ rọrùn)",
+    "good": "Dára (Máa ń wà púpọ̀ ìgbà, owó rẹ̀ kì í gbowó ju)",
+    "fair": "Aláàrín (Máa ń wà nígbà míì, owó rẹ̀ kì í rọrùn ju)",
+    "poor": "Kò dára (Kò sábà wà rárá, owó rẹ̀ gbowó gan-an)",
+    "veryPoor": "Kò dára rárá (Fẹ́rẹ̀ẹ́ kò sí rárá)",
+    "noAccess": "Kò sí àyè sí iṣẹ́ oníṣègùn ẹranko",
+    "dontKnow": "Mi ò mọ̀"
+  },
+
+    "financialService": {
+    "bankAccount": "Àkántì ilé-ifowópamọ́",
+    "mobileMoney": "Owó alágbèéká (Mobile Money)",
+    "livestockInsurance": "Ìdánilójú ẹranko-ọ̀sin",
+    "loansToBuyLivestock": "Awìn láti ra ẹranko-ọ̀sin",
+    "emergencyLoans": "Awìn pajawiri",
+    "groupSavings": "Àpamọ́ owó ẹgbẹ́",
+    "allWouldHelp": "Gbogbo wọn yóò ràn mí lọ́wọ́",
+    "notInterested": "Mi ò nífẹ̀ẹ́ sí iṣẹ́ ìṣúná",
+    "needToLearnMore": "Mo nílò láti kọ́ ẹ̀kọ́ sí i kọ́kọ́"
+  }
 }

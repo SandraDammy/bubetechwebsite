@@ -133,14 +133,15 @@
   "mainBreed": "Main Cattle Breed",
   "approximateHerdSize": "Approximate Herd Size",
   "migrationPattern": "Migration Pattern",
-  "primaryMigrationRoute": "Primary Migration Route",
+  "migrationRouteType": "Migration Route Type",
   "primaryPurposeCattle": "Primary Purpose of Cattle",
   "otherLivestocks": "Other Livestocks",
   "accessVeterinaryServices": "Access to Veterinary Services",
+  "rateVeterinaryServices": "Rate Your Veterinary Services",
   "biggestChallenge": "Biggest Challenge",
   "financialServices": "Potential Financial Services",
-  "bankAccount": "Do You Have a Bank Account?",
-  "votersCard": "Do You Have a Voter’s Card?",
+  "bankAccount": "Do You Currently Have a Bank Account?",
+  "votersCard": "Do You Have a Permanent Voter’s Card?",
   "highestLevelEducation": "Highest Level of Education",
   "otherOccupation": "Other Occupation",
   "uploadPhoto": "Upload Photo *",
@@ -263,5 +264,27 @@
   "associationOfCommercialFarmersAndAgroAlliedProducersOfNigeria": "Association of Commercial Farmers and Agro-Allied Producers of Nigeria (ACFAAPON)",
   "nigeriaFarmersAlliance": "Nigeria Farmers Alliance (NFA)",
   "nigerianWomenInAgriculturalBusinessCooperativeSocietyLtd": "Nigerian Women in Agricultural Business Cooperative Society Ltd (NIWAB)",
-  "otherSpecify": "Other (Specify)"
+  "otherSpecify": "Other (Specify)",
+
+  "vetAccess": {
+    "excellent": "Excellent (Always available when needed, affordable)",
+    "good": "Good (Usually available, mostly affordable)",
+    "fair": "Fair (Sometimes available, moderately expensive)",
+    "poor": "Poor (Rarely available, very expensive)",
+    "veryPoor": "Very Poor (Almost never available)",
+    "noAccess": "No access to veterinary services",
+    "dontKnow": "Don't know"
+  },
+
+  "financialService": {
+    "bankAccount": "Bank account",
+    "mobileMoney": "Mobile money",
+    "livestockInsurance": "Livestock insurance",
+    "loansToBuyLivestock": "Loans to buy livestock",
+    "emergencyLoans": "Emergency loans",
+    "groupSavings": "Group savings",
+    "allWouldHelp": "All of these would help",
+    "notInterested": "Not interested in financial services",
+    "needToLearnMore": "Need to learn more first"
+  }
 }

@@ -131,7 +131,7 @@
   "mainBreed": "Laawol Naange Joomirde",
   "approximateHerdSize": "Ceertu Gese Golle",
   "migrationPattern": "Ceertu Henorde",
-  "primaryMigrationRoute": "Laawol Henorde Mbayri",
+  "migrationRouteType": "Laawol Henorde Mbayri",
   "primaryPurposeCattle": "Keewol Joomirde Naange",
   "otherLivestocks": "Naangeji Goɗɗi",
   "accessVeterinaryServices": "Hollitaade E Sariyaaji Naange",
@@ -259,5 +259,27 @@
   "associationOfCommercialFarmersAndAgroAlliedProducersOfNigeria": "Fedde Sariiɓe Worɓe e Ndeendi e Naayjeeriya (ACFAAPON)",
   "nigeriaFarmersAlliance": "Jokkondiral Sariiɓe Naayjeeriya (NFA)",
   "nigerianWomenInAgriculturalBusinessCooperativeSocietyLtd": "Fedde Debbooji E Ndeendi Naayjeeriya (NIWAB)",
- "otherSpecify": "Kadi (Fayde)"
+  "otherSpecify": "Kadi (Fayde)",
+
+  "vetAccess": {
+    "excellent": "Moƴƴi haa (Heɓaama kala so ina sokli, teɗɗungal mum ndaarɗi)",
+    "good": "Moƴƴi (Heɓaama e laawol, teɗɗungal mum waawi)",
+    "fair": "Hakkeeje (Heɓaama tuma tuma, teɗɗungal mum ndaarɗi e dow)",
+    "poor": "Moƴƴaani (Heɓaama seeɗa, teɗɗungal mum ɗonɗi haa)",
+    "veryPoor": "Moƴƴaani haa (Ko ndaarno fota heɓaade)",
+    "noAccess": "Alaa heɓaade goɗɗum e gollal likitankeeji nagge",
+    "dontKnow": "Mi anndaa"
+  },
+
+  "financialService": {
+    "bankAccount": "Konto banki",
+    "mobileMoney": "Ceede telefona (Mobile Money)",
+    "livestockInsurance": "Dokkitaaji nagge",
+    "loansToBuyLivestock": "Ŋacce ceede ngam soodde nagge",
+    "emergencyLoans": "Ŋacce ceede ndiyam",
+    "groupSavings": "Ceede danndu e kawtal",
+    "allWouldHelp": "Fof ɗum fof walla mi",
+    "notInterested": "Mi yiɗaa golle ceede alaa",
+    "needToLearnMore": "Mi yiɗi janngude ko ɓuri"
+  }
 }

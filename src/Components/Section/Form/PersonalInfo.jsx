@@ -3,6 +3,7 @@ import styles from "./Form.module.css";
 import Button from "../../Common/Button/Button";
 import { useTranslation } from "react-i18next";
 import * as XLSX from "xlsx";
+import Select from "react-select";
 
 const PersonalInfo = ({ onNext, onPrevious }) => {
   const [fullName, setFullName] = useState("");
@@ -14,7 +15,6 @@ const PersonalInfo = ({ onNext, onPrevious }) => {
   const [ward, setWard] = useState("");
   const [origin, setOrigin] = useState("");
   const [base, setBase] = useState("");
-  // const [position, setPosition] = useState("");
 
   const { t, i18n } = useTranslation();
 
@@ -143,6 +143,11 @@ const PersonalInfo = ({ onNext, onPrevious }) => {
     });
   };
 
+ const sexOptions = [
+    { value: "Male", label: t("Male") },
+    { value: "Female", label: t("Female") },
+  ];
+
   return (
     <div className={styles.form}>
       <div className={styles.body}>
@@ -182,15 +187,15 @@ const PersonalInfo = ({ onNext, onPrevious }) => {
           </div>
           <div className={styles.formGroup}>
             <label className={styles.rowLabel}>{t("sex")}</label>
-            <select
-              value={sex}
-              onChange={(e) => setSex(e.target.value)}
-              className={styles.gridInput}
-            >
-              <option value="">{t("select")}</option>
-              <option value="Male">{t("male")}</option>
-              <option value="Female">{t("female")}</option>
-            </select>
+       
+            <Select
+            options={sexOptions}
+            value={sex}
+            onChange={setSex}
+            placeholder={t("select")}
+            className={styles.gridInputs}
+            classNamePrefix="react-select"
+            />
           </div>
           <div className={styles.formGroup}>
             <label className={styles.rowLabel}>{t("age")}</label>
