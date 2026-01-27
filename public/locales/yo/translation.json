@@ -130,7 +130,7 @@
   "mainBreed": "Ìran Màlúù Tó Poju",
   "approximateHerdSize": "Ìdánilójú Iye Màlúù",
   "migrationPattern": "Ìtẹ̀síwájú Iṣípadà",
-  "primaryMigrationRoute": "Ọna Ìṣípadà Pataki",
+  "migrationRouteType": "Iru Ọ̀nà Ìrìn-àjò",
   "primaryPurposeCattle": "Ìdí Tó Poju Fún Màlúù",
   "otherLivestocks": "Àwọn Ẹran Míì",
   "accessVeterinaryServices": "Ìrìpọ̀ Sẹ́yìn sí Ìtọ́jú Ẹranko",
@@ -138,6 +138,9 @@
   "financialServices": "Ìsọ̀kan Ìpèsè Ìṣúná",
   "bankAccount": "Ṣé o ní àkọọlẹ̀ banki?",
   "votersCard": "Ṣé o ní kaadi yíyàn?",
+  "selectStateFirst": "Yan Ìpínlẹ̀ Kọ́kọ́",
+  "selectLgaFirst": "Yan Ìjọba Ìbílẹ̀ Kọ́kọ́",
+  "rateVeterinaryServices": "Ṣe Àyẹ̀wò Iṣẹ́ Oníṣègùn Ẹranko Rẹ",
   "highestLevelEducation": "Ipele Ẹ̀kọ́ Tó Gá Jùlọ",
   "otherOccupation": "Iṣẹ́ Míì",
   "uploadPhoto": "Ṣe igbasilẹ fọ́tò *",
@@ -246,5 +249,41 @@
   "LGA Secretary": "Akọwé LG",
   "Ward Chairman": "Alákóso Ẹ̀ka",
   "Ward Secretary": "Akọwé Ẹ̀ka",
-  "Member": "Ọmọ ẹgbẹ́"
+  "Member": "Ọmọ ẹgbẹ́",
+  "pleaseSelectYourMinistry": "Jọ̀wọ́ yan iṣẹ́-ìjọsìn rẹ",
+  " ministry": "Iṣẹ́-ìjọsìn",
+  "selectTheMinistryYouBelongTo": "Yan iṣẹ́-ìjọsìn tí o jẹ́ ọmọ ẹgbẹ́ rẹ̀",
+  "selectYourOrganisation": "Yan àjọṣe rẹ",
+  "association": "Àjọṣe",
+  "ministryOfAgricultureAndLivestock": "Ilé-Ìṣẹ́ Minisita ti Ọgbìn àti Ẹran-ọ̀sin",
+  "ministryOfLivestock": "Ilé-Ìṣẹ́ Minisita ti Ẹran-ọ̀sin",
+  "ministryOfWaterResources": "Ilé-Ìṣẹ́ Minisita ti Àwọn Orísun Omi",
+  "allFarmersAssociationOfNigeria": "Ẹgbẹ́ Gbogbo Àwọn Agbẹ̀ Ní Nàìjíríà (AFAN)",
+  "amanaFarmersAndGrainsSuppliersAssociationOfNigeria": "Ẹgbẹ́ Agbẹ̀ Amana àti Alágbègbè Ounjẹ Ní Nàìjíríà (AFGSAN)",
+  "associationOfCommercialFarmersAndAgroAlliedProducersOfNigeria": "Ẹgbẹ́ Àwọn Agbẹ̀ Ọjà àti Àwọn Olùṣelọpọ Ohun Ọgbìn Ní Nàìjíríà (ACFAAPON)",
+  "nigeriaFarmersAlliance": "Àjọṣepọ̀ Àwọn Agbẹ̀ Ní Nàìjíríà (NFA)",
+  "nigerianWomenInAgriculturalBusinessCooperativeSocietyLtd": "Ẹgbẹ́ Àwọn Obìnrin Ní Ìṣòwò Ọgbìn Ní Nàìjíríà (NIWAB)",
+  "otherSpecify": "Miíràn (Ṣàlàyé)",
+
+  "vetAccess": {
+    "excellent": "Dára gan-an (Máa ń wà nígbà gbogbo tí a bá nílò, owó rẹ̀ rọrùn)",
+    "good": "Dára (Máa ń wà púpọ̀ ìgbà, owó rẹ̀ kì í gbowó ju)",
+    "fair": "Aláàrín (Máa ń wà nígbà míì, owó rẹ̀ kì í rọrùn ju)",
+    "poor": "Kò dára (Kò sábà wà rárá, owó rẹ̀ gbowó gan-an)",
+    "veryPoor": "Kò dára rárá (Fẹ́rẹ̀ẹ́ kò sí rárá)",
+    "noAccess": "Kò sí àyè sí iṣẹ́ oníṣègùn ẹranko",
+    "dontKnow": "Mi ò mọ̀"
+  },
+
+  "financialService": {
+    "bankAccount": "Àkántì ilé-ifowópamọ́",
+    "mobileMoney": "Owó alágbèéká (Mobile Money)",
+    "livestockInsurance": "Ìdánilójú ẹranko-ọ̀sin",
+    "loansToBuyLivestock": "Awìn láti ra ẹranko-ọ̀sin",
+    "emergencyLoans": "Awìn pajawiri",
+    "groupSavings": "Àpamọ́ owó ẹgbẹ́",
+    "allWouldHelp": "Gbogbo wọn yóò ràn mí lọ́wọ́",
+    "notInterested": "Mi ò nífẹ̀ẹ́ sí iṣẹ́ ìṣúná",
+    "needToLearnMore": "Mo nílò láti kọ́ ẹ̀kọ́ sí i kọ́kọ́"
+  }
 }

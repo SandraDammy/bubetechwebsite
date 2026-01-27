@@ -210,23 +210,102 @@
   border-radius: 50%;
 }
 
+.formGroup {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  text-justify: auto;
+  width: 100%;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.rowLabel {
+  font-family: Poppins;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: var(--mainBlack);
+  width: 100%;
+}
+
+.gridInput {
+  width: 100%;
+  font-family: Poppins;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: var(--mainBlack);
+  padding: 0.75rem;
+  font-size: 16px;
+  border: 0.5px solid var(--formLine);
+  border-radius: 6px;
+  background-color: transparent;
+  height: 3.75rem;
+
+  &:open {
+    background-color: transparent;
+  }
+
+  option {
+    background-color: transparent;
+    color: var(--mainBlack);
+  }
+}
+
+.gridInput:focus {
+  border: 0.5px solid var(--formLine);
+  background-color: transparent;
+}
+
+.gridInputs {
+  width: 100%;
+  height: 3.75rem;
+  font-family: Poppins;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: var(--mainBlack);
+}
+
+.gridInputs :global(.react-select__control) {
+  min-height: unset;
+  border: 0.5px solid var(--formLine);
+  border-radius: 6px;
+  background-color: transparent;
+  box-shadow: none;
+  width: 100%;
+  height: 3.75rem;
+}
+
+.gridInputs :global(.react-select__control--is-focused) {
+  border: 0.5px solid var(--formLine);
+}
+
+.gridInputs :global(.react-select__option) {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  padding: 0.5rem 0.75rem;
+  cursor: pointer;
+}
+
+.gridInputs :global(.react-select__option--is-focused) {
+  background-color: var(--green);
+  color: var(--mainWhite);
+}
+
+.gridInputs :global(.react-select__option--is-selected) {
+  background-color: var(--mainWhite);
+  color: var(--green);
+}
+
 @media (max-width: 480px) {
-  /* .header {
-    margin-bottom: 0.5rem;
-  }
-
-  .nav {
-    flex-direction: column;
-    gap: 1rem;
-    padding: 1rem 1.5rem;
-  }
-
-  .logoSection img,
-  .logo {
-    width: 120px;
-    height: auto;
-  } */
-
   .container {
     padding: 0 1rem;
     width: 100%;
@@ -240,10 +319,8 @@
   }
 
   .stepper {
-    /* flex-direction: column; */
     padding: 0;
-    /* gap: 1rem;
-    align-items: center; */
+
   }
 
   .stepItem {

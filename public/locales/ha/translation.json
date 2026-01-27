@@ -131,7 +131,7 @@
   "mainBreed": "Nau'in Shanu na Asali",
   "approximateHerdSize": "Kimanin Girman Garken",
   "migrationPattern": "Hanyar Hijira",
-  "primaryMigrationRoute": "Babbar Hanyar Hijira",
+  "migrationRouteType": "Nau’in Hanyar Hijira",
   "primaryPurposeCattle": "Babban Dalilin Kiwo",
   "otherLivestocks": "Sauran Dabbobi",
   "accessVeterinaryServices": "Samun Sabis na Dabbobi",
@@ -139,6 +139,11 @@
   "financialServices": "Yiwuwar Sabis na Kuɗi",
   "bankAccount": "Kana da Asusun Banki?",
   "votersCard": "Kana da Katin Zaɓe?",
+
+  "selectStateFirst": "Zaɓi Jiha Da Farko",
+  "selectLgaFirst": "Zaɓi Karamar Hukuma Da Farko",
+  "rateVeterinaryServices": "Kimanta Ayyukan Likitan Dabbobi",
+
   "highestLevelEducation": "Matsayin Ilimi Mafi Girma",
   "otherOccupation": "Sauran Ayyuka",
   "uploadPhoto": "Loda Hoto *",
@@ -245,5 +250,42 @@
   "LGA Secretary": "Sakataren Karamar Hukuma",
   "Ward Chairman": "Shugaban Gunduma",
   "Ward Secretary": "Sakataren Gunduma",
-  "Member": "Mamba"
+  "Member": "Mamba",
+
+  "pleaseSelectYourMinistry": "Don Allah zaɓi ma’aikatarka",
+  "ministry": "Ma’aikata",
+  "selectTheMinistryYouBelongTo": "Zaɓi ma’aikatar da kake ciki",
+  "selectYourOrganisation": "Zaɓi ƙungiyarka",
+  "association": "Ƙungiya",
+  "ministryOfAgricultureAndLivestock": "Ma’aikatar Noma da Kiwon Dabbobi",
+  "ministryOfLivestock": "Ma’aikatar Kiwon Dabbobi",
+  "ministryOfWaterResources": "Ma’aikatar Albarkatun Ruwa",
+  "allFarmersAssociationOfNigeria": "Kungiyar Duk Manoma Na Najeriya (AFAN)",
+  "amanaFarmersAndGrainsSuppliersAssociationOfNigeria": "Kungiyar Manoma Amana da Masu Samar da Hatsi Na Najeriya (AFGSAN)",
+  "associationOfCommercialFarmersAndAgroAlliedProducersOfNigeria": "Kungiyar Manoma Masu Kasuwanci da Masu Samar da Kayayyakin Noma Na Najeriya (ACFAAPON)",
+  "nigeriaFarmersAlliance": "Hadin Kan Manoma Na Najeriya (NFA)",
+  "nigerianWomenInAgriculturalBusinessCooperativeSocietyLtd": "Kungiyar Mata Masu Sana’ar Noma Na Najeriya (NIWAB)",
+  "otherSpecify": "Sauran (Bayyana)",
+
+  "vetAccess": {
+    "excellent": "Madalla sosai (Ana samunsa a kowane lokaci idan an buƙata, farashinsa mai sauƙi ne)",
+    "good": "Madalla (Yawanci ana samunsa, farashinsa ba ya da tsada)",
+    "fair": "Matsakaici (Ana samunsa wani lokaci, farashinsa matsakaici ne)",
+    "poor": "Ba kyau (Da wuya a same shi, farashinsa yana da tsada sosai)",
+    "veryPoor": "Ba kyau sosai (Kusan ba a samunsa)",
+    "noAccess": "Babu damar samun ayyukan likitan dabbobi",
+    "dontKnow": "Ban sani ba"
+  },
+
+  "financialService": {
+    "bankAccount": "Asusun banki",
+    "mobileMoney": "Kuɗin wayar hannu",
+    "livestockInsurance": "Inshorar dabbobi",
+    "loansToBuyLivestock": "Rancen sayen dabbobi",
+    "emergencyLoans": "Rancen gaggawa",
+    "groupSavings": "Ajiya na ƙungiya",
+    "allWouldHelp": "Duk waɗannan za su taimaka",
+    "notInterested": "Ba na sha’awar ayyukan kuɗi",
+    "needToLearnMore": "Ina buƙatar ƙarin bayani tukuna"
+  }
 }

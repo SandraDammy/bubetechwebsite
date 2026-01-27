@@ -30,7 +30,8 @@ const Language = () => {
       return;
     }
 
-    navigate("/form", { state: { language: selectedLanguage } });
+    navigate("/ministry", { state: { language: selectedLanguage } });
+    // navigate("/form", { state: { language: selectedLanguage } });
   };
 
   return (
