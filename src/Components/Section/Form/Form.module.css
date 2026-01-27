@@ -198,13 +198,7 @@
   color: var(--mainBlack);
 
 }
-/*   
-"migrationRouteType": "Migration Route Type",
-  "bankAccount": "Do You Currently Have a Bank Account?",
-  "votersCard": "Do You Have a Permanent Voter’s Card?",
 
-"rateVeterinaryServices": "Rate Your Veterinary Services",
-*/
 /* Main input */
 .gridInputs :global(.react-select__control) {
   min-height: unset;

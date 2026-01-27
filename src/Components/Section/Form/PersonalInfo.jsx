@@ -7,12 +7,12 @@ import Select from "react-select";
 
 const PersonalInfo = ({ onNext, onPrevious }) => {
   const [fullName, setFullName] = useState("");
-  const [sex, setSex] = useState("");
+  const [sex, setSex] = useState(null);
   const [age, setAge] = useState("");
   const [phone, setPhone] = useState("");
-  const [state, setState] = useState("");
-  const [lga, setLga] = useState("");
-  const [ward, setWard] = useState("");
+  const [state, setState] = useState(null);
+  const [lga, setLga] = useState(null);
+  const [ward, setWard] = useState(null);
   const [origin, setOrigin] = useState("");
   const [base, setBase] = useState("");
 
@@ -25,15 +25,12 @@ const PersonalInfo = ({ onNext, onPrevious }) => {
 
   const formatDate = () => {
     const today = new Date();
-
     const day = String(today.getDate()).padStart(2, "0");
     const month = today.toLocaleString("en-US", { month: "long" });
     const year = today.getFullYear();
-
     return `${day}-${month}-${year}`;
   };
 
-  // Generate Form ID like: MAC-20250701-482
   const generateFormId = () => {
     const date = new Date();
     const ymd = date.toISOString().slice(0, 10).replace(/-/g, "");
@@ -49,7 +46,7 @@ const PersonalInfo = ({ onNext, onPrevious }) => {
   const [lgas, setLgas] = useState([]);
   const [wards, setWards] = useState([]);
 
-  // ✅ Load wards automatically from Excel
+  // Load Excel
   useEffect(() => {
     fetch("/ward.xlsx")
       .then((res) => res.arrayBuffer())
@@ -60,60 +57,61 @@ const PersonalInfo = ({ onNext, onPrevious }) => {
 
         setAllData(jsonData);
 
-        // ✅ Extract unique States
         const uniqueStates = [
           ...new Set(jsonData.map((row) => row.State).filter(Boolean)),
         ];
+
         setStates(uniqueStates);
       })
       .catch((err) => console.error("Excel load error:", err));
   }, []);
 
-  // ✅ Load State automatically from Excel
-
+  // State → LGA
   useEffect(() => {
     if (!state) {
       setLgas([]);
-      setLga("");
+      setLga(null);
       setWards([]);
-      setWard("");
+      setWard(null);
       return;
     }
 
     const filteredLgas = [
       ...new Set(
-        allData.filter((row) => row.State === state).map((row) => row.LGA),
+        allData
+          .filter((row) => row.State === state.value)
+          .map((row) => row.LGA),
       ),
     ];
 
     setLgas(filteredLgas);
-    setLga("");
+    setLga(null);
     setWards([]);
-    setWard("");
+    setWard(null);
   }, [state, allData]);
 
-  // ✅ Load LGA automatically from Excel
-
+  // LGA → Ward
   useEffect(() => {
     if (!lga) {
       setWards([]);
-      setWard("");
+      setWard(null);
       return;
     }
 
     const filteredWards = [
       ...new Set(
         allData
-          .filter((row) => row.State === state && row.LGA === lga)
+          .filter(
+            (row) =>
+              row.State === state.value && row.LGA === lga.value,
+          )
           .map((row) => row.Ward),
       ),
     ];
 
     setWards(filteredWards);
-    setWard("");
+    setWard(null);
   }, [lga, state, allData]);
-
-  // ✅ Load wards automatically from Excel
 
   const handleNext = () => {
     if (
@@ -132,21 +130,25 @@ const PersonalInfo = ({ onNext, onPrevious }) => {
 
     onNext({
       fullName,
-      sex,
+      sex: sex.value,
       age,
       phone,
-      state,
-      lga,
-      ward,
+      state: state.value,
+      lga: lga.value,
+      ward: ward.value,
       origin,
       base,
     });
   };
 
- const sexOptions = [
+  const sexOptions = [
     { value: "Male", label: t("Male") },
     { value: "Female", label: t("Female") },
   ];
+
+  const stateOptions = states.map((s) => ({ value: s, label: s }));
+  const lgaOptions = lgas.map((l) => ({ value: l, label: l }));
+  const wardOptions = wards.map((w) => ({ value: w, label: w }));
 
   return (
     <div className={styles.form}>
@@ -154,22 +156,12 @@ const PersonalInfo = ({ onNext, onPrevious }) => {
         <div className={styles.bodyRow}>
           <div className={styles.formGroup}>
             <label className={styles.rowLabel}>{t("formId")}</label>
-
-            <input
-              type="text"
-              value={formId}
-              readOnly
-              className={styles.readOnlyInput}
-            />
+            <input value={formId} readOnly className={styles.readOnlyInput} />
           </div>
+
           <div className={styles.formGroup}>
             <label className={styles.rowLabel}>{t("date")}</label>
-            <input
-              type="text"
-              value={formDate}
-              readOnly
-              className={styles.readOnlyInput}
-            />
+            <input value={formDate} readOnly className={styles.readOnlyInput} />
           </div>
         </div>
       </div>
@@ -179,109 +171,95 @@ const PersonalInfo = ({ onNext, onPrevious }) => {
           <div className={styles.formGroup}>
             <label className={styles.rowLabel}>{t("fullName")}</label>
             <input
-              placeholder={t("enterFullName")}
               value={fullName}
               onChange={(e) => setFullName(e.target.value)}
               className={styles.gridInput}
             />
           </div>
+
           <div className={styles.formGroup}>
             <label className={styles.rowLabel}>{t("sex")}</label>
-       
             <Select
-            options={sexOptions}
-            value={sex}
-            onChange={setSex}
-            placeholder={t("select")}
-            className={styles.gridInputs}
-            classNamePrefix="react-select"
+              options={sexOptions}
+              value={sex}
+              onChange={setSex}
+              placeholder={t("select")}
+              className={styles.gridInputs}
+              classNamePrefix="react-select"
             />
           </div>
+
           <div className={styles.formGroup}>
             <label className={styles.rowLabel}>{t("age")}</label>
             <input
               type="number"
-              placeholder={t("enterAge")}
               value={age}
               onChange={(e) => setAge(e.target.value)}
               className={styles.gridInput}
             />
           </div>
+
           <div className={styles.formGroup}>
             <label className={styles.rowLabel}>
               {t("phoneNumber(optional)")}
             </label>
             <input
-              placeholder={t("enterPhoneNumber")}
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
               className={styles.gridInput}
             />
           </div>
+
           <div className={styles.formGroup}>
             <label className={styles.rowLabel}>{t("state")}</label>
-
-            <select
+            <Select
+              options={stateOptions}
               value={state}
-              onChange={(e) => setState(e.target.value)}
-              className={styles.gridInput}
-            >
-              <option value="">{t("selectState")}</option>
-              {states.map((s, index) => (
-                <option key={index} value={s}>
-                  {s}
-                </option>
-              ))}
-            </select>
+              onChange={setState}
+              placeholder={t("selectState")}
+              className={styles.gridInputs}
+              classNamePrefix="react-select"
+            />
           </div>
+
           <div className={styles.formGroup}>
             <label className={styles.rowLabel}>{t("lga")}</label>
-
-            <select
+            <Select
+              options={lgaOptions}
               value={lga}
-              onChange={(e) => setLga(e.target.value)}
-              className={styles.gridInput}
-              disabled={!state}
-            >
-              <option value="">{t("selectLGA")}</option>
-              {lgas.map((l, index) => (
-                <option key={index} value={l}>
-                  {l}
-                </option>
-              ))}
-            </select>
+              onChange={setLga}
+              placeholder={t("selectStateFirst")}
+              isDisabled={!state}
+              className={styles.gridInputs}
+              classNamePrefix="react-select"
+            />
           </div>
+
           <div className={styles.formGroup}>
             <label className={styles.rowLabel}>{t("ward")}</label>
-
-            <select
+            <Select
+              options={wardOptions}
               value={ward}
-              onChange={(e) => setWard(e.target.value)}
-              className={styles.gridInput}
-              disabled={!lga}
-            >
-              <option value="">{t("selectWard")}</option>
-              {wards.map((w, index) => (
-                <option key={index} value={w}>
-                  {w}
-                </option>
-              ))}
-            </select>
+              onChange={setWard}
+              placeholder={t("selectLgaFirst")}
+              isDisabled={!lga}
+              className={styles.gridInputs}
+              classNamePrefix="react-select"
+            />
           </div>
 
           <div className={styles.formGroup}>
             <label className={styles.rowLabel}>{t("villageOrigin")}</label>
             <input
-              placeholder={t("enterVillage")}
               value={origin}
               onChange={(e) => setOrigin(e.target.value)}
               className={styles.gridInput}
             />
           </div>
+
           <div className={styles.formGroup}>
             <label className={styles.rowLabel}>{t("currentBase")}</label>
             <input
-              placeholder={t("enterCurrentBase")}
               value={base}
               onChange={(e) => setBase(e.target.value)}
               className={styles.gridInput}
@@ -291,11 +269,7 @@ const PersonalInfo = ({ onNext, onPrevious }) => {
       </div>
 
       <div className={styles.buttonRow}>
-        <Button
-          title={t("previous")}
-          className="btnPrev"
-          onClick={onPrevious}
-        />
+        <Button title={t("previous")} className="btnPrev" onClick={onPrevious} />
         <Button title={t("next")} className="btnNext" onClick={handleNext} />
       </div>
     </div>

@@ -131,7 +131,7 @@
   "mainBreed": "Nau'in Shanu na Asali",
   "approximateHerdSize": "Kimanin Girman Garken",
   "migrationPattern": "Hanyar Hijira",
-  "migrationRouteType": "Babbar Hanyar Hijira",
+  "migrationRouteType": "Nau’in Hanyar Hijira",
   "primaryPurposeCattle": "Babban Dalilin Kiwo",
   "otherLivestocks": "Sauran Dabbobi",
   "accessVeterinaryServices": "Samun Sabis na Dabbobi",
@@ -139,6 +139,11 @@
   "financialServices": "Yiwuwar Sabis na Kuɗi",
   "bankAccount": "Kana da Asusun Banki?",
   "votersCard": "Kana da Katin Zaɓe?",
+
+  "selectStateFirst": "Zaɓi Jiha Da Farko",
+  "selectLgaFirst": "Zaɓi Karamar Hukuma Da Farko",
+  "rateVeterinaryServices": "Kimanta Ayyukan Likitan Dabbobi",
+
   "highestLevelEducation": "Matsayin Ilimi Mafi Girma",
   "otherOccupation": "Sauran Ayyuka",
   "uploadPhoto": "Loda Hoto *",

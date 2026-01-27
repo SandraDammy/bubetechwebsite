@@ -2,78 +2,81 @@ import React, { useEffect, useState } from "react";
 import styles from "./Form.module.css";
 import Button from "../../Common/Button/Button";
 import { useTranslation } from "react-i18next";
+import Select from "react-select";
+import educationOptions from "../../../Assets/Options/educationOptions";
+import occupationOptions from "../../../Assets/Options/occupationOptions";
+
 
 const EducationOccupation = ({ onSubmit, onPrevious }) => {
-  const [education, setEducation] = useState("");
-  const [occupation, setOccupation] = useState("");
+  const [education, setEducation] = useState(null);
+  const [occupation, setOccupation] = useState(null);
   const [photo, setPhoto] = useState(null);
 
   const { t, i18n } = useTranslation();
 
   useEffect(() => {
     const savedLang = localStorage.getItem("appLang");
-    if (savedLang) {
-      i18n.changeLanguage(savedLang);
-    }
+    if (savedLang) i18n.changeLanguage(savedLang);
   }, [i18n]);
 
   const handleFileChange = (e) => {
     setPhoto(e.target.files[0]);
   };
 
+  // translate options
+  const educationListOptions = educationOptions.map((opt) => ({
+    value: opt.value,
+    label: t(opt.labelKey),
+  }));
+
+  const occupationListOptions = occupationOptions.map((opt) => ({
+    value: opt.value,
+    label: t(opt.labelKey),
+  }));
+
   return (
     <div className={styles.form}>
       <div className={styles.body}>
         <div className={styles.grid}>
+          {/* Education */}
           <div className={styles.formGroup}>
-            <label className={styles.rowLabel} htmlFor="education">
+            <label className={styles.rowLabel}>
               {t("highestLevelEducation")}
             </label>
-            <select
-              id="education"
+            <Select
+              options={educationListOptions}
               value={education}
-              onChange={(e) => setEducation(e.target.value)}
-              className={styles.gridInput}
-            >
-              <option value="">{t("selectOption")}</option>
-              <option value="primary">{t("Primary")}</option>
-              <option value="secondary">{t("Secondary")}</option>
-              <option value="tertiary">{t("Tertiary")}</option>
-              <option value="quranic">{t("Qur'anic")}</option>
-              <option value="none">{t("None")}</option>
-            </select>
+              onChange={setEducation}
+              placeholder={t("selectOption")}
+              className={styles.gridInputs}
+              classNamePrefix="react-select"
+            />
           </div>
 
+          {/* Occupation */}
           <div className={styles.formGroup}>
-            <label className={styles.rowLabel} htmlFor="occupation">
-              {t("otherOccupation")}
-            </label>
-            <select
-              id="occupation"
+            <label className={styles.rowLabel}>{t("otherOccupation")}</label>
+            <Select
+              options={occupationListOptions}
               value={occupation}
-              onChange={(e) => setOccupation(e.target.value)}
-              className={styles.gridInput}
-            >
-              <option value="">{t("selectOption")}</option>
-              <option value="farming">{t("Farming")}</option>
-              <option value="trading">{t("Trading")}</option>
-              <option value="laboring">{t("Laboring")}</option>
-              <option value="handcrafts">{t("Handcrafts")}</option>
-              <option value="other">{t("Other")}</option>
-            </select>
+              onChange={setOccupation}
+              placeholder={t("selectOption")}
+              className={styles.gridInputs}
+              classNamePrefix="react-select"
+            />
           </div>
         </div>
       </div>
 
+      {/* Photo Upload */}
       <div className={styles.body}>
         <div className={styles.grid}>
           <div className={styles.formGroup}>
-            <label className={styles.rowLabel} htmlFor="photo">
+            <label className={styles.rowLabel}>
               {t("uploadPhoto")} *
             </label>
             <input
               type="file"
-              id="photo"
               accept="image/*"
               onChange={handleFileChange}
               className={styles.gridInput}
@@ -82,13 +85,24 @@ const EducationOccupation = ({ onSubmit, onPrevious }) => {
         </div>
       </div>
 
+      {/* Buttons */}
       <div className={styles.buttonRow}>
         <Button
           title={t("previous")}
           className="btnPrev"
           onClick={onPrevious}
         />
-        <Button title={t("submit")} className="btnNext" onClick={onSubmit} />
+        <Button
+          title={t("submit")}
+          className="btnNext"
+          onClick={() =>
+            onSubmit({
+              education: education?.value,
+              occupation: occupation?.value,
+              photo,
+            })
+          }
+        />
       </div>
     </div>
   );

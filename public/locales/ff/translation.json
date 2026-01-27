@@ -131,14 +131,14 @@
   "mainBreed": "Laawol Naange Joomirde",
   "approximateHerdSize": "Ceertu Gese Golle",
   "migrationPattern": "Ceertu Henorde",
-  "migrationRouteType": "Laawol Henorde Mbayri",
+  "migrationRouteType": "Hono Laawol Golle",
   "primaryPurposeCattle": "Keewol Joomirde Naange",
   "otherLivestocks": "Naangeji Goɗɗi",
   "accessVeterinaryServices": "Hollitaade E Sariyaaji Naange",
   "biggestChallenge": "Heɓɓinaade Nden Ko Feere",
   "financialServices": "Cuɓoraa e Sarɗi",
-  "bankAccount": "A heɓii koontu banki?",
-  "votersCard": "A heɓii katin jowitorde?",
+  "bankAccount": "A woodi jogii banke jooni?",
+  "votersCard": "A woodi katdu suɓorde ndeen?",
   "highestLevelEducation": "Daraja Jaangu Mbayri",
   "otherOccupation": "Cuɓoraa Golle Goɗɗi",
   "uploadPhoto": "Naatnu Ngal Foto *",
@@ -260,6 +260,10 @@
   "nigeriaFarmersAlliance": "Jokkondiral Sariiɓe Naayjeeriya (NFA)",
   "nigerianWomenInAgriculturalBusinessCooperativeSocietyLtd": "Fedde Debbooji E Ndeendi Naayjeeriya (NIWAB)",
   "otherSpecify": "Kadi (Fayde)",
+
+  "selectStateFirst": "Suɓo Leydi ɗee gila",
+  "selectLgaFirst": "Suɓo LGA ɗee gila",
+  "rateVeterinaryServices": "Jango goonga golle likkita dabbaji maa",
 
   "vetAccess": {
     "excellent": "Moƴƴi haa (Heɓaama kala so ina sokli, teɗɗungal mum ndaarɗi)",

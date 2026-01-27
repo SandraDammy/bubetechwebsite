@@ -118,10 +118,12 @@
   "selectB": "State B",
   "lga": "LGA",
   "selectLGA": "Select LGA",
+  "selectStateFirst": "Select State First",
   "lgaA": "LGA A",
   "lgaB": "LGA B",
   "ward": "Ward",
   "selectWard": "Select Ward",
+  "selectLgaFirst": "Select LGA First",
   "enterWard": "Enter your ward",
   "villageOrigin": "Village/Community of Origin",
   "enterVillage": "Enter your village",
@@ -265,6 +267,8 @@
   "nigeriaFarmersAlliance": "Nigeria Farmers Alliance (NFA)",
   "nigerianWomenInAgriculturalBusinessCooperativeSocietyLtd": "Nigerian Women in Agricultural Business Cooperative Society Ltd (NIWAB)",
   "otherSpecify": "Other (Specify)",
+
+
 
   "vetAccess": {
     "excellent": "Excellent (Always available when needed, affordable)",
