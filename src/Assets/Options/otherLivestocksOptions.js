@@ -1,23 +1,23 @@
 const otherLivestocksOptions = [
   {
     value: "sheep",
-    labelKey: "sheep",
+    labelKey: "Sheep",
   },
   {
     value: "goats",
-    labelKey: "goats",
+    labelKey: "Goats",
   },
   {
     value: "camel",
-    labelKey: "camel",
+    labelKey: "Camel",
   },
   {
     value: "poultry",
-    labelKey: "poultry",
+    labelKey: "Poultry",
   },
   {
     value: "others",
-    labelKey: "others",
+    labelKey: "Others",
   },
 ];
 

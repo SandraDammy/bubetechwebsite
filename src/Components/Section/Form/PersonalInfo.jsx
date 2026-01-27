@@ -142,8 +142,8 @@ const PersonalInfo = ({ onNext, onPrevious }) => {
   };
 
   const sexOptions = [
-    { value: "Male", label: t("Male") },
-    { value: "Female", label: t("Female") },
+    { value: "Male", label: t("male") },
+    { value: "Female", label: t("female") },
   ];
 
   const stateOptions = states.map((s) => ({ value: s, label: s }));

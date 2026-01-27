@@ -15,3 +15,50 @@
   color: var(--mainBlack);
   cursor: pointer;
 }
+
+
+/* Custom checkbox styles */
+.option input[type="checkbox"] {
+  appearance: none;
+  width: 1rem;
+  height: 1rem;
+  border: 2px solid var(--green);
+  border-radius: 3px;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+
+/* Default state */
+.option input[type="checkbox"]::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1rem;
+  height: 1rem;
+  background-color: transparent;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Checked state */
+.option input[type="checkbox"]:checked {
+  border-color: var(--green);
+  background-color: transparent;
+}
+
+.option input[type="checkbox"]:checked::before {
+  transform: translate(-50%, -50%) scale(1);
+  background-color: transparent;
+}
+
+.option input[type="checkbox"]:checked::after {
+  content: "✔";
+  color: var(--green);
+  font-size: 0.875rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
