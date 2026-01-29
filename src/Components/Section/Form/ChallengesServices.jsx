@@ -9,12 +9,12 @@ import rateVeterinary from "../../../Assets/Options/rateVeterinary";
 import financialServicesOptions from "../../../Assets/Options/financialServices";
 import challengeOptions from "../../../Assets/Options/challengeOptions";
 
-const ChallengesServices = ({ onNext, onPrevious }) => {
+const ChallengesServices = ({ onNext, onPrev }) => {
   const [rateVeterinaryServices, setRateVeterinaryServices] = useState(null);
-  const [challenge, setChallenge] = useState("");
+  const [challenge, setChallenge] = useState(null);
   const [financialServices, setFinancialServices] = useState([]);
-  const [bankAccount, setBankAccount] = useState("");
-  const [votersCard, setVotersCard] = useState("");
+  const [bankAccount, setBankAccount] = useState(null);
+  const [votersCard, setVotersCard] = useState(null);
 
   const { t, i18n } = useTranslation();
 
@@ -37,10 +37,10 @@ const ChallengesServices = ({ onNext, onPrevious }) => {
 
     onNext({
       rateVeterinaryServices: rateVeterinaryServices.value,
-      challenge,
+      challenge: challenge.value,
       financialServices: financialServices.map((item) => item.value),
-      bankAccount,
-      votersCard,
+      bankAccount: bankAccount.value,
+      votersCard: votersCard.value,
     });
   };
 
@@ -144,7 +144,7 @@ const ChallengesServices = ({ onNext, onPrevious }) => {
         <Button
           title={t("previous")}
           className="btnPrev"
-          onClick={onPrevious}
+          onClick={onPrev}
         />
         <Button title={t("next")} className="btnNext" onClick={handleNext} />
       </div>

@@ -22,14 +22,6 @@ const Ministry = () => {
     }
   }, [i18n]);
 
-  const handleSubmit = () => {
-    if (!ministry || !association) return;
-
-    navigate("/form", {
-      state: { ministry, association },
-    });
-  };
-
   const optionsMinistry = ministryOptions.map((opt) => ({
     value: opt.value,
     label: t(opt.labelKey),
@@ -39,6 +31,15 @@ const Ministry = () => {
     value: opt.value,
     label: t(opt.labelKey),
   }));
+
+  const handleSubmit = () => {
+    if (!ministry || !association) return;
+
+    navigate("/form", {
+      state: { ministry, association },
+    });
+  };
+
   return (
     <div className="layoutCont">
       <header className="header">
@@ -61,8 +62,8 @@ const Ministry = () => {
             </label>
             <Select
               options={optionsMinistry}
-              value={ministry}
-              onChange={setMinistry}
+              value={optionsMinistry.find((opt) => opt.value === ministry)}
+              onChange={(selected) => setMinistry(selected.value)}
               placeholder={t("selectTheMinistryYouBelongTo")}
               className={styles.gridInputs}
               classNamePrefix="react-select"
@@ -75,8 +76,10 @@ const Ministry = () => {
             </label>
             <Select
               options={optionsAssociation}
-              value={association}
-              onChange={setAssociation}
+              value={optionsAssociation.find(
+                (opt) => opt.value === association,
+              )}
+              onChange={(selected) => setAssociation(selected.value)}
               placeholder={t("selectYourOrganisation")}
               className={styles.gridInputs}
               classNamePrefix="react-select"

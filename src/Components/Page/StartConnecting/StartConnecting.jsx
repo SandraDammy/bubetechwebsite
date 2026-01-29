@@ -41,9 +41,24 @@ const StartConnecting = () => {
 
   const handleSubmit = (data = {}) => {
     const finalData = { ...formValues, ...data };
-    console.log("Submitting form:", finalData);
 
-    setTimeout(() => setShowSuccessModal(true), 1000);
+    const formData = new FormData();
+
+    Object.entries(finalData).forEach(([key, value]) => {
+      if (Array.isArray(value)) {
+        value.forEach((item) => formData.append(`${key}[]`, item));
+      } else {
+        formData.append(key, value);
+      }
+    });
+
+    console.log("========== FORM SUBMITTED ==========");
+    for (let pair of formData.entries()) {
+      console.log(pair[0], ":", pair[1]);
+    }
+    console.log("==================================");
+
+    setShowSuccessModal(true);
   };
 
   const renderStep = () => {
@@ -52,7 +67,7 @@ const StartConnecting = () => {
         return (
           <PersonalInfo
             onNext={handleNext}
-            onPrev={() => navigate("/startConnecting")}
+            onPrev={() => navigate("/ministry")}
           />
         );
       case 2:

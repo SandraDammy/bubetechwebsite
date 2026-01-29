@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 import * as XLSX from "xlsx";
 import Select from "react-select";
 
-const PersonalInfo = ({ onNext, onPrevious }) => {
+const PersonalInfo = ({ onNext, onPrev }) => {
   const [fullName, setFullName] = useState("");
   const [sex, setSex] = useState(null);
   const [age, setAge] = useState("");
@@ -269,7 +269,7 @@ const PersonalInfo = ({ onNext, onPrevious }) => {
       </div>
 
       <div className={styles.buttonRow}>
-        <Button title={t("previous")} className="btnPrev" onClick={onPrevious} />
+        <Button title={t("previous")} className="btnPrev" onClick={onPrev} />
         <Button title={t("next")} className="btnNext" onClick={handleNext} />
       </div>
     </div>

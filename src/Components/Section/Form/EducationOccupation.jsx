@@ -7,7 +7,7 @@ import educationOptions from "../../../Assets/Options/educationOptions";
 import occupationOptions from "../../../Assets/Options/occupationOptions";
 import UploadFile from "../../../Assets/Img/upload.svg";
 
-const EducationOccupation = ({ onSubmit, onPrevious }) => {
+const EducationOccupation = ({ onSubmit, onPrev }) => {
   const [education, setEducation] = useState(null);
   const [occupation, setOccupation] = useState(null);
   const [photo, setPhoto] = useState(null);
@@ -154,7 +154,8 @@ const EducationOccupation = ({ onSubmit, onPrevious }) => {
       <div className={styles.terms}>
         <input type="checkbox" id="terms" />
         <label htmlFor="terms">
-          {t("agreeTerms")} <span>{t("termsAndConditions")}</span> {t("ofMembership")}
+          {t("agreeTerms")} <span>{t("termsAndConditions")}</span>{" "}
+          {t("ofMembership")}
         </label>
       </div>
 
@@ -163,19 +164,8 @@ const EducationOccupation = ({ onSubmit, onPrevious }) => {
         <Button
           title={t("previous")}
           className="btnPrev"
-          onClick={onPrevious}
+          onClick={onPrev}
         />
-        {/* <Button
-          title={t("submit")}
-          className="btnNext"
-          onClick={() =>
-            onSubmit({
-              education: education?.value,
-              occupation: occupation?.value,
-              photo,
-            })
-          }
-        /> */}
         <Button
           title={t("submit")}
           className="btnNext"

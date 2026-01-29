@@ -11,12 +11,12 @@ import primaryCattleOptions from "../../../Assets/Options/primaryCattleOptions";
 import migrationRouteOptions from "../../../Assets/Options/migrationRouteOptions";
 import otherLivestocksOptions from "../../../Assets/Options/otherLivestocksOptions";
 
-const IdentificationLivestock = ({ onNext, onPrevious }) => {
-  const [mainBreed, setMainBread] = useState("");
-  const [approximate, setApproximate] = useState("");
-  const [migration, setMigration] = useState("");
-  const [primaryRoute, setPrimaryRoute] = useState("");
-  const [primaryCattle, setPrimaryCattle] = useState("");
+const IdentificationLivestock = ({ onNext, onPrev }) => {
+  const [mainBreed, setMainBreed] = useState(null);
+  const [approximate, setApproximate] = useState(null);
+  const [migration, setMigration] = useState(null);
+  const [primaryRoute, setPrimaryRoute] = useState(null);
+  const [primaryCattle, setPrimaryCattle] = useState(null);
   const [otherLivestocks, setOtherLivestocks] = useState([]);
 
   const { t, i18n } = useTranslation();
@@ -38,13 +38,14 @@ const IdentificationLivestock = ({ onNext, onPrevious }) => {
       alert("Please fill all fields");
       return;
     }
+
     onNext({
-      mainBreed,
-      approximate,
-      migration,
-      primaryRoute,
-      primaryCattle,
-      otherLivestocks,
+      mainBreed: mainBreed.value,
+      approximate: approximate.value,
+      migration: migration.value,
+      primaryRoute: primaryRoute.value,
+      primaryCattle: primaryCattle.value,
+      otherLivestocks: otherLivestocks.map((item) => item.value),
     });
   };
 
@@ -90,7 +91,7 @@ const IdentificationLivestock = ({ onNext, onPrevious }) => {
             <Select
               options={breedOptions}
               value={mainBreed}
-              onChange={setMainBread}
+              onChange={setMainBreed}
               placeholder={t("selectOption")}
               className={styles.gridInputs}
               classNamePrefix="react-select"
@@ -177,7 +178,7 @@ const IdentificationLivestock = ({ onNext, onPrevious }) => {
         <Button
           title={t("previous")}
           className="btnPrev"
-          onClick={onPrevious}
+          onClick={onPrev}
         />
         <Button title={t("next")} className="btnNext" onClick={handleNext} />
       </div>
