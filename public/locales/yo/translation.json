@@ -254,6 +254,7 @@
   " ministry": "Iṣẹ́-ìjọsìn",
   "selectTheMinistryYouBelongTo": "Yan iṣẹ́-ìjọsìn tí o jẹ́ ọmọ ẹgbẹ́ rẹ̀",
   "selectYourOrganisation": "Yan àjọṣe rẹ",
+  "selectMultipleOption": "Yan aṣayan pupọ",
   "association": "Àjọṣe",
   "ministryOfAgricultureAndLivestock": "Ilé-Ìṣẹ́ Minisita ti Ọgbìn àti Ẹran-ọ̀sin",
   "ministryOfLivestock": "Ilé-Ìṣẹ́ Minisita ti Ẹran-ọ̀sin",
@@ -285,5 +286,9 @@
     "allWouldHelp": "Gbogbo wọn yóò ràn mí lọ́wọ́",
     "notInterested": "Mi ò nífẹ̀ẹ́ sí iṣẹ́ ìṣúná",
     "needToLearnMore": "Mo nílò láti kọ́ ẹ̀kọ́ sí i kọ́kọ́"
-  }
+  },
+
+  "agreeTerms": "Nípa fífi ránṣẹ́, o ti gba ",
+  "termsAndConditions": "Àwọn Òfin àti Àwọn Àdéhùn",
+  "ofMembership": " ti ọmọ ẹgbẹ́"
 }

@@ -128,6 +128,7 @@
   "leader": "Laamate",
   "member": "Memba",
   "selectOption": "Suɓo cuɓoraa",
+  "selectMultipleOption": "Suɓo cuɓe ɗiɗi e ɗiɗi",
   "mainBreed": "Laawol Naange Joomirde",
   "approximateHerdSize": "Ceertu Gese Golle",
   "migrationPattern": "Ceertu Henorde",
@@ -285,5 +286,9 @@
     "allWouldHelp": "Fof ɗum fof walla mi",
     "notInterested": "Mi yiɗaa golle ceede alaa",
     "needToLearnMore": "Mi yiɗi janngude ko ɓuri"
-  }
+  },
+
+  "agreeTerms": "So a naatni ɗum, a jaɓii ",
+  "termsAndConditions": "Kaɗɗe e Ɗoole",
+  "ofMembership": " jeyaaɗe e gollal"
 }

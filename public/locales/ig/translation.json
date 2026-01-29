@@ -127,10 +127,11 @@
   "leader": "Onye isi",
   "member": "Onye otu",
   "selectOption": "Họrọ nhọrọ",
+  "selectMultipleOption": "Họrọ ọtụtụ nhọrọ",
   "mainBreed": "Ụdị Ehi Kasị Elu",
   "approximateHerdSize": "Nọmba ehi dị ka e kwesịrị",
   "migrationPattern": "Ụzọ njem ehi",
-   "migrationRouteType": "Ụdị Ụzọ Mbata na Mpụpụ",
+  "migrationRouteType": "Ụdị Ụzọ Mbata na Mpụpụ",
   "primaryPurposeCattle": "Ebumnuche Isi Maka Ehi",
   "otherLivestocks": "Ụzọ ehi ndị ọzọ",
   "accessVeterinaryServices": "Nweta Ọrụ Dọkịta Anụmanụ",
@@ -138,7 +139,7 @@
   "financialServices": "Ọrụ ego a ga-enwe",
   "bankAccount": "Ị nwere akaụntụ ụlọ akụ?",
   "votersCard": "Ị nwere kaadị onye ntuli aka?",
-    "selectStateFirst": "Họrọ Steeti Mbụ",
+  "selectStateFirst": "Họrọ Steeti Mbụ",
   "selectLgaFirst": "Họrọ LGA Mbụ",
   "rateVeterinaryServices": "Tụọ Ogo Ọrụ Dọkịta Anụmanụ Gị",
   "highestLevelEducation": "Ọkwa mmụta kacha elu",
@@ -284,5 +285,9 @@
     "allWouldHelp": "Ha niile ga-enyere m aka",
     "notInterested": "Enweghị m mmasị na ọrụ ego",
     "needToLearnMore": "Achọrọ m ịmụtakwu tupu m kpebie"
-  }
+  },
+
+  "agreeTerms": "Site n’itinye ya, ị kwadoro ",
+  "termsAndConditions": "Usoro na Ọnọdụ",
+  "ofMembership": " nke òtù"
 }

@@ -132,6 +132,7 @@
   "leader": "Leader",
   "member": "Member",
   "selectOption": "Select an option",
+  "selectMultipleOption": "Select multiple options",
   "mainBreed": "Main Cattle Breed",
   "approximateHerdSize": "Approximate Herd Size",
   "migrationPattern": "Migration Pattern",
@@ -268,8 +269,6 @@
   "nigerianWomenInAgriculturalBusinessCooperativeSocietyLtd": "Nigerian Women in Agricultural Business Cooperative Society Ltd (NIWAB)",
   "otherSpecify": "Other (Specify)",
 
-
-
   "vetAccess": {
     "excellent": "Excellent (Always available when needed, affordable)",
     "good": "Good (Usually available, mostly affordable)",
@@ -290,5 +289,11 @@
     "allWouldHelp": "All of these would help",
     "notInterested": "Not interested in financial services",
     "needToLearnMore": "Need to learn more first"
-  }
+  },
+
+  "agreeTerms": "By submitting you have agreed with the  ",
+  "termsAndConditions": "Terms and Conditions",
+  "ofMembership": " of membership"
+
 }
+

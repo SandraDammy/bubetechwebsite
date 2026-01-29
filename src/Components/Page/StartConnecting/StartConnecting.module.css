@@ -305,6 +305,34 @@
   color: var(--green);
 }
 
+.gridInputs :global(.react-select__multi-value) {
+  background-color: var(--form);
+  border-radius: 6px;
+}
+
+.gridInputs :global(.react-select__multi-value) {
+  margin: 2px 4px 2px 0;
+}
+
+.gridInputs :global(.react-select__multi-value__label) {
+  color: var(--mainBlack);
+  font-size: 16px;
+  padding: 2px 6px;
+}
+
+.gridInputs :global(.react-select__indicator-separator) {
+  display: none;
+}
+
+.gridInputs :global(.react-select__value-container) {
+  padding: 2px 6px;
+}
+
+.gridInputs :global(.react-select__input-container) {
+  margin: 0;
+  padding: 0;
+}
+
 @media (max-width: 480px) {
   .container {
     padding: 0 1rem;

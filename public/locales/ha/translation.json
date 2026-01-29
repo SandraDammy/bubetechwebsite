@@ -139,7 +139,7 @@
   "financialServices": "Yiwuwar Sabis na Kuɗi",
   "bankAccount": "Kana da Asusun Banki?",
   "votersCard": "Kana da Katin Zaɓe?",
-
+  "selectMultipleOption": "Zaɓi zaɓuɓɓuka da yawa",
   "selectStateFirst": "Zaɓi Jiha Da Farko",
   "selectLgaFirst": "Zaɓi Karamar Hukuma Da Farko",
   "rateVeterinaryServices": "Kimanta Ayyukan Likitan Dabbobi",
@@ -287,5 +287,9 @@
     "allWouldHelp": "Duk waɗannan za su taimaka",
     "notInterested": "Ba na sha’awar ayyukan kuɗi",
     "needToLearnMore": "Ina buƙatar ƙarin bayani tukuna"
-  }
+  },
+
+  "agreeTerms": "Ta hanyar miƙa wannan, ka amince da ",
+  "termsAndConditions": "Sharuɗɗa da Ƙa’idoji",
+  "ofMembership": " na zama memba"
 }
